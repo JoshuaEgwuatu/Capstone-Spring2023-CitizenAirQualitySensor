@@ -1,8 +1,8 @@
-Microcontroller Signoff
-FUNCTION OF THE SUBSYSTEM
+#Microcontroller Signoff
+##FUNCTION OF THE SUBSYSTEM
 	The microcontroller and its code are the centerpieces of the entire device.  They are responsible for operating, managing, communicating with, maintaining, and collaborating with all of the other subsystems and acts as both the brain and body of the device.  All the data and instructions must flow through the microcontroller at some point in its lifetime.  This gives a common place for all of the data to go and be readily available for whichever subsystem has need of it.  The hardware will be responsible for the actual actions and completion of any given task.  The code will be responsible for controlling the hardware and manipulating data.  This subsystem will be where most of the coding for the project is done as the operating code will be the largest by far.  The code itself will be where the “magic” happens as it allows for interfacing with the hardware and makes it more simple to utilize
 	These jobs require a sufficiently powerful board.  One that has ample storage, plenty of physical space, decent processing power, sufficient support, and none restrictive.  Before choosing components and detailing the design, the specific constraints of the subsystem need to be known and laid out.  Then any potential solutions can be compared to the constraints to test viability and fulfillment of the subsystem’s purpose. 
-CONSTRAINTS ON THE SUBSYSTEM
+##CONSTRAINTS ON THE SUBSYSTEM
 	The subsystem constraints are placed to ensure that it can fulfill its job in a satisfactory manner.  The constraints given below are generalized to allow for comparison of any potential contender for the microcontroller.  Constraints on the subsystem are as follows:
 The big job of the microcontroller will be to manage and operate the other subsystems to work cooperatively and synchronously.  This means that the board to be chosen must support fairly sophisticated code and be powerful enough to head all of the other subsystems.  .
 The board should not take up a massive chunk of the budget.  With a budget of $300, a super-powered board is not affordable.  Preferably, the board price ranges between $20-$60.  This range is gathered from estimating the costs of other components and reasoning where money can be saved.
@@ -20,10 +20,10 @@ The board will need to have coding language support for assembly, C, and or Pyth
 
 Please refer to Wiki, image 1
 
-BUILDABLE SCHEMATIC OF SUBSYSTEM
+##BUILDABLE SCHEMATIC OF SUBSYSTEM
 	Shown is the pseudo-code for the operating code.  The final form of the code may have parts added and additional functionalities included, but this is the general idea of how the code should flow.  Proceeding from each section is assuming that there are no errors detected indicating a “Success”.  If an error arises, a default handler will need to be called to assess the situation.  It should also be noted that the loop is intended to be theoretically infinite, however, there are explicit and implicit breaks at the battery running critically low (explicit) and the shutoff button being pushed (implicit).  “Timers” refer to either physical hardware or coded timers that go off to alert the system that the sensor(s) sampling is ready.  Communication refers to the subsystem of the same name that handles wireless communications with the server.
 
-ANALYSIS OF CHOSEN COMPONENT(S)
+##ANALYSIS OF CHOSEN COMPONENT(S)
 	The team has chosen to look at the Arduino Mega 2560 Rev 3 and Arduino USB Shield Host as the solutions.  The Arduino Mega is a larger and more powerful version of the Arduino Uno, boasting much more storage, memory, and pin space.  The USB Shield is a breakout board or additional component that connects to the Arduino Mega to allow for USB devices to be implemented and utilized.  These components, in conjunction, will more than satisfy the constraints and jobs of this subsystem.  Following are the corresponding fulfillment of the constraints:
 Arduino Mega is one of the bigger and more powerful Arduino products.  It has an astonishing 54 pin layout (4 of which are dedicated to hardware serial ports).  
 For the ratio of money-to-power ratio, $48.40 (as of 11-8-22) is generous and will suffice.  This falls within the price range of $40 to $60 a little under the median.  The only fault here is the need for the USB Host Shield at a price of $20.99.  It is ultimately necessary to have some form of external storage available, but unfortunately, the Arduino Mega does not have a USB port by default.  This is an inconvenience, but the USB Host Shield does solve this problem for a bump in price and align with the specifications for the project.
@@ -41,10 +41,10 @@ The Arduino Mega supports C and Assembly for certain.  It could even be said tha
 	
 	Arduino has been used for many, many projects in history and has a good track record.  The Arduino Mega and USB Host Shield have conjointly shown to fulfill the needs of this subsystem.  The hardware and software specifications are being checked off in their entirety and then some for potential wiggle room later in the project.  This gives more options and improvements later or prevents the need for cutting corners due to any restrictions that would arise from having a smaller and less powerful board.  Going with another option to save on the budget could prove to be a fatal flaw later on if the board doesn’t have enough room, memory, or power to get the job done.  Going a little extra seems reasonable and advisable. 
 
-BILL OF MATERIALS (BOM)
+##BILL OF MATERIALS (BOM)
 
 Please refer to Wiki, image 2
 
-SUBSYSTEM SCHEMATIC
+##SUBSYSTEM SCHEMATIC
 
 Please refer to Wiki, image 3
