@@ -50,4 +50,6 @@ Arduino has been used for many, many projects in history and has a good track re
 
 ##SUBSYSTEM SCHEMATIC
 
-![SubsystemSchematic](https://user-images.githubusercontent.com/110966922/201014183-f9ed7b55-ffa5-4098-b824-fc266ec80ede.png)
+![CAPSTONE I Shematic Checkpoint 1](https://user-images.githubusercontent.com/110966922/202655081-0386ed76-3795-4ab5-98af-ee23ff0b19f6.png)
+b.png)
+
