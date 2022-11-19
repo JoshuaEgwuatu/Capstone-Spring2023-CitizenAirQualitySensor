@@ -27,7 +27,7 @@
 6. The Arduino MKR GSM 1400 supports C and Python with many publicly available libraries. 
 7. Arduino is a very popular and respected manufacturing and electronics design company.  They were established in 2005 and have had a lot of support throughout the years.  It is expected for them to persist for quite some time.
 8. The cpu clock speed runs at a frequency of 32.768 KHz.  This will do for the needs of this subsystem given that not many computations will need to be done.  
-9. The Board Power Supply needs 5 V with a Circuit Operating Voltage at 3.3 V.  The DC Current per Input/Output Pin is 7 mA.  This puts the board at a general power draw of 35mW.   It should be noted however, that some GSM handshakes can take up to 2 A from the pins.  Special connections will need to be made for reaching this level of current regardless of components chosen as boards are at risk of harm from this level of current.
+9. The Board Power Supply needs 5 V with a Circuit Operating Voltage at 3.3 V.  The DC Current per Input/Output Pin is 7 mA.  This puts the board at a general power draw of 35mW.   It should be noted however, that some GSM handshakes can take up to 2 A from the pins.  Special connections will need to be made for reaching this level of current as some boards are at risk of harm from this level of current.
 ## BILL OF MATERIALS (BOM)
 | Designator | Manufacturer | Manufactured Part # | Description                                                                         | Quantity | Price Each |
 | ---------- | ------------ | ------------------- | ----------------------------------------------------------------------------------- | -------- | ---------- |
