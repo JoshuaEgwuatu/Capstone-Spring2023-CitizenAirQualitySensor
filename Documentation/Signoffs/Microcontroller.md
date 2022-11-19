@@ -27,7 +27,7 @@ Shown is a schematic of the Arduino Mega 2560 Rev 3.
 ![CAPSTONE I Shematic Checkpoint 1](https://user-images.githubusercontent.com/110966922/202655081-0386ed76-3795-4ab5-98af-ee23ff0b19f6.png)
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
-The team has chosen to look at the Arduino Mega 2560 Rev 3 and Arduino USB Shield Host as the solutions.  The Arduino Mega is a larger and more powerful version of the Arduino Uno with much more storage, memory, and I/O pins.  The USB Shield is a breakout board or additional component that connects to the Arduino Mega to allow for USB devices to be implemented and utilized.  These components, in conjunction, will satisfy the constraints and jobs of this subsystem.  Following are the corresponding fulfillment of the constraints:
+The team has chosen to look at the Arduino Mega 2560 Rev 3 and Arduino USB Shield Host as the solutions.  These components, in conjunction, will satisfy the constraints and jobs of this subsystem.  Following are the corresponding fulfillment of the constraints:
 
 1. The Arduino Mega 2560 Rev 3 falls within the preferred range of $20-$60 at a current price of $48.40 (as of 11-8-22).  The USB Host Shield component has a price of $20.99 as of the same date.  The USB Host Shield will provide easy access to external storage as needed by the related shall statement.  The Arduino Mega does not have a USB port by default, so the additional component is needed. 
 2. 4 UART serial hardware ports are present on the board.  SPI is supported as well with included libraries.  As an alternative later, Two-Wire Interface (TWI) is also supported.  These enable the Mega to issue instructions and exchange data between other components and subsystems.
@@ -47,5 +47,5 @@ Arduino has been used for many, many projects in history and has a good track re
 
 | Designator | Manufacturer | Manufactured Part # | Description                                                   | Quantity | Price Each  |
 | ---------- | ------------ | ------------------- | ------------------------------------------------------------- | -------- | ----------  |
-| U1         | Arduino      | A000067             | Arduino Mega 2560 Rev3 (Master Controller for User Interface) |1         | $48.40      |
-| U2         | Arduino      | A000004             | Arduino USB Host Shield (Storage PCB)                         |1         | $15.00      |
+| U1         | Arduino      | A000067             | Arduino Mega 2560 Rev3 (Master Controller for User Interface) | 1        | $48.40      |
+| U2         | Arduino      | A000004             | Arduino USB Host Shield (Storage PCB)                         | 1        | $15.00      |
