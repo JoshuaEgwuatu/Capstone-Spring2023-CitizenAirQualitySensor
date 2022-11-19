@@ -48,7 +48,7 @@ Arduino has been used for many, many projects in history and has a good track re
 | U1         | A000067             | 1        | Arduino Mega 2560 Rev3 (Master Controller for User Interface) | $48.40 |
 | U2         | A000004             | 1        | Arduino USB Host Shield (Storage PCB)                         | $15.00 |
 
-##SUBSYSTEM SCHEMATIC
+## SUBSYSTEM SCHEMATIC
 
 ![CAPSTONE I Shematic Checkpoint 1](https://user-images.githubusercontent.com/110966922/202655081-0386ed76-3795-4ab5-98af-ee23ff0b19f6.png)
 b.png)
