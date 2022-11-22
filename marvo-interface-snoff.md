@@ -5,3 +5,5 @@ Interface must support sensors of different classes that output or receive analo
 ## System Schematic
 ## Chosen Component Analysis
 ## BOM
+Designator	Manufacturer	Manufactured Part #	Description	Quantity	Price Each	
+B1	REXQualis	RG-BK-4	Breadboard (Will be the bridge between sensors and interface.	1	$11.98	
