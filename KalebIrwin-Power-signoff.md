@@ -30,8 +30,9 @@ The power subsystem will provide the necessary energy for the components to oper
     Battery (P1) capacity is 1300mAh 	Calculated need= 970mAh
     1300/970=1.34 
 ## BOM
-Designator	Manufacturer	Part Number	Description	Quantity	Price Each
-P1	OVONIC		1300mAh 14.8V LiPo battery for RC racing	1	$21.26
-P2	OCESTORE	LM2596	DC-DC Adjustable Step-Down Module with Digital Display Voltmeter Display 2 pack	1	$11.99
-P3	ALITOVE		12V-1A AC-DC wall plug with female terminal connector	1	$6.99
-P4	Treedix		5V 4.5W Solar Panel in waterproof resin	1	14.99
+| Designator | Manufacturer | Manufactured Part # | Description                                                                     | Quanitity | Price Each |
+| ---------- | ------------ | ------------------- | ------------------------------------------------------------------------------- | --------- | ---------- |
+| P1         | OVONIC       |                     | 1300mAh 14.8V LiPo battery for RC racing                                        | 1         | $21.26     |
+| P2         | OCESTORE     | LM2596              | DC-DC Adjustable Step-Down Module with Digital Display Voltmeter Display 2 pack | 1         | $11.99     |
+| P3         | ALITOVE      |                     | 12V-1A AC-DC wall plug with female terminal connector                           | 1         | $6.99      |
+| P4         | Treedix      |                     | 5V 4.5W Solar Panel in waterproof resin                                         | 1         | 14.99      |
