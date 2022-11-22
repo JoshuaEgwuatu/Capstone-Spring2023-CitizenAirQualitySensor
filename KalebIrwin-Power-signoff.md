@@ -1,7 +1,7 @@
-##Function of the subsystem 
+## Function of the subsystem 
 The power subsystem will provide the necessary energy for the components to operate. 
 
-##Constraints 
+## Constraints 
 1. Output three voltages 
   12V to power the chosen microcontroller 
   5V and 3V to power common sensors
@@ -13,10 +13,10 @@ The power subsystem will provide the necessary energy for the components to oper
 5. Battery capacity should allow no less than 24 hours of operation from a full charge 
   (~485mW*24h)/12V= ~970mAH 
 
-##Schematic 
+## Schematic 
 
 
-##Analysis 
+## Analysis 
 1. For design 1, the 12V needed to supply the microcontroller can be taken directly from the wall converter (P3) 
    For design 2, the 14.8V will be taken from the battery (P1). This is within the input voltage range for the microcontroller (6-20V) and the DC-DC           converters ()
    5V and 3V needed for the sensors will come from each DC-DC module (P2) for both modes of operation.
@@ -29,7 +29,7 @@ The power subsystem will provide the necessary energy for the components to oper
 5.  The chosen battery (P1) has 1.34 times the calculated capacity needed for the constraint to be met.
     Battery (P1) capacity is 1300mAh 	Calculated need= 970mAh
     1300/970=1.34 
-##BOM
+## BOM
 Designator	Manufacturer	Part Number	Description	Quantity	Price Each
 P1	OVONIC		1300mAh 14.8V LiPo battery for RC racing	1	$21.26
 P2	OCESTORE	LM2596	DC-DC Adjustable Step-Down Module with Digital Display Voltmeter Display 2 pack	1	$11.99
