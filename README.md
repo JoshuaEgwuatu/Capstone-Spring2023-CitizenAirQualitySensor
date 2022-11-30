@@ -19,33 +19,29 @@
 
 ### Internet Access:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  The original plan for accessing the Internet has remained the same, however, the implementation has changed.  Utilizing 3G GSM would provide national coverage.  The development here was that all major cellular service providers have been phasing out 3G support throughout the year of 2022.  This obviously proved a great concern as the initial design of the Communication subsystem was designed with 3G in mind.  The original design did not allow for anything else.  An upgrade to 4G was necessary and called for an entirely new component.
 
-## Project Demonstration & Images
+### Modularity:
 
-Give a link to a video of the project being demonstrated. The video should be hosted on the capstone youtube.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Modularity has been a core design concept from the beginning.  The system design incorporates this philosophy in many aspects and subsystems.  A project with this level of interchangeable parts and optional configurations has never been attempted by members of the team.  The team is eager to see this project flourish and see numerous options covering a wide range of locations and uses.
 
-Below the video link show some well-taken, appropriately sized images of the project.
+### Citizen Science 
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Dr. Austen has presented an admirable goal and intriguing future for this project.  His vision has a future where this proposed device is improved by numerous teams and utilized in small communities to spread awareness of air quality concerns and the health risks that can arise from poor conditions.  People and companies use this design as foundation for their own projects.  This team is happy to pursue this vision and see it fulfilled.
 
 ## About Us
 
 ### Team
 
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All of the members on the team have studied over various circuits and how to implement them to do what the developer wants it to.
-Alejandro Moore, has had some experience in PCB circuit design, analysis, and manufacturing.  Knowing what is the correct component to the system and analyzing how it should be used are things that will be needed in order to understand and record the design process. He has also had some experience in BNC cable installation and other types of wires. Learning these concepts has given a plethora of resources that can be shared with the team if needed. He is aware that the team members have other skills that can also be used within this project. This is beneficial for the functionality of the team, because it can help the others learn the concept and further the process of the project.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All of the members on the team have studied over various circuits and how to implement them to do what the developer wants it to.  Members include: Cameron Smith is a computer engineer who is heading the communication subsystem, Kaleb Irwin is an electrical engineer who is designing the power subystem, Alejandro Moore is an electrical engineer in charge of the sensor subystem, Marvo Odds is an electrical engineer managing interfacing between components and sensors, and Joshua Egwuata is an electrical engineer leading the web subsystem.  
 
 ### Faculty Supervisor
 
-Our supervisor is Dr. Jefferey Austin.
+The supervisor and customer for this project is Dr. Jeffrey Austin.  He is overseeing the design process made by the team and also providing the end-goal desires of the device.
 
 ### Stakeholders
 
-Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
-
-The customer for this product is also the same person, Dr. Jefferey Austin. Another steakholder within this course is our professor, Dr. Jessie Roberts. The team will be in contact with both teachers as we proceed within the design.
+The customer for this product is also the same person, Dr. Jeffrey Austin. Another stakeholder within this course is our professor, Mr. Jessie Roberts. The team will be in contact with both professors as we proceed within the design.
 
 
 ## Repo Organization
