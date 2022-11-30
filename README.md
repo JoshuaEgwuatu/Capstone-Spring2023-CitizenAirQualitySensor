@@ -1,6 +1,4 @@
-# {Name of the Project} - Your project should have a catchy and functional name
-
-The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
+# Citizen Air Quality Sensor
 
 ## Executive Summary
 
@@ -11,13 +9,17 @@ The descriptions and information in all readme files in the starter repo (includ
 
 ## Capabilities
 
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
-
+1. Utilize Air Quality Sensors For Given Parameters
+2. Data Acquisition Through USB Or Wirelessly Through The Internet
+3. Locate and Transmit GPS Data
+4. Optional Self-Powering Modules Using Battery/Solar
+5. Modular Sensor Design
 
 ## Salient Outcomes
 
-Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
+### Internet Access:
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
 
 ## Project Demonstration & Images
 
