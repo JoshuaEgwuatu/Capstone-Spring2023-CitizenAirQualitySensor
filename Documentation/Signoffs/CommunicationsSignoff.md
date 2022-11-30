@@ -31,4 +31,4 @@
 ## BILL OF MATERIALS (BOM)
 | Designator | Manufacturer | Manufactured Part # | Description                                                                                                 | Quantity | Price Each |
 | ---------- | ------------ | ------------------- | ----------------------------------------------------------------------------------------------------------- | -------- | ---------- |
-| U1         | DFRobot      | TEL0124             | Maduino Zero 4G LTE CAT4 (SIM7600A-H) Shield (Cellular Communication Device for Wireless Data Transmission) | 1        | $64.80     |
+| U1         | Maduino      | TEL0124             | Maduino Zero 4G LTE CAT4 (SIM7600A-H) Shield (Cellular Communication Device for Wireless Data Transmission) | 1        | $64.80     |
