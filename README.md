@@ -34,14 +34,18 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All of the members on the team have studied over various circuits and how to implement them to do what the developer wants it to.
+Alejandro Moore, has had some experience in PCB circuit design, analysis, and manufacturing.  Knowing what is the correct component to the system and analyzing how it should be used are things that will be needed in order to understand and record the design process. He has also had some experience in BNC cable installation and other types of wires. Learning these concepts has given a plethora of resources that can be shared with the team if needed. He is aware that the team members have other skills that can also be used within this project. This is beneficial for the functionality of the team, because it can help the others learn the concept and further the process of the project.
+
 ### Faculty Supervisor
 
-Tell who the faculty supervisor was for the project
+Our supervisor is Dr. Jefferey Austin.
 
 ### Stakeholders
 
 Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
 
+The customer for this product is also the same person, Dr. Jefferey Austin. Another steakholder within this course is our professor, Dr. Jessie Roberts. The team will be in contact with both teachers as we proceed within the design.
 
 
 ## Repo Organization
@@ -51,12 +55,12 @@ Give the layout of the repo and what can be found where. Make it easy on those w
 
 ### Reports
 
-In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
+The reports will conist of a Bill of Materials (BOM), Schematic, and List of Contraints and Speficiations.
 
 ### Documentation
 
-In the documentaion section information regarding the documentation that is required and how it should be organized is given.
+Signoffs and Design Documents will be placed in the Documentation Folder.
 
 ### Software
 
-In the software directory of the repo information regarding how each team is expected to document software can be found.
+The Pseudo Code and other Software components for the project will be placed in Software. 
