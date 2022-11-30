@@ -50,9 +50,6 @@ The customer for this product is also the same person, Dr. Jefferey Austin. Anot
 
 ## Repo Organization
 
-Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
-
-
 ### Reports
 
 The reports will conist of a Bill of Materials (BOM), Schematic, and List of Contraints and Speficiations.
