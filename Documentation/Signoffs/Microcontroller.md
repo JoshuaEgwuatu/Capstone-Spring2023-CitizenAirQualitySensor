@@ -23,12 +23,12 @@ Shown is the pseudo-code for the operating code.  The final form of the code may
 ![pseudo code 2](https://user-images.githubusercontent.com/110966922/202583040-c28e27fe-c175-4287-a8cb-cefafbfe327b.png)
 
 Shown is a schematic of the Arduino Mega 2560 Rev 3.
-![CAPSTONE I Shematic Checkpoint 1](https://user-images.githubusercontent.com/110966922/202655081-0386ed76-3795-4ab5-98af-ee23ff0b19f6.png)
+![CAPSTONE 1 Microcontroller Schematic](https://user-images.githubusercontent.com/118767661/204694703-fcaa5b67-bf5d-469f-a134-dae06493fe5f.png)
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
 The team has chosen to look at the Arduino Mega 2560 Rev 3 and Arduino USB Shield Host as the solutions.  These components, in conjunction, will satisfy the constraints and jobs of this subsystem.  Following are the corresponding fulfillment of the constraints:
 
-1. The Arduino Mega 2560 Rev 3 falls within the preferred range of $20-$60 at a current price of $48.40 (as of 11-8-22).  The USB Host Shield component has a price of $20.99 as of the same date.  The USB Host Shield will provide easy access to external storage as needed by the related shall statement.  The Arduino Mega does not have a USB port by default, so the additional component is needed. 
+1. The Arduino Mega 2560 Rev 3 falls within the preferred range of $20-$60 at a current price of $48.40 (as of 11-8-22).  The USB Host Shield component has a price of $20.99 as of the same date.  The USB HostShield will provide easy access to external storage as needed by the related shall statement.  The Arduino Mega does not have a USB port by default, so the additional component is needed. 
 2. 4 UART serial hardware ports are present on the board.  SPI is supported as well with included libraries.  As an alternative later, Two-Wire Interface (TWI) is also supported.  These enable the Mega to issue instructions and exchange data between other components and subsystems.
 3. The USB Host Shield enables the use of USB devices such as a Flash drive for external storage and communication.
 4. There are 54 digital input/output pins (of which 15 are PWM outputs) and 16 analog inputs.  This meets the needs for at least 15 of each (digital and analog input pins).  The other 24 digital pins may also be assigned special purposes, so the excess will be used.  
