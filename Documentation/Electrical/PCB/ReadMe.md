@@ -1,1 +1,1 @@
-See the documentation [Readme](https://github.com/TnTech-ECE/StarterRepo/blob/4acf2722f47a9d7eadf164df901ab597b25184e5/Documentation/ReadMe.md) for information about what should be in this directory
+Images of all major PCB designs.   Given that many components may comprise multiple PCBs, individual PCBs may be generalized as they are intended for cooperation with each other.  Major subystems using PCB will have their own files included.  Images will be in PCB and JPEG format.
