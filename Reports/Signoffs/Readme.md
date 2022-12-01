@@ -1,1 +1,0 @@
-This directory will contain pdf versions of the signoffs. Signoffs will be approved and added throughout the course of the design process.  These additions have no time and are related to how quickly they are approved.
