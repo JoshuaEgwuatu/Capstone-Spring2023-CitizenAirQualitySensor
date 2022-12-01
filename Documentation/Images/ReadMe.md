@@ -1,1 +1,1 @@
-See the documentation [Readme](https://github.com/TnTech-ECE/StarterRepo/blob/4acf2722f47a9d7eadf164df901ab597b25184e5/Documentation/ReadMe.md) for information about what should be in this directory
+This folder will also contain general images used throughout various documentation of the project. The images folder acts as a hoard of all the images. This includes the project poster and photos of the device under construction and completion.
