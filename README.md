@@ -36,24 +36,19 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All of the members on the team have studied over various circuits and how to implement them to do what the developer wants it to.  Members include: Cameron Smith is a computer engineer who is heading the communication subsystem, Kaleb Irwin is an electrical engineer who is designing the power subystem, Alejandro Moore is an electrical engineer in charge of the sensor subystem, Marvo Odds is an electrical engineer managing interfacing between components and sensors, and Joshua Egwuata is an electrical engineer leading the web subsystem.  
 
 ### Faculty Supervisor
-
 The supervisor and customer for this project is Dr. Jeffrey Austin.  He is overseeing the design process made by the team and also providing the end-goal desires of the device.
 
 ### Stakeholders
-
 The customer for this product is also the same person, Dr. Jeffrey Austin. Another stakeholder within this course is our professor, Mr. Jessie Roberts. The team will be in contact with both professors as we proceed within the design.
 
 
 ## Repo Organization
 
 ### Reports
-
 The reports will conist of a Bill of Materials (BOM), Schematic, and List of Contraints and Speficiations.
 
 ### Documentation
-
 Signoffs and Design Documents will be placed in the Documentation Folder.
 
 ### Software
-
 The Pseudo Code and other Software components for the project will be placed in Software. 
