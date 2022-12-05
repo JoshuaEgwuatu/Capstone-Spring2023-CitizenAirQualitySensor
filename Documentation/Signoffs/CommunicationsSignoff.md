@@ -25,7 +25,7 @@
 4. Both SPI and UART are fully supported to allow for data exchange with the microcontroller.  
 5. Two SD cards are used for storage.  The chosen SD will have 8 gigabytes of storage which is more than enough at a reasonable price.
 6. The Maduino supports C and Python with many publicly available libraries. 
-7. Arduino is a very popular and respected manufacturing and electronics design company.  They were established in 2005 and have had a lot of support throughout the years.  It is expected for them to persist for quite some time.
+7. MakerFabs is a known manufacturing company.  They create many variations of Raspberry Pis and Arduino boards to service more specific needs or specs.  Their Maduino series is a popular option for our needs and is reviewed in detail by many customers positively.  
 8. The PCM clock speed runs at 2048 KHz (2G/3G) and 4096 KHz (4G).  The CPU clock speed is not a priority as the device will be input/output heavy and not need to perform high speed computational operations. 
 
 ## BILL OF MATERIALS (BOM)
