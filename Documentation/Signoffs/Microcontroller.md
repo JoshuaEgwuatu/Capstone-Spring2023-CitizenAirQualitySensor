@@ -19,7 +19,7 @@ Shown is the pseudo-code for the operating code.  The final form of the code may
 ![pseudo code 2](https://user-images.githubusercontent.com/110966922/202583040-c28e27fe-c175-4287-a8cb-cefafbfe327b.png)
 
 Shown is a schematic of the Arduino Mega 2560 Rev 3.
-![CAPSTONE 1 Microcontroller Schematic](https://user-images.githubusercontent.com/118767661/204694703-fcaa5b67-bf5d-469f-a134-dae06493fe5f.png)
+![CAPSTONE 1 Microcontroller Schematic Updated](https://user-images.githubusercontent.com/118767661/206057697-6be6d265-4ac2-411e-a632-a95b974fea32.png)
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
 The team has chosen to look at the Arduino Mega 2560 Rev 3 and Arduino USB Shield Host as the solutions.  These components, in conjunction, will satisfy the constraints and jobs of this subsystem.  Following are the corresponding fulfillment of the constraints:
