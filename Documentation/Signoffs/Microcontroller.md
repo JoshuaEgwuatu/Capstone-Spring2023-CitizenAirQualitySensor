@@ -4,10 +4,10 @@ Within this subsystem, the code will instruct the hardware in how to sample from
 
 ## CONSTRAINTS ON THE SUBSYSTEM
 The constraints given below are generalized to allow for comparison of any potential contender for the microcontroller.  Constraints on the subsystem are as follows:
-1. The chosen microcontroller should cost no more than $60 as the end-user only has a budget of $300.  This board value cap is gathered from estimating the costs of other subsystems and viewing prices of available options that satisfy preceeding constraints such as Raspberry Pis, Arduinos, Intel, ESP, etc.  Up to 20% of the budget was then allocated due to the importance of this subsystem.
+1. The chosen microcontroller should cost no more than $60 as the end-user only has a budget of $300.  This board value cap is gathered from estimating the costs of other subsystems and viewing prices of available options that satisfy proceeding constraints such as Raspberry Pis, Arduinos, Intel, ESP, etc.  Up to 20% of the budget was then allocated due to the importance of this subsystem.
 2. The microcontroller must be able to send instructions and transfer data to other components such as the Communication subsystem.  To do this, Serial Peripheral Interface (SPI) or Universal Asynchronous Receiver/Transmitter (UART) as standards in hardware communication for liaising will need to be achievable. 
 3. USB Flash Drive external storage support is required as per the shall statements. The USB standard is used for convenience for the user as it is small, easily portable, commonly used for data storage, and readily available.
-4. The board must have at least 15 digital input pins and 16 analog input pins. The board must have enough Input/Output (I/O) pins to operate any combination of 3 sensors whether they be digital or analog. Different sensors interface with a potentially different number of pins; preliminary research shows most air quality sensors take 5 of fewer pins to operate, so 5 pins per sensor times 3 sensors gives 15 pins. Two analog pins will be used to measure voltage and current from the power subsystem to monitor battery capacity.   
+4. The board must have at least 15 digital input pins and 16 analog input pins. The board must have enough Input/Output (I/O) pins to operate any combination of 3 sensors whether they be digital or analog. Different sensors interface with a potentially different number of pins; preliminary research shows most air quality sensors take 5 of fewer pins to operate, so 5 pins per sensor times 3 sensors gives 15 pins. 2 analog pins will be used to measure voltage and current from the power subsystem to monitor battery capacity.   
 5. There must be sufficient memory for the code. Comparing similar operating code (Wireless Sensor Collection and Small-time Process Operating) with libraries and compilation show a range of 15 KB (10%) (Kilobytes) above or below 150 KB in flash memory.  To account for the worst case, 165 KB is the required memory.
 6. Some form of battery monitoring capabilities need to be included or applicable as per shall statements.
 7.  This project aims for replicability, so a board that remains relevant and available is a key part. The manufacturer needs to be a reputable and safe choice.  A stable and reputable manufacturer is assumed to remain in business for years to come and continue producing the chosen board. Public and customer reviews will be used to gauge manufacturer reputability while board production history will be used to gauge product longevity.
@@ -18,7 +18,7 @@ Shown is the pseudo-code for the operating code.  The final form of the code may
 
 ![pseudo code 2](https://user-images.githubusercontent.com/110966922/202583040-c28e27fe-c175-4287-a8cb-cefafbfe327b.png)
 
-Shown is a schematic of the Arduino Mega 2560 Rev 3.
+Shown is a schematic of the Arduino Mega 2560 Rev 3 and USB Host Shield:
 ![CAPSTONE 1 Microcontroller Schematic Updated](https://user-images.githubusercontent.com/118767661/206057697-6be6d265-4ac2-411e-a632-a95b974fea32.png)
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
@@ -27,10 +27,10 @@ The team has chosen to look at the Arduino Mega 2560 Rev 3 and Arduino USB Shiel
 1. The Arduino Mega 2560 Rev 3 falls under the preferred maximum of $60 at a current price of $48.40 (as of 11-8-22).  The USB Host Shield component has a price of $20.99 as of the same date.   
 2. 4 UART serial hardware ports are present on the board.  SPI is supported as well with included libraries.  These enable the Mega to issue instructions and exchange data between other components and subsystems (Communication).
 3. The USB Host Shield enables the use of USB devices such as a Flash drive for external storage and communication. The Arduino Mega does not support USB as a standalone component.
-4. There are 54 digital input/output pins (of which 15 are PWM outputs) and 16 analog inputs.  This meets the needs for at least 18 digital and 16 analog input pins. 
+4. There are 54 digital input/output pins (of which 15 are PWM outputs) and 16 analog inputs.  This meets the needs for at least 18 digital (15 for sensors and 3 for USB Host) and 16 analog input pins. 
 5. The code is currently of an unknown size, so it is necessary to aim slightly higher in terms of needed processing memory.  The Arduino Mega has 256 KB of Flash, 8 KB of SRAM, and 4 KB of EEPROM.  The SRAM and Flash memory are satisfactory for the subsystem’s needs.
 6. Algorithmic measurement of the battery capacity is supported.  The board will be able to read the voltage levels coming from the battery by taking a reading from a voltage divider located in the power subsystem.  This reading can then be used as a reference initially and then measured against the incoming voltage from said point continuously. Running an algorithm based on the battery’s expected output vs operational output will determine the battery’s capacity.
-7. Arduino is a very popular and respected manufacturing and electronics design company.  They were established in 2005 and have had a lot of support throughout the years.  The Ardunio Mega 2560 was realeased in 2010 and has been a staple of the Ardunio product stack fo rthe previous 12 years. It is expected for them to continue support for quite some time. 
+7. The Arduino Mega 2560 was released in 2010 and has been a staple of the Arduino product stack for the previous 12 years. It is expected for them to continue production for quite some time as no announcements of replacements or discontinuations have been made.  Arduino was established in 2005 and have had much support throughout the years becoming a popular and respected manufacturing and electronics design company.  
 8. The Arduino Mega supports C and Python with a generous amount of libraries and code support.
 
 	
