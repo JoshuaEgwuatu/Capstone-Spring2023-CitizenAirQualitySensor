@@ -1,16 +1,16 @@
 # Communication Signoff
 ## FUNCTION OF THE SUBSYSTEM
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Communication subsystem is responsible for exchanging data across and allows for access to the Internet.  Without this subsystem, wireless gathering of data would be infeasible.  This component will integrate with the microcontroller and act as a liaison or mouth for the device.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The type of chosen type of communication is 4G Long-term Evolution (LTE), which is a standard to describe the telecommunications protocols used by mobile and cellular device communications across broadband cellular networks.  Global System for Mobile Communication (GSM) and 3G are no longer viable options as the hardware supporting them will be shutoff December 31st, 2022  The reasoning behind the decision to utilize this type of communication is the near global infrastructure already set in place.  There are exceptions to this, but in terms of coverage, 4G LTE will be an expansive choice.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Communication subsystem is responsible for receiving data from the Microcontroller subsystem, connecting the device to the Internet, and formatting and sending the received data to the Web & Wireless subsystem.  This subsystem will utilize 4G LTE (Long-term Evolution) as a standard in telecommunications to connect to the Internet for its near global coverage.  
+
 ## CONSTRAINTS ON THE SUBSYSTEM
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  The constraints given below are generalized to allow for comparison of any potential contender for the microcontroller.  Constraints on the subsystem are as follows:
-1. The component must be able to utilize LTE communication in 4G.  4G operating frequencies include 600 MHz, 700 MHz, 1700/2100 MHz, 2300 MHz, and 2500 MHz bands.  This is the chosen method of accessing the Internet due to its coverage and support in place.
-2. The component must have a slot and support for a Subscriber Identity Module card (SIM).  This card contains identification information related to the device that allows a specified mobile network to pinpoint its location.  Without this, the device will be unable to send data to the mobile networks and, by extension, the Internet.
-3. Price for this component should remain under $100 as this can quickly become a very expensive component, but it needs a limit and to be included for wireless communication.  
-4. The component must support communication with other components.  To do this, Serial Peripheral Interface (SPI), Universal Asynchronous Receiver/Transmitter (UART), or some form of hardware communication will need to be achievable on the board.  SPI is a synchronous method while UART is an asynchronous method for two devices connected over a short distance to liaise.
-5. There must be sufficient memory for the code. Comparing similar operating code with libraries and compilation show a range of 12 KB above or below 120 KB (Kilobytes) in flash memory. To account for worst case, 132 KB is the required memory.  
-6. The component will need to have coding language support for C and or Python. Support for both is preferred for options and coverage but not required. It is expected that the users will have some degree of coding experience and may potentially personalize or improve upon the code. These languages are chosen due to popularity and performance. C, in particular, is predicted to be very desirable for this project.
-7. The manufacturer needs to be a reputable and safe choice. A stable manufacturere that is assumed to remain in business for years to come and continue producing the chosen board is a necessecity. This project aims for replicability, so a board that remains relevant and available is a key part.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  The constraints given below are generalized to allow for comparison of any potential contender for the solution.  Constraints on the subsystem are as follows:
+1. The component must be able to utilize 4G LTE telecommunication.  4G LTE operating frequencies include 600 MHz, 700 MHz, 1700/2100 MHz, 2300 MHz, and 2500 MHz bands.  This is the chosen method of accessing the Internet due to its coverage and support in place.
+2. The component must have a slot and support for a Subscriber Identity Module card (SIM).  The component must be able to use this SIM card and its identifying information to access the specified broadband cellular network related to the SIM card's service provider.
+3. Price for this component should remain under $100 as end-users only have a budget of $300.  Allocating 1/3 of the budget is from estimating the costs of other subsystems and viewing prices of available options that satisfy the functions.
+4. For receiving data from the Microcontroller subsystem, Serial Peripheral Interface (SPI) or Universal Asynchronous Receiver/Transmitter (UART) as standards for hardware communication will need to be achievable.  
+5. There must be sufficient memory for the code. Comparing similar operating code (Wireless Sensor Collection and Small-time Processes Operating) with libraries and compilation show a range of 12 KB (Kilobyte) (10%) above or below 120 KB in flash memory. To account for worst case, 132 KB is the required memory.  
+6. The board will need to have coding language support for C and/or Python. At least one must be supported. These languages are chosen due to popularity, online support, and performance. This helps create a wider web of coverage for end-users who are at least relatively experienced with coding and engineering concepts.
+7. This project aims for replicability, so a component with a stable and reputable manufacturer that remains relevant and available is a key part.  A stable and reputable manufacturer is assumed to remain in business for years to come and continue producing the chosen board. Public and customer reviews will be used to gauge manufacturer reputability while component production history will be used to gauge product longevity.
 8. The clock speed for sending/receiving signals must be at least 4096 KHz.  If the clock were any slower, it would not able to keep up with 4G speeds.  
 
 ## BUILDABLES OF SUBSYSTEM
@@ -18,15 +18,15 @@
 ![Psued-Code_Comm](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/Psuedo-code_Comm.JPG)
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The team has chosen to look at the Maduino Zero 4G LTE(SIM7600X) to fulfill the needs of the communications subsystem.  It is a small board that takes advantage of the cellular networks to transfer and exchange data wirelessly.  This component will satisfy the previously listed constraints and jobs of this subsystem.  Following are the corresponding fulfillment of the constraints:
-1. The Maduino is able to fully utilize 4G LTE to communicate and transmit data throughout the Internet.  The carrier frequencies are 850 MHz, 1800 MHz, and 1900 MHz which puts it within range of the standard GSM. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The team has chosen to look at the Maduino Zero 4G LTE(SIM7600X) to fulfill the needs of the communications subsystem.  This component will satisfy the previously listed constraints and jobs of this subsystem.  Following are the corresponding fulfillment of the constraints:
+1. The Maduino is able to fully utilize 4G LTE to communicate and transmit data throughout the Internet.  The carrier frequencies are 850 MHz, 1800 MHz, and 1900 MHz which puts it within range of the standard 4G LTE. 
 2. There is a slot for a SIM card on the bottom of the component with corresponding connections.
 3. With a price of $64.80, it falls under the $100 limit.  Two SD cards will also be purchased for a total of $74.80.
-4. Both SPI and UART are fully supported to allow for data exchange with the microcontroller.  
-5. Two SD cards are used for storage.  The chosen SD will have 8 gigabytes of storage which is more than enough at a reasonable price.
+4. UART is fully supported to allow for data to be receiving from the Microcontroller subsystem.  
+5. Two SD cards are used for storage.  The chosen SD will have 8 gigabytes of storage each which is more than enough at a reasonable price.
 6. The Maduino supports C and Python with many publicly available libraries. 
-7. MakerFabs is a known manufacturing company.  They create many variations of Raspberry Pis and Arduino boards to service more specific needs or specs.  Their Maduino series is a popular option for our needs and is reviewed in detail by many customers positively.  
-8. The PCM clock speed runs at 2048 KHz (2G/3G) and 4096 KHz (4G).  The CPU clock speed is not a priority as the device will be input/output heavy and not need to perform high speed computational operations. 
+7. The SIM7600 series of boards were first introduced in 2018 and more realized in production in 2020, making them newer boards.  MakerFabs, founded in 2015, is a known manufacturing company that has created many variations of PCBA boards.  Their Maduino series is a popular option for wireless connections and is reviewed in detail by many customers positively.  
+8. The PCM clock speed runs at 2048 KHz (2G/3G) and 4096 KHz (4G).  4G clock speeds are an option and will enable the component to send/receive data at needed frequencies.
 
 ## BILL OF MATERIALS (BOM)
 | Designator | Manufacturer      | Manufactured Part # | Description                                                                                     | Quantity | Price Each |
