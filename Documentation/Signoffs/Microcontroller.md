@@ -29,7 +29,7 @@ The team has chosen the Arduino Mega 2560 Rev 3 and Arduino USB Host Shield as t
 4. There are 54 digital input/output pins (of which 15 are PWM outputs) and 16 analog inputs.  This meets the needs for at least 18 digital (15 for sensors and 3 for USB Host) and 16 analog input pins.  There are also 4 UART pins and 21 digital (2 for battery monitoring discretely) may be assigned special purposes later on in design.  1 analog pin may also be used for taking a continuous measurement for the battery monitoring.
 5. The Arduino Mega has 256 KB of Flash, 8 KB of SRAM, and 4 KB of EEPROM.  The SRAM and Flash memory are satisfactory for the subsystem’s needs.
 6. The Arduino Mega 2560 was released in 2010 and has been in production ever since [1].  The Mega is used in more demanding projects, such as this one, and has received good reception [2] [3] [4]. No announcements of replacements or discontinuations have been made regarding the Mega 2560.  Arduino was established in 2005 and have had much support throughout the years becoming a popular and respected manufacturing and electronics design company [5] [6] [7].  
-7. The Arduino Mega supports C [8] and Python [9] with a generous amount of libraries and code support [10].
+7. The Arduino Mega supports C [8][14] and Python [9][15] with a generous amount of libraries and code support [10].
 
 	
 Arduino has been used for many, many projects in history and has a good track record.  The Arduino Mega and USB Host Shield have conjointly shown to fulfill the needs of this subsystem.  
@@ -56,3 +56,6 @@ Arduino has been used for many, many projects in history and has a good track re
 11. Texas Instruments, Electrical Design and Semiconductor Production Company, "Universal Asynchronous Receiver/Transmitter (UART)," https://www.ti.com/lit/ug/sprugp1/sprugp1.pdf?ts=1670532165815&ref_url=https%253A%252F%252Fwww.google.com%252F (Accessed on 12-8-22).
 12. Pena, Eric, Analog Dialogue, Technical Magazine, "UART: A Hardware Communication Protocol Understanding Universal Asynchronous Receiver/Transmitter," https://www.analog.com/en/analog-dialogue/articles/uart-a-hardware-communication-protocol.html (Accessed on 12-8-22).
 13. USB Implementor-Forum Inc., Support Organization for USB Protocols and DataSheets, "USB 2.0 Specification," https://www.usb.org/document-library/usb-20-specification  (Accessed on 12-8-22).
+14. International Organization for Standards (ISO), License Holders and Technical Committees For Standards, "ISO/IEC 9899:2018
+Information technology — Programming languages — C," https://www.iso.org/standard/74528.html (Accessed 12-8-22).
+15. Guido van Rossum, Barry Warsaw, Nick Coghlan, Program For Early Parent Support (PEPS), Python Developers, "PEP 8 – Style Guide for Python Code," https://peps.python.org/pep-0008/  (Accessed on 12-8-22).
