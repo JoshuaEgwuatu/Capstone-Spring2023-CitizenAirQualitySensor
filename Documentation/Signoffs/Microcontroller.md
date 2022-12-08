@@ -58,4 +58,4 @@ Arduino has been used for many, many projects in history and has a good track re
 13. USB Implementor-Forum Inc., Support Organization for USB Protocols and DataSheets, "USB 2.0 Specification," https://www.usb.org/document-library/usb-20-specification  (Accessed on 12-8-22).
 14. International Organization for Standards (ISO), License Holders and Technical Committees For Standards, "ISO/IEC 9899:2018
 Information technology — Programming languages — C," https://www.iso.org/standard/74528.html (Accessed 12-8-22).
-15. Guido van Rossum, Barry Warsaw, Nick Coghlan, Program For Early Parent Support (PEPS), Python Developers, "PEP 8 – Style Guide for Python Code," https://peps.python.org/pep-0008/  (Accessed on 12-8-22).
+15. Python Software Foundation, Python Developers, "The Python Language Reference" https://docs.python.org/3/reference/index.html  (Accessed on 12-8-22).
