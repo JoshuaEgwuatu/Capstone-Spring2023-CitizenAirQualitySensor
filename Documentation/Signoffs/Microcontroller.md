@@ -43,10 +43,10 @@ Arduino has been used for many, many projects in history and has a good track re
 
 
 ## References
-[1] Wikipedia, free online encyclopedia, "List of Arduino boards and compatible systems," https://en.wikipedia.org/wiki/List_of_Arduino_boards_and_compatible_systems  (Accessed on 12-8-22).
-[2] Blom, Jim, SparkFun Electronics, Electronics Designers, Retailers, and Critiques, "Arduino Comparison Guide," https://learn.sparkfun.com/tutorials/arduino-comparison-guide  (Accessed on 12-8-22).
-[3] Pedamkar, Priya, EDUCBA, Skill Based Educational and Tutorial Services, "Arduino Mega vs Uno," https://www.educba.com/arduino-mega-vs-uno (Accessed on 12-8-22).
-[4] Element14, Provides Tutorials, Reviews, and Discussion Blogs For Engineers and Designers, "Review of Arduino Mega 2560," https://community.element14.com/products/roadtest/rv/roadtest_reviews/1068/review_of_arduino_me  (Accessed on 12-8-22).
-[5] G2, Software Peer Review and Marketplace, "Arduino IDE Reviews & Product Details," https://www.g2.com/products/arduino-ide/reviews (Accessed on 12-8-22).
-[6] Arduino, Electronics and Software Manufacturers, "About Arduino," https://www.arduino.cc/en/about (Accessed on 12-8-22).
-[7] Kushner, David, IEEE Spectrum, Largest Technical Professional Organization, "The Making of Arduino," https://spectrum.ieee.org/the-making-of-arduino (Accessed on 12-8-22).
+1. Wikipedia, free online encyclopedia, "List of Arduino boards and compatible systems," https://en.wikipedia.org/wiki/List_of_Arduino_boards_and_compatible_systems  (Accessed on 12-8-22).
+2. Blom, Jim, SparkFun Electronics, Electronics Designers, Retailers, and Critiques, "Arduino Comparison Guide," https://learn.sparkfun.com/tutorials/arduino-comparison-guide  (Accessed on 12-8-22).
+3. Pedamkar, Priya, EDUCBA, Skill Based Educational and Tutorial Services, "Arduino Mega vs Uno," https://www.educba.com/arduino-mega-vs-uno (Accessed on 12-8-22).
+4. Element14, Provides Tutorials, Reviews, and Discussion Blogs For Engineers and Designers, "Review of Arduino Mega 2560," https://community.element14.com/products/roadtest/rv/roadtest_reviews/1068/review_of_arduino_me  (Accessed on 12-8-22).
+5. G2, Software Peer Review and Marketplace, "Arduino IDE Reviews & Product Details," https://www.g2.com/products/arduino-ide/reviews (Accessed on 12-8-22).
+6. Arduino, Electronics and Software Manufacturers, "About Arduino," https://www.arduino.cc/en/about (Accessed on 12-8-22).
+7. Kushner, David, IEEE Spectrum, Largest Technical Professional Organization, "The Making of Arduino," https://spectrum.ieee.org/the-making-of-arduino (Accessed on 12-8-22).
