@@ -11,11 +11,9 @@ Give the elevator pitch and abstract for the project. It should allow interested
 
 Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
 
-
 ## Salient Outcomes
 
 Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
-
 
 ## Project Demonstration & Images
 
@@ -39,11 +37,9 @@ Tell who the faculty supervisor was for the project
 Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
 
 
-
 ## Repo Organization
 
 Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
-
 
 ### Reports
 
