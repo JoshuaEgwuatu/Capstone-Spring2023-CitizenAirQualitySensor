@@ -15,7 +15,7 @@ Constraints on the subsystem are as follows:
 ## BUILDABLE SCHEMATIC OF SUBSYSTEM
 Shown is the pseudo-code for the operating code.  If an error arises, a default handler will need to be called to assess the situation.  It should also be noted that the loop is intended to be theoretically infinite, however, there are explicit and implicit breaks at the battery running critically low (explicit) and the shutoff button being pushed (implicit).  “Timers” refer to either physical hardware or coded timers that go off to alert the system that the sensor(s) sampling is ready.
 
-![pseudo code 2](https://user-images.githubusercontent.com/110966922/202583040-c28e27fe-c175-4287-a8cb-cefafbfe327b.png)
+![CapstonePsuedo](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/CapstonePsuedo.jpg)
 
 Shown is a schematic of the Arduino Mega 2560 Rev 3 and USB Host Shield:
 ![CAPSTONE 1 Microcontroller Schematic Updated](https://user-images.githubusercontent.com/118767661/206057697-6be6d265-4ac2-411e-a632-a95b974fea32.png)
