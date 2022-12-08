@@ -5,7 +5,7 @@ Within this subsystem, the code will instruct the hardware in how to sample from
 ## CONSTRAINTS ON THE SUBSYSTEM
 Constraints on the subsystem are as follows:
 1. The chosen microcontroller should cost no more than $60 as the end-user only has a budget of $300.  This board value cap is gathered from estimating the costs of other subsystems and viewing prices of available options that satisfy proceeding constraints such as Raspberry Pis, Arduinos, Intel, ESP, etc.  Up to 20% of the budget was then allocated due to the importance of this subsystem.
-2. The microcontroller must be able to send instructions and transfer data to other components such as the Communication subsystem.  To do this, Universal Asynchronous Receiver/Transmitter (UART) (2 UART pins) as a standard in hardware communication for liaising will need to be achievable. 
+2. The microcontroller must be able to send instructions and transfer data to other components such as the Communication subsystem.  To do this, Universal Asynchronous Receiver/Transmitter [11] (UART) (2 UART pins) as a standard in hardware communication for liaising will need to be achievable. 
 3. USB Flash Drive external storage support is required as per the shall statements. The USB standard is used for convenience for the user as it is small, easily portable, commonly used for data storage, and readily available.
 4. The board must have at least 15 digital input pins and 16 analog input pins. This allows the board to have enough Input/Output (I/O) pins to operate any combination of 3 sensors whether they be digital or analog. Different sensors interface with a potentially different number of pins; preliminary research shows most air quality sensors take 5 of fewer pins to operate, so 5 pins per sensor times 3 sensors gives 15 pins. 2 analog/digital pins will be used to read voltage/current from the power subsystem to monitor battery capacity with 1 analog pin for continuous.  It must have 2 UART pins for UART.
 5. There must be sufficient memory for the code. Comparing similar operating code (Wireless Sensor Collection and Small-time Process Operating) with libraries and compilation show a range of 15 KB (10%) (Kilobytes) above or below 150 KB in flash memory.  To account for the worst case, 165 KB is the required memory.
@@ -29,7 +29,7 @@ The team has chosen the Arduino Mega 2560 Rev 3 and Arduino USB Host Shield as t
 4. There are 54 digital input/output pins (of which 15 are PWM outputs) and 16 analog inputs.  This meets the needs for at least 18 digital (15 for sensors and 3 for USB Host) and 16 analog input pins.  There are also 4 UART pins and 21 digital (2 for battery monitoring discretely) may be assigned special purposes later on in design.  1 analog pin may also be used for taking a continuous measurement for the battery monitoring.
 5. The Arduino Mega has 256 KB of Flash, 8 KB of SRAM, and 4 KB of EEPROM.  The SRAM and Flash memory are satisfactory for the subsystem’s needs.
 6. The Arduino Mega 2560 was released in 2010 and has been in production ever since [1].  The Mega is used in more demanding projects, such as this one, and has received good reception [2] [3] [4]. No announcements of replacements or discontinuations have been made regarding the Mega 2560.  Arduino was established in 2005 and have had much support throughout the years becoming a popular and respected manufacturing and electronics design company [5] [6] [7].  
-7. The Arduino Mega supports C and Python with a generous amount of libraries and code support.
+7. The Arduino Mega supports C [8] and Python [9] with a generous amount of libraries and code support [10].
 
 	
 Arduino has been used for many, many projects in history and has a good track record.  The Arduino Mega and USB Host Shield have conjointly shown to fulfill the needs of this subsystem.  
@@ -50,3 +50,8 @@ Arduino has been used for many, many projects in history and has a good track re
 5. G2, Software Peer Review and Marketplace, "Arduino IDE Reviews & Product Details," https://www.g2.com/products/arduino-ide/reviews (Accessed on 12-8-22).
 6. Arduino, Electronics and Software Manufacturers, "About Arduino," https://www.arduino.cc/en/about (Accessed on 12-8-22).
 7. Kushner, David, IEEE Spectrum, Largest Technical Professional Organization, "The Making of Arduino," https://spectrum.ieee.org/the-making-of-arduino (Accessed on 12-8-22).
+8. CPlusPlus, Archive of the C, C#, and C++ Programming Language, "C-Library," https://cplusplus.com/reference/clibrary (Accessed on 12-8-22).
+9. Python, Archive of Python Programming Language, "Arduino-Python3 Command API," https://pypi.org/project/arduino-python3/ (Accessed on 12-8-22).
+10. Arduino, Electronics and Software Manufacturers, "Libraries - Arduino," https://www.arduino.cc/reference/en/libraries/ (Accessed on 12-8-22).
+11. Texas Instruments, Electrical Design and Semiconductor Production Company, "Universal Asynchronous Receiver/Transmitter (UART)," https://www.ti.com/lit/ug/sprugp1/sprugp1.pdf?ts=1670532165815&ref_url=https%253A%252F%252Fwww.google.com%252F (Accessed on 12-8-22).
+12. Pena, Eric, Analog Dialogue, Technical Magazine, "UART: A Hardware Communication Protocol Understanding Universal Asynchronous Receiver/Transmitter," https://www.analog.com/en/analog-dialogue/articles/uart-a-hardware-communication-protocol.html (Accessed on 12-8-22).
