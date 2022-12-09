@@ -1,54 +1,59 @@
 # Citizen Air Quality Sensor
 
-The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
-
 ## Executive Summary
 
-Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The goal of this project is a replicable device that accepts and operates multiple air quality sensors independently with a selection of interchangeable sensor options for local data collection.  Air quality is vital to maintaining life on Earth.  Poor air quality can result in a slew of health problems such as heart disease and lung cancer.  In the modern age, humanity pushes the levels of pollution in the world to unprecedented levels as compared to the pre-industrial era.  This pollution affects the very air that all living things rely on to survive.  This perspective on the negative repercussions of polluting the air and Earth is what led to this team’s proposition of a device that allows everyday citizens to see what pollutants blight their communities.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; There are already services that exist to alleviate this problem, however, the services do not fulfill the solution to a high degree.  The biggest of these services would be the Air Quality Index (AQI) provided by the United States Environmental Protection Agency.  The AQI takes in data from sensors placed systematically all across the country and in highly populated areas.  This data is then aggregated together to fill in any regions that were not explicitly sampled from a sensor directly.  The issue derives from that last sentence.  Because it is not reasonable or cost-effective for these services to place sensors everywhere, the readings that are received from these sensors may not be accurate in any given place.  For a community wanting a detailed view into the air quality of their chosen area, they would require more concrete sources of data.  It is here where the team’s proposed device comes in to provide an easy-to-use, solar-powered, easily replicable, and low-cost modular system that uses multiple sensors to gather data on different pollutants.
+
 
 
 ## Capabilities
 
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
+1. Utilize Air Quality Sensors For Given Parameters
+2. Data Acquisition Through USB Or Wirelessly Through The Internet
+3. Locate and Transmit GPS Data
+4. Optional Self-Powering Modules Using Battery/Solar
+5. Modular Sensor Design
 
 ## Salient Outcomes
 
-Projects often have some outcomes that are more interesting than others. Here, highlight those things that you found interesting!
+### Internet Access:
 
-## Project Demonstration & Images
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  The original plan for accessing the Internet has remained the same, however, the implementation has changed.  Utilizing 3G GSM would provide national coverage.  The development here was that all major cellular service providers have been phasing out 3G support throughout the year of 2022.  This obviously proved a great concern as the initial design of the Communication subsystem was designed with 3G in mind.  The original design did not allow for anything else.  An upgrade to 4G was necessary and called for an entirely new component.
 
-Give a link to a video of the project being demonstrated. The video should be hosted on the capstone youtube.
+### Modularity:
 
-Below the video link show some well-taken, appropriately sized images of the project.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Modularity has been a core design concept from the beginning.  The system design incorporates this philosophy in many aspects and subsystems.  A project with this level of interchangeable parts and optional configurations has never been attempted by members of the team.  The team is eager to see this project flourish and see numerous options covering a wide range of locations and uses.
 
+### Citizen Science 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Dr. Austen has presented an admirable goal and intriguing future for this project.  His vision has a future where this proposed device is improved by numerous teams and utilized in small communities to spread awareness of air quality concerns and the health risks that can arise from poor conditions.  People and companies use this design as foundation for their own projects.  This team is happy to pursue this vision and see it fulfilled.
 
 ## About Us
 
 ### Team
 
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All of the members on the team have studied over various circuits and how to implement them to do what the developer wants it to.  Members include: 
+Cameron Smith is a computer engineer who is heading the communication subsystem
+Kaleb Irwin is an electrical engineer who is designing the power subystem
+Alejandro Moore is an electrical engineer in charge of the sensor subystem
+Marvo Odds is an electrical engineer managing interfacing between components and sensors
+Joshua Egwuata is an electrical engineer leading the web subsystem.  
 
 ### Faculty Supervisor
-
-Tell who the faculty supervisor was for the project
+The supervisor and customer for this project is Dr. Jeffrey Austin.  He is overseeing the design process made by the team and also providing the end-goal desires of the device.
 
 ### Stakeholders
-
-Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+The customer for this product is also the same person, Dr. Jeffrey Austin. Another stakeholder within this course is our professor, Mr. Jessie Roberts. The team will be in contact with both professors as we proceed within the design.
 
 
 ## Repo Organization
 
-Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
-
 ### Reports
-
-In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
+The reports will conist of a Bill of Materials (BOM), Schematic, and List of Contraints and Speficiations.
 
 ### Documentation
-
-In the documentaion section information regarding the documentation that is required and how it should be organized is given.
+Signoffs and Design Documents will be placed in the Documentation Folder.
 
 ### Software
-
-In the software directory of the repo information regarding how each team is expected to document software can be found.
+The Pseudo Code and other Software components for the project will be placed in Software. 
