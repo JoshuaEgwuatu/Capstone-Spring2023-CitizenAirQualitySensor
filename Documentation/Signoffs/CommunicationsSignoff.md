@@ -55,5 +55,5 @@ Notes: T-Mobile prepaid SIM cards come in many packages and plans for typical ta
 7. HowToElectronics, Engineering Community For Public Electrical Projects, News, and Articles, "Using SIM7600 4G GSM with Arduino | AT Commands, Call, SMS," https://how2electronics.com/using-sim7600-4g-gsm-with-arduino-at-commands-call-sms/ (Accessed on 12-8-22).
 8. Espressif Systems, Specializes in AIoT Development, "ESP8266," https://www.espressif.com/en/products/socs/esp8266 (Accessed on 12-8-22).
 9. Tones B, Instructables, Autodesk Inc., Documentation and Engineering Education Community, "ESP8266 WiFi Module for Dummies," https://www.instructables.com/ESP8266-WiFi-Module-for-Dummies/ (Accessed on 12-8-22).
-10. IDA HÜBSCHMANN, Nabto, IoT Communication Development Organization, "ESP8266 for IoT: A Complete Guide," https://www.nabto.com/esp8266-for-iot-complete-guide/ (Accessed on 12-8-22).
+10. Ida HÜbschmann, Nabto, IoT Communication Development Organization, "ESP8266 for IoT: A Complete Guide," https://www.nabto.com/esp8266-for-iot-complete-guide/ (Accessed on 12-8-22).
 11. Amazon, Online Marketplace, "HiLetgo 1PC ESP8266 NodeMCU CP2102 ESP-12E Customer Reviews," https://www.amazon.com/HiLetgo-Internet-Development-Wireless-Micropython/product-reviews/B010O1G1ES/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews (Accessed on 12-8-22).
