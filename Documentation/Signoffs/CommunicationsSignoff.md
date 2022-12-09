@@ -22,7 +22,7 @@ The only connections made are 2 UART connections to the Microcontroller subsyste
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
 The team has chosen the Maduino Zero 4G LTE(SIM7600X) to satisfy the previously listed constraints and jobs of this subsystem for 4G LTE:
-1. The Maduino is able to fully utilize 4G LTE to communicate and transmit data throughout the Internet.  The carrier frequencies are 850 MHz, 1800 MHz, and 1900 MHz which puts it within range of the standard 4G LTE. 
+1. The Maduino is able to fully utilize 4G LTE to communicate and transmit data throughout the Internet.
 2. There is a slot for a SIM card on the bottom of the component with corresponding connections.
 3. With a price of $64.80, it falls under the $100 limit.  Two SD cards will also be purchased for a total of $74.80.  T-Mobile Mobile Internet Access SIM card has a recurring cost of $10.
 4. UART is fully supported to allow for data to be received from the Microcontroller subsystem.  
