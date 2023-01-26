@@ -41,6 +41,7 @@ Arduino has been used for many, many projects in history and has a good track re
 | U1         | Arduino      | A000067             | Arduino Mega 2560 Rev3 (Master Controller for User Interface) | 1        | $48.40      |
 | U2         | Arduino      | A000004             | Arduino USB Host Shield (Storage PCB)                         | 1        | $20.99      |
 
+Notes: Both purchases can be made from Amazon to maintain same retailer.  Arduino themselves will only sell the Arduino Mega.  Links are suscetible to change and deletion, so part numbers, titles, and manufacturer are used to specify item.
 
 ## References
 1. Wikipedia, free online encyclopedia, "List of Arduino boards and compatible systems," https://en.wikipedia.org/wiki/List_of_Arduino_boards_and_compatible_systems  (Accessed on 12-8-22).
