@@ -4,20 +4,20 @@ The Communication subsystem is responsible for receiving data from the Microcont
 
 ## CONSTRAINTS ON THE SUBSYSTEM
 Constraints on the subsystem are as follows for 4G LTE configuration:
-1. The component must be able to utilize 4G LTE telecommunication.  This is the chosen method of accessing the Internet due to its coverage and support in place.
+1. The component must be able to utilize 4G LTE telecommunication.  This is the chosen method of accessing the Internet for users needing its coverage.
 2. The component must have support for a Subscriber Identity Module card (SIM).  
 3. Price for this component should remain under $100 as end-users only have a budget of $300.  Recurring costs per month should be $10 or lower.  Allocating 1/3 of the budget is from estimating the costs of other subsystems and viewing prices of available options that satisfy the functions.
-4. For receiving data from the Microcontroller subsystem, Universal Asynchronous Receiver/Transmitter (UART) as standards for hardware communication will need to be achievable [2] [3].  
+4. For receiving data from the Microcontroller subsystem, Universal Asynchronous Receiver/Transmitter (UART) as standards for hardware communication will need to be achievable with at least 2 UART pins [2] [3].  
 5. This project aims for replicability, so a board that remains relevant and available is a key part. The manufacturer needs to be a reputable and safe choice. A stable and reputable manufacturer is assumed to remain in business for years to come and continue producing the chosen board. Public and customer reviews will be used to gauge manufacturer reputability while board production history will be used to gauge product longevity.  
 
 Constraints on the subsystem are as follows for Wi-Fi configuration:
 1. The component must have support for connecting to an already established Wi-Fi network for Internet access.  
 2. Price for this component should remain under $100 as end-users only have a budget of $300.  Allocating 1/3 of the budget is from estimating the costs of other subsystems and viewing prices of available options that satisfy the functions.
-3. For receiving data from the Microcontroller subsystem, Universal Asynchronous Receiver/Transmitter (UART) as standards for hardware communication will need to be achievable [2] [3].
+3. For receiving data from the Microcontroller subsystem, Universal Asynchronous Receiver/Transmitter (UART) as standards for hardware communication will need to be achievable with at least 2 UART pins [2] [3].
 4. This project aims for replicability, so a board that remains relevant and available is a key part. The manufacturer needs to be a reputable and safe choice. A stable and reputable manufacturer is assumed to remain in business for years to come and continue producing the chosen board. Public and customer reviews will be used to gauge manufacturer reputability while board production history will be used to gauge product longevity.  
 
 ## BUILDABLES OF SUBSYSTEM
-The only connections made are 2 UART connections to the Microcontroller subsystem.  “Timers” refers to physical or software timers that act as a "Watchdog" to prevent the system from hanging on a bad or failed connection. Once a timer is triggered, an interrupt should start and take over to see what is taking so long.  It will then close the connection and return to the loop to try again.
+The only connections made are 2 UART connections to the Microcontroller subsystem.  “Timers” refers to physical or software timers that act as a "Watchdog" to prevent the system from hanging on a bad or failed connection. Once a timer is triggered, an interrupt should start and take over to see what is taking so long.  It will then close the connection and return to the loop to wait for another attempt.
 ![Psued-Code_Comm](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/Psuedo-code_Comm.JPG)
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
@@ -30,7 +30,7 @@ The team has chosen the Maduino Zero 4G LTE(SIM7600X) to satisfy the previously 
 
 The team has chosen the HiLetGo ESP8266 NodeMCU CP2102 ESP-12E to satisfy the previously listed constraints and jobs of this subsystem for Wi-Fi:
 1. The ESP8266 has the ability to connect to a local Wi-Fi network to transmit/receive data throughout the Internet.
-2. With a price of $7.99, it falls under the $100 limit.
+2. With a price of $7.99, it falls well under the $100 limit.
 3. UART is fully supported to allow for data to be received from the Microcontroller subsystem.
 4. The ESP8266 was launched by Espressif in 2014 and has steadily rose in popularity and usage in custom projects requiring a Wi-Fi connection [8] [9].  This manufacturer, HiLetGo, has been producing components since 2016 and specializes in robotic, sensor, and module manufacturing [9].  Although preceeded by the ESP32, ESP8266 continues manufacturing due to its popularity and performance per dollar [10].  Customer reviews highly rate the HiLetGo version of the ESP8266 in particular [11].
 
@@ -39,9 +39,13 @@ The team has chosen the HiLetGo ESP8266 NodeMCU CP2102 ESP-12E to satisfy the pr
 | Designator | Manufacturer      | Manufactured Part # | Description                                                                                     | Quantity | Price Each |
 | ---------- | ----------------  | ------------------- | ----------------------------------------------------------------------------------------------- | -------- | ---------- |
 | U1         | Maduino/MakerFabs | OHMZ4G7600          | Maduino Zero 4G LTE (SIM7600A-H) (Cellular Communication Device for Wireless Data Transmission) | 1        | $64.80     |
-| U2         | Micro Center      | 16GB SDHC 2PK       | Micro Center 16GB SDHC Class 10 Flash Memory Card 2 Pack (Storage for device)                   | 1        | $9.99      |
-| U3         | T-Mobile          | ZZZ260R070          | T-Mobile® SIM Card - 4G - 5G (Prepaid SIM card and data plan for wireless Internet access)      | 1        | $10.00     |
+| U2         | SanDisk      | SDSDXNE-016G-GNCIN       | SanDisk 16GB Extreme SDHC UHS-I Memory Card - 90MB/s, C10, U3, V30, 4K UHD                  | 1        | $9.99      |
+| U3         | T-Mobile          | ZZZ260R070          | T-Mobile® SIM Card - 4G - 5G (Prepaid SIM card and data plan for wireless Internet access)      | 1        | $9.78     |
 | U4         | HiLetGo           | 703681358704        | HiLetGo 1PC ESP8266 NodeMCU CP2102 ESP-12E Development Board Open Source Serial Module          | 1        | $7.99      |
+
+Notes: Do not purchase the T-Mobile prepaid SIM card without an explicit request from the supervisor or instuctor and team.  Wi-Fi will be the initial focus, so there is not need to pay for a monthly plan just yet. 
+
+Notes: The Maduino Zero 4G LTE (SIM7600A-H) ("A-H" referring to North American frequency bands while "E-H" refers to several other countries) can only be purchased from MakerFabs.  The SanDisk 16GB Extreme SDHC UHS-I Memory Card (SD Card) and HiLetGo 1PC ESP8266 are both available from Amazon.
 
 Notes: T-Mobile prepaid SIM cards come in many packages and plans for typical tablets and phones.  We are asking for just the SIM card and data plan for ZIP code 38501.  Sim card pack T-Mobile® SIM Card - 4G - 5G (SKU: ZZZ260R070) with the Mobile Internet Plan: Unlimited Mobile Internet with up to 2GB of 5G & 4G LTE Data for $10.00 per month with $10.00 activation fee covering the first month.
 
