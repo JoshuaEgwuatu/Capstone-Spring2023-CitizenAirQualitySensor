@@ -1,16 +1,14 @@
 Interface Signoff
 
 Subsystem Function
-The interface will house up 3 analog/digital based sensors at a time and output the recieved data to the microcontroller.                                                                                                   
+The interface will house a minimum of 3 sensors at a time that can be analog current, analog voltage, or digital signal based. The output or data gathered from these sensors will then be transmitted to the microcontroller.
+
 Subsystem Constraints
-Interface must support sensors of different classes that output or receive analog voltage,analog current and digital signals.
-Interfaces must provide 3 or 5VDC to support sensors with different voltage requirements.
+The interface must support sensors that output or receive analog voltage,analog current and digital signals.
+The interface must provide 3 or 5VDC to support sensors with different voltage requirements.
 
 System Schematic
-
 ![Interface Schematic](https://user-images.githubusercontent.com/118490274/206822519-73ab0610-30a2-4b01-a183-2ac593d38109.JPG)
-
-
 
 Chosen Component Analysis
 The datasheet for the 3SP CO 1000 sensor has pin 1 as VCC, pin 4 as GND, and pin 5 as counter/data out and is connected to the analog pin 0 on the board because the 3SP sensor is an analog based device. Pin 1 is connected to 3 volts dc which is the needed supply voltage as requested in the datasheet.
