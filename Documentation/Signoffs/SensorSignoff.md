@@ -1,47 +1,31 @@
 # Sensor Subsystem Signoff
 ## FUNCTION OF THE SUBSYSTEM
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The sensor subsystem is the actuator of our Air Quality design. These sensors will analyze and receive data from the outside and 
-send the new data from the interface straight to the microcontroller. Without this subsystem, the device we plan to design could never retrieve any real data for the 
-user to have and use. Therefore, the sensors are a crucial part of the process. For most gas sensors, they are propped up by a PCB board that allocates its data for 
-Master devices to store for data calculation.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The sensor subsystem will be designed to take commands from the Microcontroller Subsystem and execute the tasks for an extended period of time. These sensors will analyze and receive data from the outside and send the new data from the interface straight to the microcontroller. Within this subsystem, the sensors will take and measure the data differently, but give the same information back for the user to obtain. Therefore, the Sensor Subsystem is an integral part of the process.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For experimental purposes, the design team has decided to get multiple types of sensors for the modular functionality to the device. 
 These types are digital, analog voltage, and analog current output sensors. While the digital sensors send bits describing the measurement of a specific parameter, the 
 analog sensors send their signals a bit differently. There are pros and cons on analog voltage or current signals in many regards. Voltage outputs for analog components
 are more common, but current signals are faster and less likely to lose current or voltage drops in the signal process. Current analog sensors have an extra step where 
 a built-in transmitter in the component takes the voltage and sets a current range for the signal to be generated. Once the current signal gets to the microcontroller, 
-it would need to go back to its voltage via a load resistor. The team plans on getting various types of sensors for the design process of this subsystem so that the 
-user of the Air Quality Device will be able to input various sensors that will accurately state the parameter value.
+it would need to go back to its voltage via a load resistor. The team plans on getting various types of sensors for the design process of this subsystem so that the user of the Air Quality Device will be able to use the modular sensor inputs for most of the sensors that the user desires.
 
 ## CONSTRAINTS ON THE SUBSYSTEM
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The subsystem constraints are placed to ensure that it can fulfill its job in a satisfactory manner.  The constraints given below 
-are generalized to allow for comparison of any potential contender for the sensors.  Constraints on the subsystem are as follows:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The subsystem constraints are placed to ensure that it can fulfill its job in a satisfactory manner.  The constraints given below are structured to meet the qualifications of functionality, modularity, and sampling rate for the digital, analog voltage, and current sensors. Constraints on the subsystem are as follows:
 
-1. Shall have a selection of tested sensors to cover a range of pollutants, particulates, air composites, and other qualities.  Common qualities to measure are carbon 
-monoxide, lead, nitrogen oxides, ozone, particulate matter, and sulfur dioxide.  Other qualities may be selected in the future, but these are definite qualities to 
-look for.  These sensors should work independently from each other.
+1. Shall have a selection of tested sensors to cover a range of pollutants, particulates, air composites, and other qualities.  Common qualities to measure are carbon monoxide, lead, nitrogen oxides, ozone, particulate matter, and sulfur dioxide.  Other qualities may be selected in the future, but these are definite qualities to look for.  These sensors should work independently from each other.
 
-2. Shall be modular. Specifically, the change of sensor should be seamless and handled by the board and software.
+2. Shall be modular. Specifically, the change of sensor should be seamless and handled by the board and software. The sensors will have multiple kinds of Input/Output (I/O) ports, so a list will be made that acknowledges all I/O ports of sensors to be approved and tested. The I/O ports that are shared among a group of sensors should be able to operate seamlessly if swapped out from the same type of I/O port for another sensor in the group using that I/O port.  Sensors that do not share this I/O port will have a port of its own grouping that has this same functionality within that group.
 
-3. Shall utilize sensors that are interchangeable.  The sensors will have multiple kinds of input/output (I/O) ports, so a list will be made that acknowledges all I/O 
-ports of sensors to be approved and tested.  The I/O ports that are shared among a group of sensors should be able to operate seamlessly if swapped out from the same 
-type of I/O port for another sensor in the group using that I/O port.  Sensors that do not share this I/O port will have a port of its own grouping that has this same 
-functionality within that group.
+3. Each sensor must be able to communicate with the microcontroller using a communicative language such as Serial Peripheral Interface (SPI), or Universal Asynchronous Receiver-Transmitter (UART). The microcontroller for this design will also be able to communicate with those same data transfer techniques. 
 
-4. Each sensor must be able to communicate with the microcontroller using a communicative language such as Serial Peripheral Interface (SPI), or Universal 
-Asynchronous Receiver-Transmitter (UART). Being able to talk with the sensors is crucial towards the pseudo code created in the Microcontroller subsystem.
+4. Shall be able to operate with at least 3 sensors sampling independently of each other.  Sensors will take samples at set intervals and be read and stored on the device periodically.  Samples may be received and outputted one at a time.
 
-5. Shall be able to operate with at least 3 sensors sampling independently of each other.  Sensors will take samples at set intervals and be read and stored on the 
-device periodically. Samples may be received and outputted one at a time.
+5. According to the Pacific Marine Environmental Laboratory [1], the speed for sample rates when receiving analog or digital signal input from the sensors should be sampled at a rate at approximately 2 Hz with a sample period of 30 seconds. Having sample rates that are too low causes data to be lost in the calibration process.
 
-6. The speed for sample rates when receiving analog signal input from the sensors should be sampled at a rate in the range of 44.1kHz - 48 kHz. Having sample rates 
-that are too low causes data to be lost in the data calibration process.
+6. The input voltages from the interface will provide either 3 or 5 V DC. Therefore, each sensor that will be used for the device shall have input voltages of either value. Appropriate current and power supply to the load will also have similar values for each sensor.
 
-7. The input voltages from the interface will provide either 3 or 5 V DC. Therefore, each sensor that will be used for the device shall have input voltages in that 
-range and will be properly powered during use. The sensors used will need to be on and working for extended periods of time.
+7. For every sensor that is plugged onto the Air Quality Device initially, there may be a start up time for initial calibration. All sensors shall start data acquisition once the timer goes to 0, and the microcontroller signals the sensors to start.
 
-8. For every sensor that is plugged onto the Air Quality Device initially, there may be a startup time for initial calibration. All sensors shall start data 
-acquisition once the timer goes to 0, and the microcontroller signals the sensors to start.
 
 ## BUILDABLES OF THE SUBSYSTEM
 
@@ -104,3 +88,7 @@ because the microcontroller is able to communicate to other devices in that lang
 |Carbon Monoxide Gas Sensor(MQ7)|SEN0132|1|Analog Voltage CO Gas Sensor|$9.85|
 |3SP_CO_1000 Package 110-102|110-102|1|Analog Current CO Gas Sensor (Modular with Digital Sesnor)|$20|
 |DGS-CO 968-034|968-034|1|Digital CO Gas Sesnor (Modular with Analog Current Sensor) if out of stock, 968-001 is similar option.|$50|
+
+## REFERENCES
+
+1. Pacific Marine Environmental Laboratory Gas Sensor Sampling Rate Standards “Sampling Rates” https://www.pmel.noaa.gov/ocs/sampling-rates (Accessed on 1-31-23).
