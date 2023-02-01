@@ -18,7 +18,7 @@ Constraints on the subsystem are as follows for Wi-Fi configuration:
 
 ## BUILDABLES OF SUBSYSTEM
 The only connections made are 2 UART connections to the Microcontroller subsystem.  “Timers” refers to physical or software timers that act as a "Watchdog" to prevent the system from hanging on a bad or failed connection. Once a timer is triggered, an interrupt should start and take over to see what is taking so long.  It will then close the connection and return to the loop to wait for another attempt.
-![Psued-Code_Comm](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/Psuedo-code_Comm.JPG)
+![Psued-Code_Comm2](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/Psuedo-code_Comm2.jpg)
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
 The team has chosen the Maduino Zero 4G LTE(SIM7600X) to satisfy the previously listed constraints and jobs of this subsystem for 4G LTE:
@@ -39,8 +39,8 @@ The team has chosen the HiLetGo ESP8266 NodeMCU CP2102 ESP-12E to satisfy the pr
 | Designator | Manufacturer      | Manufactured Part # | Description                                                                                     | Quantity | Price Each |
 | ---------- | ----------------  | ------------------- | ----------------------------------------------------------------------------------------------- | -------- | ---------- |
 | U1         | Maduino/MakerFabs | OHMZ4G7600          | Maduino Zero 4G LTE (SIM7600A-H) (Cellular Communication Device for Wireless Data Transmission) | 1        | $64.80     |
-| U2         | SanDisk      | SDSDXNE-016G-GNCIN       | SanDisk 16GB Extreme SDHC UHS-I Memory Card - 90MB/s, C10, U3, V30, 4K UHD                  | 1        | $9.99      |
-| U3         | T-Mobile          | ZZZ260R070          | T-Mobile® SIM Card - 4G - 5G (Prepaid SIM card and data plan for wireless Internet access)      | 1        | $9.78     |
+| U2         | SanDisk           | SDSDXNE-016G-GNCIN  | SanDisk 16GB Extreme SDHC UHS-I Memory Card - 90MB/s, C10, U3, V30, 4K UHD                      | 2        | $9.99      |
+| U3         | T-Mobile          | ZZZ260R070          | T-Mobile® SIM Card - 4G - 5G (Prepaid SIM card and data plan for wireless Internet access)      | 1        | $9.78      |
 | U4         | HiLetGo           | 703681358704        | HiLetGo 1PC ESP8266 NodeMCU CP2102 ESP-12E Development Board Open Source Serial Module          | 1        | $7.99      |
 
 Notes: Do not purchase the T-Mobile prepaid SIM card without an explicit request from the supervisor or instuctor and team.  Wi-Fi will be the initial focus, so there is not need to pay for a monthly plan just yet. 
