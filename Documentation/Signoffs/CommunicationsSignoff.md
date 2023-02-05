@@ -1,6 +1,6 @@
 # Communication Signoff
 ## FUNCTION OF THE SUBSYSTEM
-The Communication subsystem is responsible for receiving data from the Microcontroller subsystem, connecting the device to the Internet, and formatting and sending the received data to the Web & Wireless subsystem.  These functions may be done in two configurations: 4G LTE or Wi-Fi.  This subsystem can be configured to utilize 4G LTE (Long-term Evolution) as a standard in telecommunications to connect to the Internet for its near global coverage [1].  This subsystem may also be configured to connect to the Internet using Wireless-Fidelity (Wi-FI) and its associated IEEE 802.11 (802 Family Set) standard [12].  The Web & Wireless subsystem, a server conjoined to the Internet, will wait for data from the Communication subsystem, format and encrypt the data, and then store and display it for the user on a webpage.
+The Communication subsystem is responsible for receiving data from the Microcontroller subsystem, connecting the device to the Internet, and formatting/encrypting and sending the received data to the Web & Wireless subsystem.  Encryption is done to protect the data from outside malicious intent.  These functions may be done in two configurations: 4G LTE or Wi-Fi.  This subsystem can be configured to utilize 4G LTE (Long-term Evolution) as a standard in telecommunications to connect to the Internet for its near global coverage [1].  This subsystem may also be configured to connect to the Internet using Wireless-Fidelity (Wi-FI) and its associated IEEE 802.11 (802 Family Set) standard [12].  The Web & Wireless subsystem, a server conjoined to the Internet, will wait for data from the Communication subsystem, format and encrypt the data, and then store and display it for the user on a webpage.
 
 ## CONSTRAINTS ON THE SUBSYSTEM
 Constraints on the subsystem are as follows for 4G LTE configuration:
@@ -43,7 +43,7 @@ The team has chosen the HiLetGo ESP8266 NodeMCU CP2102 ESP-12E to satisfy the pr
 | U3         | T-Mobile          | ZZZ260R070          | T-Mobile® SIM Card - 4G - 5G (Prepaid SIM card and data plan for wireless Internet access)      | 1        | $9.78      |
 | U4         | HiLetGo           | 703681358704        | HiLetGo 1PC ESP8266 NodeMCU CP2102 ESP-12E Development Board Open Source Serial Module          | 1        | $7.99      |
 
-Notes: Do not purchase the T-Mobile prepaid SIM card without an explicit request from the supervisor or instuctor and team.  Wi-Fi will be the initial focus, so there is not need to pay for a monthly plan just yet. 
+Notes: Do not purchase the T-Mobile prepaid SIM card  or Maduino Zero 4G LTE without an explicit request from the supervisor or instuctor and team.  Wi-Fi will be the initial focus, so there is not need to pay for a monthly plan just yet. 
 
 Notes: The Maduino Zero 4G LTE (SIM7600A-H) ("A-H" referring to North American frequency bands while "E-H" refers to several other countries) can only be purchased from MakerFabs.  The SanDisk 16GB Extreme SDHC UHS-I Memory Card (SD Card) and HiLetGo 1PC ESP8266 are both available from Amazon.
 
