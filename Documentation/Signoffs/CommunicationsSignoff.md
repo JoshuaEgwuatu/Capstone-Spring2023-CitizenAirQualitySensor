@@ -18,7 +18,7 @@ Constraints on the subsystem are as follows for Wi-Fi configuration:
 
 ## BUILDABLES OF SUBSYSTEM
 “Timers” refers to physical or software timers that act as a "Watchdog" to prevent the system from hanging on a bad or failed connection. Once a timer is triggered, an interrupt should start and take over to see what is taking so long.  It will then either attempt to resend the data one more time or terminate the connection.  If the data or connection is still not confirmed on the second try, the connection is still terminated.
-![Psued-Code_Comm3](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/Psuedo-code_Comm3.jpg)
+![Psued-Code_Comm4](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/Psuedo-code_Comm4.jpg)
 
 The first configuration is 4G LTE with the Maduino Zero 4G LTE(SIM7600X) connected to the Arduino.  There are only two connections to the UART pins to allow for data exchange between the two subsystems.
 ![Comm_4G](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/Comm_4G.JPG)
