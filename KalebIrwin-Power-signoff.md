@@ -5,11 +5,15 @@ The subsystem will provide the microcontroller and sensor interface with power. 
 1. Provide 1.96W of power 
    a. *1.75W to Arduino Mega 
    b. 210mW for three high current draw sensors simultaneously
+
 Constraints on system for AC operation
+
 2. Function on 120V 60Hz AC input
 3. Power the Arduino Mega with 5V USB input
 4. **Provide 5V and 3V DC for sensor interface 
+
 Constraints on system for battery operation
+
 5. Power the Arduino Mega with 7-12V or 5V through the USB connector 
 6. **Provide 5V and 3V for sensor interface 
 7. Battery capacity greater than 18.816 Ah 
