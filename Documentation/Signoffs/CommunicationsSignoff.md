@@ -17,8 +17,14 @@ Constraints on the subsystem are as follows for Wi-Fi configuration:
 4. This project aims for replicability, so a board that remains relevant and available is a key part. The manufacturer needs to be a reputable and safe choice. A stable and reputable manufacturer is assumed to remain in business for years to come and continue producing the chosen board. Public and customer reviews will be used to gauge manufacturer reputability while board production history will be used to gauge product longevity.  
 
 ## BUILDABLES OF SUBSYSTEM
-The only connections made are 2 UART connections to the Microcontroller subsystem.  “Timers” refers to physical or software timers that act as a "Watchdog" to prevent the system from hanging on a bad or failed connection. Once a timer is triggered, an interrupt should start and take over to see what is taking so long.  It will then close the connection and return to the loop to wait for another attempt.
-![Psued-Code_Comm2](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/Psuedo-code_Comm2.jpg)
+“Timers” refers to physical or software timers that act as a "Watchdog" to prevent the system from hanging on a bad or failed connection. Once a timer is triggered, an interrupt should start and take over to see what is taking so long.  It will then either attempt to resend the data one more time or terminate the connection.  If the data or connection is still not confirmed on the second try, the connection is still terminated.
+![Psued-Code_Comm3](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/Psuedo-code_Comm3.jpg)
+
+The first configuration is 4G LTE with the Maduino Zero 4G LTE(SIM7600X) connected to the Arduino.  There are only two connections to the UART pins to allow for data exchange between the two subsystems.
+![Comm_4G](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/Comm_4G.JPG)
+
+The second configuration is Wi-Fi with the ESP8266 connected to the Arduino.  there are only two connections to the UART pins to allow for data exchange between the two subsystems.
+![Comm_Wifi](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/Comm_Wifi.JPG)
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
 The team has chosen the Maduino Zero 4G LTE(SIM7600X) to satisfy the previously listed constraints and jobs of this subsystem for 4G LTE:
