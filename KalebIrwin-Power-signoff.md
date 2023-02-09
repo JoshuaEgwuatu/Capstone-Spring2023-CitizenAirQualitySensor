@@ -54,8 +54,7 @@ Gaining 6 W*4.5 h = 27 Wh given 4.5 hours of peak sun
 ## Notes 
 *Maximum and typical power calculations done with no low power modes or code taken into account. For actual operation these values can be lowered substainually and should be considered to lower the load on the battery. For this project we will attempt to include as many options as possible and provide data on power consumption with and without these features.
 
-**Additional constraint placed on power subsystem if the chosen sensors exceed the Arduino Mega 50 mA current limit. 
-***
+**Additional constraint placed on power subsystem if the chosen sensors exceed the Arduino Mega 50 mA current limit. If the sensors do not exceed the current limitations of the Arduino Mega and its' pins, the DC-DC converters may be ommited from the design as the sensors can use the 3.3 V and 5 V supplies on the board. 
 ## Reference 
 tbi
 
