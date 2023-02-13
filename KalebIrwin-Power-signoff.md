@@ -4,13 +4,13 @@ The subsystem will provide the microcontroller and sensor interface with power. 
 ## Constraints 
 1. *Provide a maximum power draw of 1.686 W and 0.831 W typical 
    
-   a. Arduino Mega maximum power is 0.9 W taken from 5 V operation at 180 mA peak current draw [diyiot] with 0.375 W typical power requirements taken from 5 V 75 mA typical operation [diyiot]
+   a. Arduino Mega maximum power is 0.9 W taken from 5 V operation at 180 mA peak current draw with 0.375 W typical power requirements taken from 5 V 75 mA typical operation [1]
    
-   b. ESP8266 maximum power draw is 0.561 W taken from 170 mA maximum required current at 3.3 V operation [esp8266 datasheet]
-   Typical power draw for ESP8266 is 0.231 W taken from 3.3 V 70 mA typical operation [diyiot]
+   b. ESP8266 maximum power draw is 0.561 W taken from 170 mA maximum required current at 3.3 V operation [2]
+   Typical power draw for ESP8266 is 0.231 W taken from 3.3 V 70 mA typical operation [3]
    
    c. 225mW for three high current draw sensors simultaneously
-2. Power the Ardunio Mega with 7-12 V on the Vin pin or 5±0.25 V through the USB input on the board [ardunio documentation][USB Spec rev 2]
+2. Power the Ardunio Mega with 7-12 V on the Vin pin or 5±0.25 V through the USB input on the board [4][5]
 3. **Provide 5 V and 3 V for sensor interface
 
 Additional constraint on system for AC operation
@@ -19,13 +19,13 @@ Additional constraint on system for AC operation
 
 Additional constraints on system for battery operation
 
-5. Operate for a minimum time span of 48 hours 
+5. Operate for a minimum time span of 48 hours on a single charge without additional power from a solar cell 
 
 6. Battery capacity greater than 39.888 Wh 
    
       Calculated with (typical power draw*minimum continuous operation time = (0.831 W * 48 h) = 39.888 Wh 
    
- 7. Must make use of a solar panel to extend the operational time without maintenance 
+ 7. Must use a solar panel that replinishes the typical 19.944 W used during 24 hours of operation in 4.5 hours of direct sunlight [6]
 
 ## Schematic 
 <img width="866" alt="BuildableAC" src="https://user-images.githubusercontent.com/118766525/216235986-c4a7bbef-dcb8-4c07-8018-090d6612bf4e.png">
@@ -33,16 +33,16 @@ Additional constraints on system for battery operation
 
 ## Analysis 
 1. The chosen wall adapter is rated at 5V and 2.1A. Multiplying these numbers yields 10.2W. The chosen battery has USB output of 5V and 3A. Multiplying these numbers yields 15W both of which are greater than the worst case power draw of 1.686W
-2. Both solutions provide 5 V usb output that can power the arduino 
+2. Both solutions provide 5 V USB output that can power the Arduino 
 3. 5V can be taken directly from the USB-A to the screw terminal on either power option and sent to the interface. It can also be connected to the input terminal on the DC-DC converter to provide the 3V.
    
    a. The chosen DC-DC converter requires an input voltage at least 1.5V higher than the output voltage and can input 4-40V and output 1.5-35V. These ranges allow for a 5V input and a 3V output.
 
 4. The chosen wall adapter is rated for 100V-240V 50/60Hz AC which covers the US electrical system 
-5. Chosen battery has a stated capacity of 25000 mA or 125 Wh at 5 V. Using this and the typical power draw of 0.831 W tells us that it will run for 150.42 hours on a single charge with no additional power from the solar cell. This is 3.13x the minimum operation time. 
-6. Battery capacity is stated at 25000 mA or 125 Wh at 5 V. This is greater than the calculated minimum of 39.888 Wh 
-7. Built in solar cell provides 6W during peak sun hours
-Gaining 6 W*4.5 h = 27 Wh given 4.5 hours of peak sun
+5. Chosen battery has a stated capacity of 25000 mA and uses an internal battery voltage of 3.7 V for a power capacity of 92.5 Wh. Using this and the typical power draw of 0.831 W tells us that it will run for 111.31 hours on a single charge with no additional power from the solar cell. This is 2.319x the minimum operation time. 
+6. Battery capacity is stated at 25000 mA or 92.5 Wh at 3.7 V. This is greater than the calculated minimum of 39.888 Wh 
+7. Built in solar cell provides can provide 6W during peak sun hours
+Gaining 6 W*4.5 h = 27 Wh given 4.5 hours of peak sun which is greater than the 19.988 W daily usage.
 
 ## BOM
 | Designator | Manufacturer | Manufactured Part # | Description                                                                     | Quanitity | Price Each |
@@ -56,6 +56,9 @@ Gaining 6 W*4.5 h = 27 Wh given 4.5 hours of peak sun
 
 **Additional constraint placed on power subsystem if the chosen sensors exceed the Arduino Mega 50 mA current limit. If the sensors do not exceed the current limitations of the Arduino Mega and its' pins, the DC-DC converters may be ommited from the design as the sensors can use the 3.3 V and 5 V supplies on the board. 
 ## Reference 
-tbi
-
-have the refrences just not formated and ordered 
+1. C. David, “Arduino mega tutorial [pinout],” DIYI0T, 07-May-2021. [Online]. Available: https://diyi0t.com/arduino-mega-tutorial/. [Accessed: 07-Feb-2023]. 
+2. “ESP8266EX datasheet - espressif,” ESP8266 Datasheet. [Online]. Available: https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf. [Accessed: 08-Feb-2023]. 
+3. C. David, “How to reduce the ESP8266 power consumption?,” DIYI0T, 07-May-2021. [Online]. Available: https://diyi0t.com/how-to-reduce-the-esp8266-power-consumption/. [Accessed: 07-Feb-2023]. 
+4. T. A. Team, “MEGA 2560 REV3: Arduino documentation,” Arduino Documentation | Arduino Documentation. [Online]. Available: https://docs.arduino.cc/hardware/mega-2560. [Accessed: 07-Feb-2023]. 
+5. USB-IF,“USB 2.0 specification,” USB, 08-Oct-2021. [Online]. Available: https://www.usb.org/document-library/usb-20-specification. [Accessed: 07-Feb-2023]. 
+6. Unbound Solar , “Sun hours map: How many sun hours do you get?,” 09-Mar-2021. [Online]. Available: https://unboundsolar.com/solar-information/sun-hours-us-map. [Accessed: 08-Feb-2023]. 
