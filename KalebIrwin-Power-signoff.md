@@ -21,11 +21,13 @@ Additional constraints on system for battery operation
 
 5. Operate for a minimum time span of 48 hours on a single charge without additional power from a solar cell 
 
-6. Battery capacity greater than 39.888 Wh 
+6. Battery capacity greater than 39.89 Wh 
    
-      Calculated with (typical power draw*minimum continuous operation time = (0.831 W * 48 h) = 39.888 Wh 
+      Calculated with (typical power draw * minimum continuous operation time = (0.831 W * 48 h) = 39.89 Wh 
    
- 7. Must use a solar panel that replinishes the typical 19.944 W used during 24 hours of operation in 4.5 hours of direct sunlight [6]
+ 7. Must use a solar panel that is at least 4.43 W. 
+ 
+      Calculated with (typical daily power usage / average hours of direct sun [6]) = (19.94 Wh / 4.5 h) = 4.43 W
 
 ## Schematic 
 <img width="866" alt="BuildableAC" src="https://user-images.githubusercontent.com/118766525/216235986-c4a7bbef-dcb8-4c07-8018-090d6612bf4e.png">
@@ -39,10 +41,10 @@ Additional constraints on system for battery operation
    a. The chosen DC-DC converter requires an input voltage at least 1.5V higher than the output voltage and can input 4-40V and output 1.5-35V. These ranges allow for a 5V input and a 3V output.
 
 4. The chosen wall adapter is rated for 100V-240V 50/60Hz AC which covers the US electrical system 
-5. Chosen battery has a stated capacity of 25000 mA and uses an internal battery voltage of 3.7 V for a power capacity of 92.5 Wh. Using this and the typical power draw of 0.831 W tells us that it will run for 111.31 hours on a single charge with no additional power from the solar cell. This is 2.319x the minimum operation time. 
-6. Battery capacity is stated at 25000 mA or 92.5 Wh at 3.7 V. This is greater than the calculated minimum of 39.888 Wh 
-7. Built in solar cell provides can provide 6W during peak sun hours
-Gaining 6 W*4.5 h = 27 Wh given 4.5 hours of peak sun which is greater than the 19.988 W daily usage.
+5. The chosen battery has a stated capacity of 25000 mAh and uses an internal battery voltage of 3.7 V for a power capacity of 92.5 Wh. Using this and the typical power draw of 0.831 W tells us that it will run for 111.31 hours on a single charge with no additional power from the solar cell. This is 2.319x the minimum operation time. 
+6. Battery capacity is stated at 25000 mAh at 3.7 V for a total of 92.5 Wh. This is greater than the calculated minimum of 39.89 Wh 
+7. Built in solar cell provides can provide 6 W during peak sun hours
+Gaining 6 W * 4.5 h = 27 Wh given 4.5 hours of peak sun which is greater than the 19.988 Wh daily usage.
 
 ## BOM
 | Designator | Manufacturer | Manufactured Part # | Description                                                                     | Quanitity | Price Each |
@@ -55,6 +57,8 @@ Gaining 6 W*4.5 h = 27 Wh given 4.5 hours of peak sun which is greater than the 
 *Maximum and typical power calculations done with no low power modes or code taken into account. For actual operation these values can be lowered substainually and should be considered to lower the load on the battery. For this project we will attempt to include as many options as possible and provide data on power consumption with and without these features.
 
 **Additional constraint placed on power subsystem if the chosen sensors exceed the Arduino Mega 50 mA current limit. If the sensors do not exceed the current limitations of the Arduino Mega and its' pins, the DC-DC converters may be ommited from the design as the sensors can use the 3.3 V and 5 V supplies on the board. 
+
+***An additioanl solar cell can be purchased in the event that the solution presented is not suffecent for a users area. This additional panel must have micro-USB output as it will need to be pluged into the power in port of the battery.  
 ## Reference 
 1. C. David, “Arduino mega tutorial [pinout],” DIYI0T, 07-May-2021. [Online]. Available: https://diyi0t.com/arduino-mega-tutorial/. [Accessed: 07-Feb-2023]. 
 2. “ESP8266EX datasheet - espressif,” ESP8266 Datasheet. [Online]. Available: https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf. [Accessed: 08-Feb-2023]. 
