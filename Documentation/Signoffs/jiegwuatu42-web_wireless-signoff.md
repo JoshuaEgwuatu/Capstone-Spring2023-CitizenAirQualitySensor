@@ -12,8 +12,9 @@ The subsystem constraints are placed to ensure that it can fulfill its job in a 
 
 ## BUILDABLE SCHEMATIC OF SUBSYSTEM
 
-<img width="382" alt="4G Connection" src="https://user-images.githubusercontent.com/110966922/219455699-98eec98f-c571-4faf-8f2e-6f461f0a780c.png">
-<img width="353" alt="Wifi Connection" src="https://user-images.githubusercontent.com/110966922/219455721-fe607bf9-ef33-4a89-9a90-1d2d1bd4f04f.png">
+<img width="350" alt="4G Connection" src="https://user-images.githubusercontent.com/110966922/219462337-5e72409b-17d1-4c59-8d68-eab86c8fda1f.png">
+<img width="432" alt="Wifi Connection" src="https://user-images.githubusercontent.com/110966922/219462340-b16763c0-cbe4-4803-ba0f-be77fbb212e4.png">
+
 
 Server will be made using HTML. It will receive info from TCP Connection provided from UART. 
 
