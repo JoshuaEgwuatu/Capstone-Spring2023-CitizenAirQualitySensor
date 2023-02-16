@@ -7,8 +7,7 @@ The Wireless acquisition of data helps effortlessly boost the quality of life. T
 
 The subsystem constraints are placed to ensure that it can fulfill its job in a satisfactory manner. Constraints on the subsystem are as follows:
 1. The server host machine must possess adequate storage space for the server code to store all collected data.
-2. The data will be encrypted and decrypted with an undisclosed algorithm using AES Symmetric Encryption. 
-3. 
+2. The data will be encrypted and decrypted with an undisclosed algorithm using AES Symmetric Encryption.  
 
 
 ## BUILDABLE SCHEMATIC OF SUBSYSTEM
@@ -20,14 +19,11 @@ Server will be made using HTML. It will receive info from TCP Connection provide
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
 
-
+N/A
 
 ## BILL OF MATERIALS (BOM)
 
-| Designator | Manufacturer | Manufactured Part # | Description                                                   | Quantity | Price Each  |
-| ---------- | ------------ | ------------------- | ------------------------------------------------------------- | -------- | ----------  |
-|            |              |                     |                                                               |          |             |
-|            |              |                     |                                                               |          |             |
+N/A
 
 ## References
 1. https://www.unitrends.com/blog/data-encryption#:~:text=A%20key%20is%20used%20to,physical%20access%20to%20the%20device.
