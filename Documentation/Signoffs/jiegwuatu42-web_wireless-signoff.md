@@ -7,7 +7,8 @@ The Wireless acquisition of data helps effortlessly boost the quality of life. T
 
 The subsystem constraints are placed to ensure that it can fulfill its job in a satisfactory manner. Constraints on the subsystem are as follows:
 1. The server host machine must possess adequate storage space for the server code to store all collected data.
-2. The data will be encrypted with an undisclosed algorithm
+2. The data will be encrypted and decrypted with an undisclosed algorithm using AES Symmetric Encryption. 
+3. 
 
 
 ## BUILDABLE SCHEMATIC OF SUBSYSTEM
@@ -15,6 +16,7 @@ The subsystem constraints are placed to ensure that it can fulfill its job in a 
 <img width="382" alt="4G Connection" src="https://user-images.githubusercontent.com/110966922/219455699-98eec98f-c571-4faf-8f2e-6f461f0a780c.png">
 <img width="353" alt="Wifi Connection" src="https://user-images.githubusercontent.com/110966922/219455721-fe607bf9-ef33-4a89-9a90-1d2d1bd4f04f.png">
 
+Server will be made using HTML. It will receive info from TCP Connection provided from UART. 
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
 
