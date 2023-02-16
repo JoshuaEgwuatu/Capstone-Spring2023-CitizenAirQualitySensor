@@ -23,7 +23,9 @@ Server will be made using HTML. It will receive info from TCP Connection provide
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
 
-N/A
+The team has chosen HTML5 UP to statisfy constraints and jobs of this system for the server/UI:
+1. Free web design templates that keeps price of the project affordable.
+2. 
 
 ## BILL OF MATERIALS (BOM)
 
