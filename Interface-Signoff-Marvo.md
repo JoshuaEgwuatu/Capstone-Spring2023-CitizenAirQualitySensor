@@ -2,7 +2,7 @@
 
 ## Subsystem Function
 The interface will be able to connect a minimum of 3 sensor signal output types to the microcontroller. These output signal types will be in the form of: Analog voltage, analog current and digital signals. 
-Subsystem Constraints
+## Subsystem Constraints
 Must support these current and voltage signal ranges without harming the microcontroller
 Common voltage output ranges: 0 to 1 V, 0 to 5 V, 1 to 5 V, 0 to 10V, and -10 to 10 V. 
 Common current output range of 4-20 mA.
