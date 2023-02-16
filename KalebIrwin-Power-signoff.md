@@ -9,13 +9,13 @@ The subsystem will provide the microcontroller and sensor interface with power. 
    b. ESP8266 maximum power draw is 0.561 W taken from 170 mA maximum required current at 3.3 V operation [2]
    Typical power draw for ESP8266 is 0.231 W taken from 3.3 V 70 mA typical operation [3]
    
-   c. 225 mW for three high current draw sensors simultaneously
+   c. 225 mW for three high current draw sensors simultaneously 
 2. Power the Ardunio Mega with 7-12 V 160 mA on the Vin pin or 5±0.25 V 200mA from the USB 2.0 standard through the USB 2.0 input on the board [4][5]
 3. **Provide 5 V and 3 V for sensor interface
 
 Additional constraint on system for AC operation
 
- 4. Function on 120 V 60 Hz AC mains input
+ 4. Function on 120 V 60 Hz AC mains input and must have UL certification 
 
 Additional constraints on system for battery operation
 
@@ -23,7 +23,7 @@ Additional constraints on system for battery operation
    
       Calculated with (typical power draw * minimum continuous operation time = (0.831 W * 48 h) = 39.89 Wh 
    
- 6. Must use a solar panel that is at least 4.43 W. 
+ 6. Must use a solar panel that is at least 4.43 W in order to recharge the batteries daily power consumption within the optimal solar charging timefrmae. 
  
       Calculated with (typical daily power usage / average hours of direct sun [6]) = (19.94 Wh / 4.5 h) = 4.43 W
 
