@@ -25,7 +25,7 @@ Server will be made using HTML. It will receive info from TCP Connection provide
 
 The team has chosen HTML5 UP to statisfy constraints and jobs of this system for the server/UI:
 1. Free web design templates that keeps price of the project affordable.
-2. 
+2. Fully responsive software that allows easy between web and mobile platforms/
 
 ## BILL OF MATERIALS (BOM)
 
