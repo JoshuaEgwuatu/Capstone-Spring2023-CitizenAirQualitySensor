@@ -21,36 +21,38 @@ Additional constraints on system for battery operation
 
 5. Battery capacity greater than 39.89 Wh to allow for a minimum operational time of 48 hours on a single charge without additional power from a solar cell 
    
-      Calculated with (typical power draw * minimum continuous operation time = (0.831 W * 48 h) = 39.89 Wh 
+      Calculated with (typical power draw * minimum continuous operation time) = (0.831 W * 48 h) = 39.89 Wh 
    
- 6. Must use a solar panel that is at least 4.43 W in order to recharge the batteries daily power consumption within the optimal solar charging timefrmae. 
+ 6. Must use a solar panel that is at least 4.43 W in order to recharge the batteries daily power consumption within the optimal solar charging timeframe of 4.5 hours [6]. 
  
-      Calculated with (typical daily power usage / average hours of direct sun [6]) = (19.94 Wh / 4.5 h) = 4.43 W
+      Calculated with (typical daily power usage / average hours of direct sun) = (19.94 Wh / 4.5 h) = 4.43 W
 
 ## Schematic 
-<img width="866" alt="BuildableAC" src="https://user-images.githubusercontent.com/118766525/216235986-c4a7bbef-dcb8-4c07-8018-090d6612bf4e.png">
-<img width="627" alt="BuildableDC" src="https://user-images.githubusercontent.com/118766525/216236032-495901d5-41aa-42f0-b8a0-075caf56226f.png">
+<img width="1040" alt="Screen Shot 2023-02-17 at 10 37 43 AM" src="https://user-images.githubusercontent.com/118766525/219712171-392a585f-9603-4d4d-93a5-71a3d57acb4f.png">
+<img width="1020" alt="Screen Shot 2023-02-17 at 3 13 57 PM" src="https://user-images.githubusercontent.com/118766525/219794582-51e36cb9-bd46-4767-8d8f-dcb19e173199.png">
 
 ## Analysis 
-1. The chosen wall adapter is rated at 5 V and 2.1 A. Multiplying these numbers yields 10.2 W. The chosen battery has USB output of 5 V and 3 A. Multiplying these numbers yields 15 W both of which are greater than the worst case power draw of 1.686 W
+1. The chosen wall adapter is rated at 5 V and 2 A. Multiplying these numbers yields 10 W. The chosen battery has USB output of 5 V and 3 A. Multiplying these numbers yields 15 W both of which are greater than the worst case power draw of 1.686 W
 2. Both solutions provide 5 V USB output that can power the Arduino 
 3. 5V can be taken directly from the USB-A to the screw terminal on either power option and sent to the interface. It can also be connected to the input terminal on the DC-DC converter to provide the 3 V.
    
    a. The chosen DC-DC converter requires an input voltage at least 1.5 V higher than the output voltage and can input 4-40 V and output 1.5-35 V. These ranges allow for a 5 V input and a 3 V output.
 
-4. The chosen wall adapter is rated for 100-240 V 50/60 Hz AC which covers the US electrical system 
+4. The chosen wall adapter is rated for 100-240 V 50/60 Hz AC which covers the US electrical system and shows UL certification.
 5. The chosen battery has a stated capacity of 25000 mAh and uses an internal battery voltage of 3.7 V for a power capacity of 92.5 Wh. Using this and the typical power draw of 0.831 W tells us that it will run for 111.31 hours on a single charge with no additional power from the solar cell. This is 2.319x the minimum operation time. 
 6. Built in solar cell provides can provide 6 W during peak sun hours
-Gaining 6 W * 4.5 h = 27 Wh given 4.5 hours of peak sun which is greater than the 19.988 Wh daily usage.
+
+   Gaining 6 W * 4.5 h = 27 Wh given 4.5 hours of peak sun which is greater than the 19.988 Wh daily usage.
 
 ## BOM
 | Designator | Manufacturer | Manufactured Part # | Description                                                                     | Quanitity | Price Each |
 | ---------- | ------------ | ------------------- | ------------------------------------------------------------------------------- | --------- | ---------- |
-| P1         | Hiluckey     |                     | Solar Charger 25000mAh                                                          | 1         | $46.99     |
-| P2         | ALMOCN       | LM2596S             | DC-DC Adjustable Step-Down Module with Digital Display Voltmeter Display 2 pack | 1         | $8.99    |
-| P3         | HopePow      |                     | 5V 2.1A wall charger 3 pack                                                     | 1         | $10.99      |
-| P4         | JUXINICE     |                     | Male USB to screw terminal connector 2 pack                                     | 1         | $8.99  
-| ***        | SANKABA      | 000010              | 5W USB Solar Panel for DC 5V Security Camera.                                   | 0         | $23.99 
+| P1         | Hiluckey     |                     | Solar Charger 25000 mAh                                                          | 1         | $46.99     |
+| P2         | ALMOCN       |              | DC-DC Adjustable Step-Down Module with Digital Display Voltmeter Display 2 pack | 1         | $8.99    |
+| P3         | Fonken      |                     | 5 V 2 A wall charger 3 pack                                                     | 1         | $11.99      |
+| P4         | Itramax     |                     | USB male to two female adapter                                                      | 1         | $12.99      |
+| P5         | JUXINICE     |                     | Male USB to screw terminal connector 2 pack                                     | 1         | $8.99  
+| ***        | SANKABA      | 000010              | 5 W USB Solar Panel for DC 5V Security Camera.                                   | 0         | $23.99 
 ## Notes 
 *Maximum and typical power calculations done with no low power modes or code taken into account. For actual operation these values can be lowered substainually and should be considered to lower the load on the battery. For this project we will attempt to include as many options as possible and provide data on power consumption with and without these features.
 
