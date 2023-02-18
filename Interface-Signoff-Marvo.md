@@ -1,24 +1,22 @@
 # Interface Signoff
 
 ## Subsystem Function
-The interface will be able to connect a minimum of 3 sensor signal output types to the microcontroller. These output signal types will be in the form of: Analog voltage, analog current and digital signals. 
+The interface conditions any input analog voltage, analog current and digital signal then transmits it to the microcontroller. 
 ## Subsystem Constraints
-Must support these current and voltage signal ranges without harming the microcontroller
-Common voltage output ranges: 0 to 1 V, 0 to 5 V, 1 to 5 V, 0 to 10V, and -10 to 10 V. 
-Common current output range of 4-20 mA.
+1) Must be able to operate with mV voltage output ranges
+2) Must support positive DC voltage ranges: 0 to 1 V, 0 to 5 V, 1 to 5 V, 0 to 10V
+3) Must be able to operate with negative voltage ranges: -10 to 10 V
+4) Must Support current output range: 4-20 mA
+5) The PCB material used must be UL certified
+
 
 ## System Schematic
 
 ![Interface Schematic Mark 4 PNG](https://user-images.githubusercontent.com/118490274/219834938-37dff819-c3d3-414d-8535-df8448b19ed3.PNG)
 
 ## Analysis
-### Overvoltage Protection
-* The resistor at the input of the 741 op amp will serve to keep the clamping diodes under the max current rating. The schottky 1N5817 diodes can handle a forward current of 25 A for 8.3 ms, thus a 10k resistor will keep the forward current in the mA range for voltages below 100 V. This will ensure the diodes stay well below their max current rating.
-* The schottky diodes at the input form a clamping circuit and will become forward biased if the anode voltage is higher than the supply voltage of 5 volts. This will pull the voltage up or down to one of the supply voltages and redirect excess current away from the op amp inputs. 
-* The diode at the output of the op amp will behave the same way serving as extra protection to pull the voltage down to 5 volts before entering the microcontroller.
 
-### Amplification
-* The 741 op amp will use two resistors with Rl set to a fixed value of 100 ohms and R2 being a 100 K potentiometer to allow the user to increase or decrease the gain depending on the output signal of the sensor.
+1) The amplifier will allow small signals such as those in the mV range to be measured by the arduino. The system is made of the OP27 op amp with resistors Rl set to a fixed value of 100 ohms and R2 being a 100 K potentiometer to allow the user to increase or decrease the gain depending on the output signal of the sensor. If the input signal to the op amp is already within the volt range then the microcontroller can measure the signal without needing amplification therefore a gain of 1 would be sufficient. However, if the signal was 1 mV then you would need a gain of 1000 to amplify to the range of 1 volt. A 100k ohm potentiometer as the R2 component in the op amp will allow this choice.  
 
 | Gain          | R1            | R2              |               
 | ------------- | ------------- | -------------   |
@@ -27,14 +25,14 @@ Common current output range of 4-20 mA.
 |100            | 100 Oohms     |  10k ohms       |
 |1000           | 100 Oohms     |  100 ohms       |
 
-* If the input signal to the op amp is already within the volt range then the microcontroller can measure the signal without needing amplification therefore a gain of 1 would be sufficient. However, if the signal was 1 mV then you would need a gain of 1000 to amplify to the range of 1 volt. A 100k ohm potentiometer as the R2 component in the op amp will allow this choice. 
-* The op amp positive supply voltage will be 5 volts and the negative supply voltage will be 1 volt. This will ensure that the op amp voltage output will not go below 1 volt or above 5 volts even if input voltage to the op amp has negative values such as a -10 to 10 volt range. 
 
-### Current to Voltage Converter
-* The current to voltage converter is just a 250 ohm resistor in series with the current source input. This will convert a current output from an analog sensor to a voltage output to be measured by the arduino. 
-* Due to ohm's law, V=IR, a 250 ohm resistor will convert a 4-20 mA range to a 1-5 V output.
-* 4 mA * 250 ohms = 1 volts
-* 20 mA * 250 ohms = 5 volts  
+2) The 1N750 zener diode (D4) at the output of the full wave rectifier circuit has a breakdown voltage of 4.7 volts. If the output voltage of the op amp is above this breakdown voltage the diode will pull the voltage down 4.7 volts. This will ensure that any DC voltage ranges exceeding 5 volts can be used without overloading the arduino.
+
+3) The AC voltage signal is run through a half wave rectifier which will invert the signal and cut any peaks above 0. The original voltage signal and the signal from the half wave rectifier are both run through a summing op amps inverting input. This adds the amplitudes of both signals which produces a negative magnitude and is then inverted by the op amp thus only giving a positive output. This will ensure that the interface can handle any negative voltages coming from an AC signal. 
+
+4) The current to voltage converter is just a 250 ohm resistor in series with the current source input. This will convert a current output from an analog sensor to a voltage output capable of being measured by the arduino. A 250 ohm resistor will convert a 4-20 mA range to a 1-5 V output. 4 mA * 250 ohms = 1 volts and 20 mA * 250 ohms = 5 volts.  
+
+5) The pcb material will be FR4 PCB. The FR4 PCB has been through rigorous testing and has been UL certified.
 
 ## BOM
 
