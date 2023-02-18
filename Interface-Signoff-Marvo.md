@@ -8,7 +8,8 @@ Common voltage output ranges: 0 to 1 V, 0 to 5 V, 1 to 5 V, 0 to 10V, and -10 to
 Common current output range of 4-20 mA.
 
 ## System Schematic
-![Interface Schematic Mark 2 Picture](https://user-images.githubusercontent.com/118490274/219454627-441b4e7b-a791-4570-bbc5-45335db35594.PNG)
+
+![Interface Schematic Mark 4 PNG](https://user-images.githubusercontent.com/118490274/219834938-37dff819-c3d3-414d-8535-df8448b19ed3.PNG)
 
 ## Analysis
 ### Overvoltage Protection
