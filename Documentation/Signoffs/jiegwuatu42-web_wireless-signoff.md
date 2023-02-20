@@ -32,8 +32,11 @@ The team has chosen HTML5 UP to statisfy constraints and jobs of this system for
 N/A
 
 ## References
-1. https://www.unitrends.com/blog/data-encryption#:~:text=A%20key%20is%20used%20to,physical%20access%20to%20the%20device.
+1. [1]A. Marget, “Data Encryption: How It Works & Methods Used,” Unitrends, Jan. 27, 2022. https://www.unitrends.com/blog/data-encryption#:~:text=A%20key%20is%20used%20to (accessed Feb. 10, 2023).
+‌
 
-2. https://www.hivemq.com/blog/mqtt-vs-http-protocols-in-iot-iiot/#:~:text=They%20both%20run%20over%20TCP,respond%20to%20requests%20from%20clients.
+2. [1]I. Craggs, “MQTT Vs. HTTP: Which protocol is the best for IoT or IIoT?,” www.hivemq.com. https://www.hivemq.com/blog/mqtt-vs-http-protocols-in-iot-iiot/#:~:text=They%20both%20run%20over%20TCP (accessed Feb. 10, 2023).
+‌
 
-3. https://circuitdigest.com/microcontroller-projects/sending-arduino-data-to-webpage
+3. [1]“How to Send Data from Arduino to Webpage using WiFi,” Circuitdigest.com, 2016. https://circuitdigest.com/microcontroller-projects/sending-arduino-data-to-webpage (accessed Feb. 10, 2023).
+‌
