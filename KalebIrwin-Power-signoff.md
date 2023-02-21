@@ -9,9 +9,9 @@ The subsystem will provide the microcontroller and sensor interface with power. 
    b. ESP8266 maximum power draw is 0.561 W taken from 170 mA maximum required current at 3.3 V operation [2]
    Typical power draw for ESP8266 is 0.231 W taken from 3.3 V 70 mA typical operation [3]
    
-   c. 225 mW for three high current draw sensors simultaneously 
+   c. The largest power draw observed in evaluated sensors was 75 mW. Accoutning for three of these peak power draw sensors yeilds 225 mW.
 2. Power the Ardunio Mega with 7-12 V 160 mA on the Vin pin or 5±0.25 V 200mA from the USB 2.0 standard through the USB 2.0 input on the board [4][5]
-3. **Provide 5 V and 3 V for sensor interface
+3. **Provide 45 mA at 5 V and 75 mA at 3 V for sensor interface (This supports the three peak power draw sensors)
 
 Additional constraint on system for AC operation
 
@@ -23,13 +23,13 @@ Additional constraints on system for battery operation
    
       Calculated with (typical power draw * minimum continuous operation time) = (0.831 W * 48 h) = 39.89 Wh 
    
- 6. Must use a solar panel that is at least 4.43 W in order to recharge the batteries daily power consumption within the optimal solar charging timeframe of 4.5 hours [6]. 
+ 6. Must use a solar panel that is at least 4.43 W in order to recharge the batteries daily power consumption within the peak solar hours timeframe of 4.5 hours [6]. 
  
-      Calculated with (typical daily power usage / average hours of direct sun) = (19.94 Wh / 4.5 h) = 4.43 W
+      Calculated with (typical daily power usage / average peak sun hours) = (19.94 Wh / 4.5 h) = 4.43 W
 
 ## Schematic 
-<img width="1040" alt="Screen Shot 2023-02-17 at 10 37 43 AM" src="https://user-images.githubusercontent.com/118766525/219712171-392a585f-9603-4d4d-93a5-71a3d57acb4f.png">
-<img width="1020" alt="Screen Shot 2023-02-17 at 3 13 57 PM" src="https://user-images.githubusercontent.com/118766525/219794582-51e36cb9-bd46-4767-8d8f-dcb19e173199.png">
+<img width="1200" alt="Screen Shot 2023-02-21 at 2 06 23 AM" src="https://user-images.githubusercontent.com/118766525/220285025-171f9e2e-493a-4bbb-8cd2-f816e9e3b597.png">
+<img width="1026" alt="Screen Shot 2023-02-21 at 2 06 51 AM" src="https://user-images.githubusercontent.com/118766525/220285065-30f646b1-512d-4a8b-b341-d15ee94891f1.png">
 
 ## Analysis 
 1. The chosen wall adapter is rated at 5 V and 2 A. Multiplying these numbers yields 10 W. The chosen battery has USB output of 5 V and 3 A. Multiplying these numbers yields 15 W both of which are greater than the worst case power draw of 1.686 W
@@ -40,7 +40,7 @@ Additional constraints on system for battery operation
 
 4. The chosen wall adapter is rated for 100-240 V 50/60 Hz AC which covers the US electrical system and shows UL certification.
 5. The chosen battery has a stated capacity of 25000 mAh and uses an internal battery voltage of 3.7 V for a power capacity of 92.5 Wh. Using this and the typical power draw of 0.831 W tells us that it will run for 111.31 hours on a single charge with no additional power from the solar cell. This is 2.319x the minimum operation time. 
-6. Built in solar cell provides can provide 6 W during peak sun hours
+6. Built in solar cell can provide 6 W during peak sun hours
 
    Gaining 6 W * 4.5 h = 27 Wh given 4.5 hours of peak sun which is greater than the 19.988 Wh daily usage.
 
