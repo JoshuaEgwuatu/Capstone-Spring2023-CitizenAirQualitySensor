@@ -31,8 +31,8 @@ The interface conditions a chosen set of analog voltage, analog current and digi
 | Designator   | Manufacturer                       | Manufactured Part #     | Description                         | Quantity    | Price       |
 |------------- |----------------------------------- |-------------------------|-------------------------------------|-------------|-------------|
 | P1           | ‎jianxin                           | JIANXI-09-13-30-zong-01 | ¼ W Resistor Pack                   | 25 pieces   | $6.99       |
-| P2           | Stackpole Electronics Inc          |CF14JT10K0               | 10k ohm resistor                    | 2           | $0.1        |
-| P3           | Stackpole Electronics Inc          |RNF14BTE5K00             | RES 5K OHM 0.1% 1/4W                | 1           |             |
+| P2           | Stackpole Electronics Inc          |CF14JT10K0               | RES 10K OHM 5% 1/4W                 | 2           | $0.00729    |
+| P3           | Stackpole Electronics Inc          |RNF14BTE5K00             | RES 5K OHM 0.1% 1/4W                | 1           | $0.13965    |
 | P4           | Lumimax Optoelectronic Technology  | CF1/4W3K3JTB            | RES 3.3K OHM 5% 1/4W                | 1           | $0.01144    |
 | P5           | Stackpole Electronics Inc          | CF14JT2K20              | RES 2.2K OHM 5% 1/4W                | 1           | $0.1        |
 | P6           | Stackpole Electronics Inc          | CF14JT1K00              | RES 1K OHM 5% 1/4W                  | 1           | $0.1        |
