@@ -1,48 +1,36 @@
 # Interface Signoff
 
 ## Subsystem Function
-The interface conditions any input analog voltage, analog current and digital signal then transmits it to the microcontroller. 
+The interface conditions a chosen set of analog voltage, analog current and digital signal output ranges to be within the 0-5 volt range then transmits the data to the microcontroller. 
 ## Subsystem Constraints
-1) Must be able to operate with mV voltage output ranges
-2) Must support positive DC voltage ranges: 0 to 1 V, 0 to 5 V, 1 to 5 V, 0 to 10V
-3) Must be able to operate with negative voltage ranges: -10 to 10 V
-4) Must Support current output range: 4-20 mA
-5) The PCB material used must be UL certified
-
+1) Must scale the following voltage ranges to 0-5 V: 0-3 V, 0-10 V   
+2) Must convert the following current range to 0-5 V: 4-20 mA 
+3) Resistors must be RoHS compliant.
 
 ## System Schematic
 
-![Interface Schematic Mark 4 PNG](https://user-images.githubusercontent.com/118490274/219834938-37dff819-c3d3-414d-8535-df8448b19ed3.PNG)
+![interface mark 4 schematic](https://user-images.githubusercontent.com/118490274/220842539-eee8c190-cef5-4922-8b62-e53048e0ebf4.PNG)
 
 ## Analysis
 
-1) The amplifier will allow small signals such as those in the mV range to be measured by the arduino. The system is made of the OP27 op amp with resistors Rl set to a fixed value of 100 ohms and R2 being a 100 K potentiometer to allow the user to increase or decrease the gain depending on the output signal of the sensor. If the input signal to the op amp is already within the volt range then the microcontroller can measure the signal without needing amplification therefore a gain of 1 would be sufficient. However, if the signal was 1 mV then you would need a gain of 1000 to amplify to the range of 1 volt. A 100k ohm potentiometer as the R2 component in the op amp will allow this choice.  
+1) Voltage Scaling
+* An input voltage range 0-3 V is scaled to 0-5 V through the use of an non-inverting amplifier with a gain of 5/3. The gain formula for a non-inverting op amp is 1 + R2/R1 and if R1 is set to 3.3k then R2 needs to be 2.2k to acquire a gain of 5/3.The input voltage range is ran through the op amp and multiplied by the gain to scale up to the needed range of 0-5 V. 0 x 5/3 = 0 V and 3 x 5/3 = 5 V now making the 0-3 V range map into 0-5 V.
+* A 0-10 V range will be scaled down to 0-5 V by way of voltage division. The formula for voltage division is Vout = ( R2 x Vin ) / ( R1 + R2 ). If we set both resistor values to 10k then vout will equal half of the input voltage. (10k x 0 V) / (10k + 10k) = 0 V and (10k x 10 V) / (10k + 10k) = 5 V. The 0-10 V range is now scaled down to a 0-5 V range now measurable by the arduino. Using ohm's law, 10 V / (10k + 10k),  the current going through the voltage divider is .5 mA. Using the power formula, 10v x .5 mA, the power dissipated by each resistor is 5 mW. The chosen resistors are  ¼ W resistors so power dissipation and overheating will not become a problem.  
 
-| Gain          | R1            | R2              |               
-| ------------- | ------------- | -------------   |
-|1              | 100 Oohms     |  0 ohms         |
-|10             | 100 Oohms     |  1k ohms        |
-|100            | 100 Oohms     |  10k ohms       |
-|1000           | 100 Oohms     |  100 ohms       |
+2) Current to Voltage Converter
+* The current to voltage converter is a 1000 ohm resistor in parallel with a 330 ohm resistor to form a 250 ohm resistor in series with the current source input. The resistor will convert a 4-20 mA range to a 1-5 V output. 4 mA * 250 ohms = 1 volt and 20 mA * 250 ohms = 5 volts. With a current of 20 mA and a produced voltage of 5 V the power dissipated would be .1 W. This is lower than our ¼ W resistor which solves any power dissipation concerns. 
 
-
-2) The 1N750 zener diode (D4) at the output of the full wave rectifier circuit has a breakdown voltage of 4.7 volts. If the output voltage of the op amp is above this breakdown voltage the diode will pull the voltage down 4.7 volts. This will ensure that any DC voltage ranges exceeding 5 volts can be used without overloading the arduino.
-
-3) The AC voltage signal is run through a half wave rectifier which will invert the signal and cut any peaks above 0. The original voltage signal and the signal from the half wave rectifier are both run through a summing op amps inverting input. This adds the amplitudes of both signals which produces a negative magnitude and is then inverted by the op amp thus only giving a positive output. This will ensure that the interface can handle any negative voltages coming from an AC signal. 
-
-4) The current to voltage converter is just a 250 ohm resistor in series with the current source input. This will convert a current output from an analog sensor to a voltage output capable of being measured by the arduino. A 250 ohm resistor will convert a 4-20 mA range to a 1-5 V output. 4 mA * 250 ohms = 1 volts and 20 mA * 250 ohms = 5 volts.  
-
-5) The pcb material will be FR4 PCB. The FR4 PCB has been through rigorous testing and has been UL certified.
+3) RoHS Compliance
+* The chosen resistors are stated to be lead free and RoHS compliant by the manufacturer.  
 
 ## BOM
 
-|Designator   |Manufacturer      |Manufactured Part # |Description                                                      | Price       |
-|-------------|------------------|--------------------|-----------------------------------------------------------------|-------------|
-| 1           |Juried Engineering| LM741CN/NOPB       | M741 Single 44V 1 MHz Operational Amplifier Op Amp (Pack of 10) | $12.09      |
-| 2           | OJACK            |                    | 125 Piece 1N5817 Diode Pack                                     | $5.99       |
-| 3           | CIGICM           | IN5817             | 125 Piece Resistor Pack                                         | $5.99       |
+| Designator   | Manufacturer      | Manufactured Part #     | Description                         | Quantity    | Price       |
+|------------- |------------------ |-------------------------|-------------------------------------|-------------|-------------|
+| P1           | ‎jianxin          | JIANXI-09-13-30-zong-01 | ¼ W Resistor Pack                   | 25 pieces   | $6.99       |
+| P2           | Texas Instruments | 296-OP-07DP-ND          | IC OPAMP GP 1 CIRCUIT 8DIP (digikey)| 1           | $2.97       |
+
 
 
 ## References
-* Storr, Wayne. “Non-Inverting Operational Amplifier - the Non-Inverting Op-Amp.” Basic Electronics Tutorials, 4 Aug. 2022, https://www.electronics-tutorials.ws/opamp/opamp_3.html.
-* Burton, Daniel. “OP Amp Input over-Voltage Protection: Clamping vs. Integrated.” Microwave Product Digest, 22 Feb. 2016, https://www.mpdigest.com/2016/02/22/op-amp-input-over-voltage-protection-clamping-vs-integrated/. 
+1) R. C. Dorf and J. A. Svoboda, Introduction to Electric Circuits, 9th Edition, John Wiley & Sons, Inc., 2014   
