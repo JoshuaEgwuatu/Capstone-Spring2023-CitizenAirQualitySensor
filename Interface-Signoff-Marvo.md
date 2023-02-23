@@ -28,16 +28,16 @@ The interface conditions a chosen set of analog voltage, analog current and digi
 
 ## BOM
 
-| Designator   | Manufacturer      | Manufactured Part #     | Description                         | Quantity    | Price       |
-|------------- |------------------ |-------------------------|-------------------------------------|-------------|-------------|
-| P1           | ‎jianxin          | JIANXI-09-13-30-zong-01 | ¼ W Resistor Pack                   | 25 pieces   | $6.99       |
-| P2           | ‎jianxin          |                         | 10k ohm resistor                    | 2           |             |
-| P3           | ‎jianxin          |                         | 5k  ohm resistor                    | 1           |             |
-| P4           | ‎jianxin          |                         | 3.3k ohmresistor                    | 1           |             |
-| P5           | ‎jianxin          |                         | 2.2k ohm resistor                   | 1           |             |
-| P6           | ‎jianxin          |                         | 1k ohm resistor                     | 1           |             |
-| P7           | ‎jianxin          |                         | 330 ohm resistor                    | 1           |             |
-| P8           | Texas Instruments | 296-OP-07DP-ND          | IC OPAMP GP 1 CIRCUIT 8DIP (digikey)| 1           | $2.97       |
+| Designator   | Manufacturer                       | Manufactured Part #     | Description                         | Quantity    | Price       |
+|------------- |----------------------------------- |-------------------------|-------------------------------------|-------------|-------------|
+| P1           | ‎jianxin                           | JIANXI-09-13-30-zong-01 | ¼ W Resistor Pack                   | 25 pieces   | $6.99       |
+| P2           | Stackpole Electronics Inc          |CF14JT10K0               | 10k ohm resistor                    | 2           | $0.1        |
+| P3           | Stackpole Electronics Inc          |RNF14BTE5K00             | RES 5K OHM 0.1% 1/4W                | 1           |             |
+| P4           | Lumimax Optoelectronic Technology  | CF1/4W3K3JTB            | RES 3.3K OHM 5% 1/4W                | 1           | $0.01144    |
+| P5           | Stackpole Electronics Inc          | CF14JT2K20              | RES 2.2K OHM 5% 1/4W                | 1           | $0.1        |
+| P6           | Stackpole Electronics Inc          | CF14JT1K00              | RES 1K OHM 5% 1/4W                  | 1           | $0.1        |
+| P7           | Stackpole Electronics Inc          |  CF14JT330R             | RES 330 OHM 5% 1/4W                 | 1           | $0.1        |
+| P8           | Texas Instruments                  | 296-OP-07DP-ND          | IC OPAMP GP 1 CIRCUIT 8DIP (digikey)| 1           | $2.97       |
 
 
 
