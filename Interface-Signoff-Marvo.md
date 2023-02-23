@@ -24,7 +24,7 @@ The interface conditions a chosen set of analog voltage, analog current and digi
 * The current to voltage converter is a 1000 ohm resistor in parallel with a 330 ohm resistor to form a 250 ohm resistor in series with the current source input. The resistor will convert a 4-20 mA range to a 1-5 V output. 4 mA * 250 ohms = 1 volt and 20 mA * 250 ohms = 5 volts. With a current of 20 mA and a produced voltage of 5 V the power dissipated would be .1 W. This is lower than our ¼ W resistor which gets rid of power dissipation concerns. 
   
 3) RoHS Compliance
-* The chosen resistors are stated to be lead free and RoHS compliant by the manufacturer jianxin.  
+* The chosen resistors and OP07 op amp have been found on Digikey and are listed as RoHS compliant.  
 
 ## BOM
 
