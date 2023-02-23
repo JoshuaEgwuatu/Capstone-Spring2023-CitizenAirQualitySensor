@@ -1,7 +1,8 @@
 # Interface Signoff
 
 ## Subsystem Function
-The interface conditions a chosen set of analog voltage, analog current and digital signal output ranges to be within the 0-5 volt range then transmits the data to the microcontroller. 
+The interface conditions a chosen set of analog voltage, analog current and digital signal output ranges coming from the sensor subsystem to be within the 0-5 volt range then outputs these conditioned signals to the microcontroller. 
+
 ## Subsystem Constraints
 1) Must scale the following voltage ranges to 0-5 V: 0-3 V, 0-10 V, -10-10 V, and -5-5 V   
 2) Must convert the following current range to 0-5 V: 4-20 mA 
