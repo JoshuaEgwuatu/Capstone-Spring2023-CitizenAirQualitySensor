@@ -37,7 +37,7 @@ The interface conditions a chosen set of analog voltage, analog current and digi
 | P5           | Stackpole Electronics Inc          | CF14JT2K20              | RES 2.2K OHM 5% 1/4W                | 1           | $0.1        |
 | P6           | Stackpole Electronics Inc          | CF14JT1K00              | RES 1K OHM 5% 1/4W                  | 1           | $0.1        |
 | P7           | Stackpole Electronics Inc          |  CF14JT330R             | RES 330 OHM 5% 1/4W                 | 1           | $0.1        |
-| P8           | Texas Instruments                  | 296-OP-07DP-ND          | IC OPAMP GP 1 CIRCUIT 8DIP (digikey)| 1           | $2.97       |
+| P8           | 	Analog Devices Inc.               | OP07CSZ-REEL            | IC OPAMP GP 1 CIRCUIT 8SOIC         | 1           | $2.31000    |
 
 
 
