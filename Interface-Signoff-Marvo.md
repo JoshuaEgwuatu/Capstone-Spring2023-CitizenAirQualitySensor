@@ -4,19 +4,10 @@
 The interface conditions a chosen set of analog voltage and analog current output ranges coming from the sensor subsystem to be within the 0 V to 5 V or 1 V to 5 V range then outputs these conditioned signals to the microcontroller. Digital signals do not connect with the interface but instead go straight to the microcontroller.  
 
 ## Subsystem Constraints
-1) Must scale the following voltage ranges to 0 V to 5 V: 
-* 
-   0 V to 3 V
-*   
-   0 V to 10 V
- *   
-   -10 V to +10 V
-*  
-   -5 V to +5 V   
-   
+1) Must scale the following voltage ranges to 0 V to 5 V: 0 V to 3 V,  0 V to 10 V,  -10 V to +10 V,  -5 V to +5 V     
 2) Must convert a current signal of 4 to 20 mA to a voltage signal of 1 to 5 V
 3) Components must be RoHS compliant
-4) Must operate off of 5±0.25 V and 9mA from the power system
+4) Interface must not draw any more current than the power system can provide ( 3 A ) and operate off of 5±0.25 V from the power system.
 
 ## System Schematic
 
@@ -53,8 +44,8 @@ The interface conditions a chosen set of analog voltage and analog current outpu
 3) RoHS Compliance
 * The chosen resistors and OP07 op amp have been found on Digikey and are listed as RoHS compliant.  
 
-4) Interface must run off of power systems 5 volts
-* As shown in the schematic, the only  two circuits in the interface that need power are the op amp the three resistor circuit which are both supplied 5 V from the power system. The op amp power consumption with a 5 volt power supply is about 50 mW. The current this correlates to with a 5 volt supply is about 8mA. Perfoming nodal analysis on the negative voltage to 0 V to 5 V converter comes out to about 1 mA. The other 2 circuits do not draw any power and therfore the max current consumption of the interface is about 9 mA.
+4) 
+* As shown in the schematic, the only  two circuits in the interface that need power are the op amp the three resistor circuit which are both supplied 5 V from the power system. The op amp power consumption with a 5 volt power supply is about 50 mW. Taking the 5 volt power supply and dividing by the 50 mW power draw of the op07 you get a current draw of 10 mA. The only other circuit that draws power in the interface is the negative voltage to 0 V to 5 V converter, perfoming nodal analysis on said circuit comes out to about 1 mA. Therfore total current draw of the interface is about 11 mA. 
 
 ## BOM
 
