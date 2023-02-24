@@ -62,7 +62,10 @@ Cherokee Data/Specifications:
 
 ## BILL OF MATERIALS (BOM)
 
-N/A
+| Designator | Manufacturer      | Manufactured Part # | Description                                                                                     | Quantity | Price Each |
+| ---------- | ----------------  | ------------------- | ----------------------------------------------------------------------------------------------- | -------- | ---------- |
+| U1         | Cherokee Project | Cherokee | Web Server | 1        | $64.80     |
+
 
 ## References
 1. A. Marget, “Data Encryption: How It Works & Methods Used,” Unitrends, Jan. 27, 2022. https://www.unitrends.com/blog/data-encryption#:~:text=A%20key%20is%20used%20to (accessed Feb. 10, 2023).
