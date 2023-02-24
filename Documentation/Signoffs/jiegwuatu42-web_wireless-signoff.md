@@ -17,11 +17,11 @@ Chart Displaying Possibilities:
 |Required Space for Server (Megabytes per month)| | | | |
 |:----|:----|:----|:----|:----|
 | | |Data Size| | |
-|Sensors left in the field| |8 Bits|10 Bits|16 bits|
-|1 Month| |7.88E+01|9.86E+01|1.58E+02|
-|3 Months| |2.37E+02|2.96E+02|4.73E+02|
-|6 Months| |4.73E+02|5.91E+02|9.46E+02|
-|1 Year| |9.46E+02|1.18E+03|1.89E+03|
+|Sensors left in the field| |8 Bit sampling|10 bit sampling|16 bit sampling|
+|1 Month| |78.8 megabytes|98.6 megabytes|158E megabytes|
+|3 Months| |237 megabytes|296 megabytes|473 megabytes|
+|6 Months| |473 megabytes|591 megabytes|946 megabytes|
+|1 Year| |946 megabytes|1180 megabytes|1890 megabytes|
 
 
 
