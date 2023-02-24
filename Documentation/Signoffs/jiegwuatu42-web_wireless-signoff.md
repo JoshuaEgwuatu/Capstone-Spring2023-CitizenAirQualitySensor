@@ -49,15 +49,15 @@ Server will be made using HTML. It will receive info from TCP Connection provide
 
 Cherokee Data/Specifications: 
 - Minimum Laptop Requirements:
-- - CPU Speed: 133Mhz
-- - System Programs: sh shell, make and an ANSI C compiler
+  - CPU Speed: 133Mhz
+  - System Programs: sh shell, make and an ANSI C compiler
 - Coding language: Python
-- - Easy to use
+  - Easy to use
 - Supports OpenSSL backend
-- - TLS library that secures data
+  - TLS library that secures data
 - User Interface
-- - Extremely friendly user interface (UI)
-- - Uses graphical interface
+  - Extremely friendly user interface (UI)
+  - Uses graphical interface
 
 
 ## BILL OF MATERIALS (BOM)
