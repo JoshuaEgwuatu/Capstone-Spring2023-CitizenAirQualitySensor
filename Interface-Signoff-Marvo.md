@@ -10,7 +10,7 @@ The interface conditions a chosen set of analog voltage and analog current outpu
 
 ## System Schematic
 
-![WORST CASE ANALYSIS FOR CIRCUIT 1](https://user-images.githubusercontent.com/118490274/221122223-c6ed2429-67f1-4fdd-9eaf-56006c308c21.PNG)
+![interface mark 5 schematic](https://user-images.githubusercontent.com/118490274/221126418-b5eed9c2-7cea-4c91-a7e5-c7a780e5fbaa.PNG)
 
 ## Analysis
 
@@ -23,6 +23,10 @@ The interface conditions a chosen set of analog voltage and analog current outpu
 
 
 * A 0 V to 10 V range will be scaled down to 0 V to 5 V by way of voltage division. The formula for voltage division is Vout = ( R2 x Vin ) / ( R1 + R2 ). If we set both resistor values to 10k then vout will equal half of the input voltage. (10k x 0 V) / (10k + 10k) = 0 V and (10k x 10 V) / (10k + 10k) = 5 V. The 0-10 V range is now scaled down to a 0 V to 5 V range now measurable by the arduino. Using ohm's law, 10 V / (10k + 10k),  the current going through the voltage divider is .5 mA. Using the power formula, 10v x .5 mA, the power dissipated by each resistor is 5 mW. The chosen resistors are  ¼ W resistors so power dissipation and overheating will not become a problem. 
+* Component Variations for 0 V to 10 V to 0 V to 5 V Circuit:  Each resistor tolerance is 5%. Taking this into account, a ltspice worse cast analysis simulation was performed for for the input voltages 0 V and 10 V. The arduino megas logic low range is -0.5 V to 1.5 V. and logic high would be between 3 V to 5.5 V. As shown by the graphs, even with the variations of values due to tolerances input voltage 10 V maps to a logic 1 because the output of the circuit with tolerances considered ranges from 4.8 V to 5.24 V which is within the logic high range of. Input voltage 0 V maps to a logic 0 because the output of the circuit with tolerances considered is 0 V which is within the logic low range. 
+
+![WORST CASE ANALYSIS FOR CIRCUIT 2](https://user-images.githubusercontent.com/118490274/221125591-8bcd4d9c-c7e1-4e57-bc8a-518199cc2f27.PNG)
+
 * To accurately map our chosen negative voltage ranges, a set of equations and steps are used to pick the right resistor values for our three resistor voltage converter circuit. Step 1: Delta Vin = Sensor output range and Delta Vout =  A/D input range. Step 2: Ax = Delta Vin /  Delta Vout, Bx = Vbias / (Vout Vin/A ), and Cx = Ax * Bx / (Ax * Bx - Ax - Bx ). Step 2: RA and Vbias will be kept constant at 10k and 5 volts respectively. RA = (10K / Ax ) * Ax  = 10K. RB = (10k / Ax ) * Bx. RC = (10k / Ax ) * Cx. If input range is -10-10 V and these equations are followed, the values of resistor A,B and C would be 10k,5k, and 10k respectively to map the input range to 0 V to 5 V. If input range was -5 to +5 V, using these equations would give us RA = 10k, RB = 10k and RC would be disconnected to map -5 to +5 V to 0 V to 5 V. 
 
 2) Current to Voltage Converter
