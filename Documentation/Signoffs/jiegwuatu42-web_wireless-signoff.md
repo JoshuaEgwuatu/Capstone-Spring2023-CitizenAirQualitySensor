@@ -11,9 +11,12 @@ Via 4G LTE
 Via Wi-Fi
 2. The server must have adequate storage for user data. This storage is based on the number of sensors used at once (3 max). The current goal is to hold data collected for a month. At this time, 1 GB of ram is required. A chart will be provided to show if the user chooses to use a different option. 
 The equation used: 10 Hz (worst case sampling rate) * 10 bits (analog to digital converter) = 100 bits. 100 bits / 8 (8 bits in a byte) = 12.5 bytes per second. 12.5 bytes per second / 10^6 (convert to megabytes) = 12.5*10^-6 megabytes. 12.5*10^-6 megabytes * 1 month = 32.8536 megabytes per month. 32.8536 megabytes per month * 3 (sensors in microcontroller at one time) = 98.5608  megabytes per month [N/A]
+
 Chart Displaying Possibilities:
-| Required Space for Server (Megabytes per month) |
-| ----------------------------------------------- |
+
+
+| Required Space for Server (Megabytes per month) |  |        |         |        |
+| ----------------------------------------------- |  |        |         |        |
 |                                                 |  | Data Size |
 | Sensors left in the field                       |  | 8 Bits | 10 Bits | 16 bits |
 | 1 Month                                         |  | 7.88E+01 | 9.86E+01 | 1.58E+02 |
