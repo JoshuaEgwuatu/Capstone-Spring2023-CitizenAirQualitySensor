@@ -10,7 +10,7 @@ The subsystem constraints are placed to ensure that it can fulfill its job in a 
 Via 4G LTE
 Via Wi-Fi
 2. The server must have adequate storage for user data. This storage is based on the number of sensors used at once (3 max). The current goal is to hold data collected for a month. At this time, 1 GB of ram is required. A chart will be provided to show if the user chooses to use a different option. 
-The equation used: 10 Hz (worst case sampling rate) * 10 bits (analog to digital converter) = 100 bits. 100 bits / 8 (8 bits in a byte) = 12.5 bytes per second. 12.5 bytes per second / 10^6 (convert to megabytes) = 12.5*10^-6 megabytes. 12.5*10^-6 megabytes * 1 month = 32.8536 megabytes per month. 32.8536 megabytes per month * 3 (sensors in microcontroller at one time) = 98.5608  megabytes per month [N/A]
+The equation used: 10 Hz (worst case sampling rate) * 2 bytes per 10 bit sample = 20 bytes per second. 20 bytes per second / 1.0486 * 10^6 (convert to megabytes) = 20 * 1.0486 * 10^-6 megabytes. 20 * 1.0486 * 10^-6 * 1 month = 32.8536 megabytes per month. 32.8536 megabytes per month * 3 (sensors in microcontroller at one time) = 50.16  megabytes per month [N/A]ex
 
 Chart Displaying Possibilities:
 
@@ -18,14 +18,14 @@ Chart Displaying Possibilities:
 |:----|:----|:----|:----|:----|
 | | |Data Size| | |
 |Sensors left in the field| |8 Bit sampling|10 bit sampling|16 bit sampling|
-|1 Month| |78.8 megabytes|98.6 megabytes|158E megabytes|
-|3 Months| |237 megabytes|296 megabytes|473 megabytes|
-|6 Months| |473 megabytes|591 megabytes|946 megabytes|
-|1 Year| |946 megabytes|1180 megabytes|1890 megabytes|
+|1 Month| |25.08 megabytes|50.16 megabytes|50.16 megabytes|
+|3 Months| |75.24 megabytes|150.47 megabytes|150.47 megabytes|
+|6 Months| |150.47 megabytes|300.95 megabytes|300.95 megabytes|
+|1 Year| |300.95 megabytes|601.9 megabytes|601.9 megabytes|
 
 
 
-3. The data will be encrypted and decrypted using AES Symmetric Encryption. The encryption/decryption will happen at two different times:
+3. The data will be encrypted and decrypted using TLS Encryption. The encryption/decryption will happen at two different times:
 Microcontroller to Server
 Server to User
 4. The server must be able to process the data collected.
