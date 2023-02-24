@@ -24,9 +24,9 @@ Chart Displaying Possibilities:
 
 
 3. The data will be encrypted and decrypted using TLS Encryption. The encryption/decryption will happen at two different times: [9]
-- Microcontroller to Server
+- Communication to Server
 - Server to User
-4. The server must be able to process the data collected.
+4. The server must be able to read, decrypt, and format the data collected.
 5. The server must be accessible via the Internet.
 6. The data received must be displayed in a user friendly format. Graphical Interface suggested.
 
