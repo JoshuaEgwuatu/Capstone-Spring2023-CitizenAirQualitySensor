@@ -36,8 +36,7 @@ Server to User
 
 ## BUILDABLE SCHEMATIC OF SUBSYSTEM
 
-<img width="350" alt="4G Connection" src="https://user-images.githubusercontent.com/110966922/219462337-5e72409b-17d1-4c59-8d68-eab86c8fda1f.png">
-<img width="432" alt="Wifi Connection" src="https://user-images.githubusercontent.com/110966922/219462340-b16763c0-cbe4-4803-ba0f-be77fbb212e4.png">
+<img width="209" alt="Server Flow Chart" src="https://user-images.githubusercontent.com/110966922/221298770-8a3229b9-522d-4038-99cb-fc014aa2086b.png">
 
 
 Server will be made using HTML. It will receive info from TCP Connection provided from UART. 
@@ -46,16 +45,19 @@ Server will be made using HTML. It will receive info from TCP Connection provide
 
 1. Arduino IDE
 2. ArduinoMqttClient
+3. The pre-built server the team selected is Cherokee. It is a high-performance web server that is fast, flexible, and easy to configure. The server meets project constraints. 
 
-For Wifi Component:
-3. NodeMCU
-Works with HiLetGo 1PC ESP8266 NodeMCU CP2102 ESP-12E
-Arduino-like hardware IO which is easier for the user to configure and manipulate. 
-![Wifi Module HTTP Server](https://user-images.githubusercontent.com/110966922/221247686-2bc1a8b8-0a40-409c-804d-ef23eedf323f.png)
-![Wifi Module Access Point](https://user-images.githubusercontent.com/110966922/221247710-097123f8-785a-4ec7-b119-68a5eb4fa8a0.png)
-
-
-For 4G LTE:
+Cherokee Data/Specifications: 
+- Minimum Laptop Requirements:
+- - CPU Speed: 133Mhz
+- - System Programs: sh shell, make and an ANSI C compiler
+- Coding language: Python
+- - Easy to use
+- Supports OpenSSL backend
+- - TLS library that secures data
+- User Interface
+- - Extremely friendly user interface (UI)
+- - Uses graphical interface
 
 
 ## BILL OF MATERIALS (BOM)
