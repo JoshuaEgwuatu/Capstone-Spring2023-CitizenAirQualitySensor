@@ -1,7 +1,7 @@
 # Interface Signoff
 
 ## Subsystem Function
-The interface conditions a chosen set of analog voltage and analog current output ranges coming from the sensor subsystem to be within the 0-5 volt range then outputs these conditioned signals to the microcontroller. Digital signals do not connect with the interface but instead go straight to the microcontroller.  
+The interface conditions a chosen set of analog voltage and analog current output ranges coming from the sensor subsystem to be within the 0 V to 5V or 1 V to 5 V range then outputs these conditioned signals to the microcontroller. Digital signals do not connect with the interface but instead go straight to the microcontroller.  
 
 ## Subsystem Constraints
 1) Must scale the following voltage ranges to 0 V to 5 V: 0 V to 3 V, 0 V to 10 V, -10 V to +10 V, and -5 V to +5 V   
@@ -51,15 +51,14 @@ The interface conditions a chosen set of analog voltage and analog current outpu
 
 | Designator   | Manufacturer                       | Manufactured Part #     | Description                         | Quantity    | Price       |
 |------------- |----------------------------------- |-------------------------|-------------------------------------|-------------|-------------|
-| P1           | ‎jianxin                           | JIANXI-09-13-30-zong-01 | ¼ W Resistor Pack                   | 25 pieces   | $6.99       |
-| P2           | Stackpole Electronics Inc          |CF14JT10K0               | RES 10K OHM 5% 1/4W                 | 2           | $0.00729    |
-| P3           | Stackpole Electronics Inc          |RNF14BTE5K00             | RES 5K OHM 0.1% 1/4W                | 1           | $0.13965    |
-| P4           | Lumimax Optoelectronic Technology  | CF1/4W3K3JTB            | RES 3.3K OHM 5% 1/4W                | 1           | $0.01144    |
-| P5           | Stackpole Electronics Inc          | CF14JT2K20              | RES 2.2K OHM 5% 1/4W                | 1           | $0.1        |
-| P6           | Stackpole Electronics Inc          | CF14JT1K00              | RES 1K OHM 5% 1/4W                  | 1           | $0.1        |
-| P7           | Stackpole Electronics Inc          | CF14JT330R              | RES 330 OHM 5% 1/4W                 | 1           | $0.1        |
-| P8           | Stackpole Electronics Inc          | CF14JT20K0              | RES 20K OHM 5% 1/4W                 | 2           | $0.10000    |        
-| P9           | 	Analog Devices Inc.               | OP07CSZ-REEL            | IC OPAMP GP 1 CIRCUIT 8SOIC         | 1           | $2.31000    |
+| P1           | Stackpole Electronics Inc          |CF14JT10K0               | RES 10K OHM 5% 1/4W                 | 2           | $0.00729    |
+| P2           | Stackpole Electronics Inc          |RNF14BTE5K00             | RES 5K OHM 0.1% 1/4W                | 1           | $0.13965    |
+| P3           | Lumimax Optoelectronic Technology  | CF1/4W3K3JTB            | RES 3.3K OHM 5% 1/4W                | 1           | $0.01144    |
+| P4           | Stackpole Electronics Inc          | CF14JT2K20              | RES 2.2K OHM 5% 1/4W                | 1           | $0.1        |
+| P5           | Stackpole Electronics Inc          | CF14JT1K00              | RES 1K OHM 5% 1/4W                  | 1           | $0.1        |
+| P6           | Stackpole Electronics Inc          | CF14JT330R              | RES 330 OHM 5% 1/4W                 | 1           | $0.1        |
+| P7           | Stackpole Electronics Inc          | CF14JT20K0              | RES 20K OHM 5% 1/4W                 | 2           | $0.10000    |        
+| P8           | 	Analog Devices Inc.               | OP07CSZ-REEL            | IC OPAMP GP 1 CIRCUIT 8SOIC         | 1           | $2.31000    |
 
 
 
