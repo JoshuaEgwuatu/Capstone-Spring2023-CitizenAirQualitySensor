@@ -7,6 +7,7 @@ The interface conditions a chosen set of analog voltage and analog current outpu
 1) Must scale the following voltage ranges to 0 V to 5 V: 0 V to 3 V, 0 V to 10 V, -10 V to +10 V, and -5 V to +5 V   
 2) Must convert the following current range to 1 V to 5 V: 4 mA to 20 mA 
 3) Components must be RoHS compliant.
+4) Must operate off of 5 V from the power system.
 
 ## System Schematic
 
@@ -16,7 +17,7 @@ The interface conditions a chosen set of analog voltage and analog current outpu
 
 1) Voltage Scaling
 * An input voltage range 0 V to 3 V is scaled to 0-5 V through the use of an non-inverting amplifier with a gain of 5/3. The gain formula for a non-inverting op amp is 1 + (R2/R1) and if R1 is set to 3.3k then R2 needs to be 2.2k to acquire a gain of 5/3. The input voltage range is ran through the op amp which multiplies the voltage by the gain. This scales up the original range to the desired range of 0 V to 5 V. 0 V x 5/3 = 0 V and 3 V x 5/3 = 5 V now making a 0 V to 3 V signal map into 0 V to 5 V.
-* Offset Voltage: Voff due to input offset is calculated with the equation (1+R2/R1) x input offset voltage. Voff due to input offset current is calculated by R2 x input offset current. According to the op07 datasheet, input offset voltage and input offset current are 75 uV max and 3.8 nA max. Substituting these values into the previous equations along with our resistor values of R1 = 3300 and R2 = 2200, we get a total offset voltage of .125 mV which is between our acceptable offset output range of 0 mV to 20 mV.
+* Offset Voltage: Voff due to input offset is calculated with the equation (1+R2/R1) x input offset voltage. Voff due to input offset current is calculated by R2 x input offset current. According to the op07 datasheet, input offset voltage and input offset current are 75 uV max and 3.8 nA max respectively. Substituting these values into the previous equations along with our resistor values of R1 = 3300 and R2 = 2200, we get a total offset voltage of .125 mV which is between our acceptable offset output range of 0 mV to 20 mV. Taking into account resistor tolerances, the new range for total offset voltage is between .12 mV to .14 mV which is still within our acceptable offset range of 0 mV to 20 mV.
 * Component Variations for 0 V to 3 V to 0 V to 5 V Circuit: Each resistor tolerance and voltage tolerance for the op amp power supply is 5%. Taking this into account, a ltspice worse cast analysis simulation was performed for for the input voltages 0 V and 3 V respictevly. The arduino mega accepts -0.5 V to .3 X Vcc ( 1.5 V) and  as logic low and .3 x Vcc ( 3 V ) to Vcc + 0.5 ( 5.5 V) as logic high. As shown by the graphs, even with the variations of values due to tolerances input voltage 0 V maps to a logic 0 because the output of the circuit with tolerances considered ranges from 925 mV to 926 mV which is within the logic low range of -0.5 V to 1.5 V. Input voltage 3 V maps to a logic 1 because the output of the circuit with tolerances considered ranges from 3.8 V to 4.3 V which is within the logic high range of 3 V to 5.5 V. 
 
 ![WORST CASE ANALYSIS FOR CIRCUIT 1](https://user-images.githubusercontent.com/118490274/221122771-ea940e4f-cec6-4fda-8705-ac0186986cd8.PNG)
@@ -43,6 +44,9 @@ The interface conditions a chosen set of analog voltage and analog current outpu
 3) RoHS Compliance
 * The chosen resistors and OP07 op amp have been found on Digikey and are listed as RoHS compliant.  
 
+4) Interface must run off of power systems 5 volts
+* As shown in the schematic, the only  two circuits in the interface that need power are the op amp the three resistor circuit which are both supplied 5 V from the power system. 
+
 ## BOM
 
 | Designator   | Manufacturer                       | Manufactured Part #     | Description                         | Quantity    | Price       |
@@ -62,3 +66,4 @@ The interface conditions a chosen set of analog voltage and analog current outpu
 ## References
 1) R. C. Dorf and J. A. Svoboda, Introduction to Electric Circuits, 9th Edition, John Wiley & Sons, Inc., 2014   
 2) Wyss, K. Scaling and Biasing Analog Signals, Symmetric Research, 24 Nov. 2007, http://edge.rit.edu/edge/P17105/public/Final%20Documents/pihat/docs/raspi_zero_power_sensor_hat/app_notes/resistor_biasing.pdf.  
+3) “OP07 Datasheet by Analog Devices Inc..” Digi, https://www.digikey.com/en/htmldatasheets/production/53383/0/0/1/op07.html. 
