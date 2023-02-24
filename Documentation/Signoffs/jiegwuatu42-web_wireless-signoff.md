@@ -37,7 +37,7 @@ Chart Displaying Possibilities:
 <img width="209" alt="Server Flow Chart" src="https://user-images.githubusercontent.com/110966922/221298770-8a3229b9-522d-4038-99cb-fc014aa2086b.png">
 
 
-Server will be made using HTML. It will receive info from TCP Connection provided from UART. 
+Server will host a html website. Will be made using program languages C, Python, and Go
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
 
