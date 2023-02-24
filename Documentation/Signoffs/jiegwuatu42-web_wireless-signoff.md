@@ -68,7 +68,7 @@ Cherokee Data/Specifications:
 
 
 ## References
-‌
+
 1. Datasheet SPS30 Particulate Matter Sensor for Air Quality Monitoring and Control.” https://cdn.sparkfun.com/assets/4/e/e/f/8/Sensirion_PM_Sensors_Datasheet_SPS30.pdf (Accessed on 2-23-23).
 
 2. Amazon.com: Customer reviews: HiLetgo 1PC ESP8266 NodeMCU CP2102 ESP-12E Development Board Open Source Serial Module Works Great for Arduino IDE/Micropython (Small),” www.amazon.com. https://www.amazon.com/HiLetgo-Internet-Development-Wireless-Micropython/product-reviews/B010O1G1ES/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews (accessed Feb. 23, 2023).
