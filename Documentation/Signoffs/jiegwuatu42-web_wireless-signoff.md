@@ -43,9 +43,7 @@ Server will be made using HTML. It will receive info from TCP Connection provide
 
 ## ANALYSIS OF CHOSEN COMPONENT(S)
 
-1. Arduino IDE
-2. ArduinoMqttClient
-3. The pre-built server the team selected is Cherokee. It is a high-performance web server that is fast, flexible, and easy to configure. The server meets project constraints. [9]
+1. The pre-built server the team selected is Cherokee. It is a high-performance web server that is fast, flexible, and easy to configure. The server meets project constraints. [9]
 
 Cherokee Data/Specifications: 
 - Minimum Laptop Requirements:
