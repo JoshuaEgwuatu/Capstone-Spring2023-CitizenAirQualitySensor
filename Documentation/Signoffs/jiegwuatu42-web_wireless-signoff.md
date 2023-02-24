@@ -7,8 +7,9 @@ The Web & Wireless subsystem is responsible for receiving data from the Communic
 
 The subsystem constraints are placed to ensure that it can fulfill its job in a satisfactory manner. Constraints on the subsystem are as follows:
 1. The server must be able to communicate with the microcontroller:
-Via 4G LTE
-Via Wi-Fi
+
+- Via 4G LTE
+- Via Wi-Fi
 2. The server must have adequate storage for user data. This storage is based on the number of sensors used at once (3 max). [1] The current goal is to hold data collected for a month. At this time, 1 GB of ram is required. A chart will be provided to show if the user chooses to use a different option. 
 The equation used: 10 Hz (worst case sampling rate) * 2 bytes per 10 bit sample = 20 bytes per second. 20 bytes per second / 1.0486 * 10^6 (convert to megabytes) = 20 * 1.0486 * 10^-6 megabytes. 20 * 1.0486 * 10^-6 * 1 month = 32.8536 megabytes per month. 32.8536 megabytes per month * 3 (sensors in microcontroller at one time) = 50.16  megabytes per month [N/A]
 
