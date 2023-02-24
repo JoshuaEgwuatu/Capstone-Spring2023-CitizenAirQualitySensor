@@ -64,7 +64,7 @@ Cherokee Data/Specifications:
 
 | Designator | Manufacturer      | Manufactured Part # | Description                                                                                     | Quantity | Price Each |
 | ---------- | ----------------  | ------------------- | ----------------------------------------------------------------------------------------------- | -------- | ---------- |
-| U1         | Cherokee Project | Cherokee | Web Server | 1        | $64.80     |
+| S1         | Cherokee Project | Cherokee | Web Server | 1        | $0     |
 
 
 ## References
