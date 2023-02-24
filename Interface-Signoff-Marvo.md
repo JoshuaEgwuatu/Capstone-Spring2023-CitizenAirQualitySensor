@@ -16,7 +16,7 @@ The interface conditions a chosen set of analog voltage and analog current outpu
    
 2) Must convert a current signal of 4 to 20 mA to a voltage signal of 1 to 5 V
 3) Components must be RoHS compliant
-4) Must operate off of 5±0.25 V from the power system
+4) Must operate off of 5±0.25 V and 9mA from the power system
 
 ## System Schematic
 
@@ -54,7 +54,7 @@ The interface conditions a chosen set of analog voltage and analog current outpu
 * The chosen resistors and OP07 op amp have been found on Digikey and are listed as RoHS compliant.  
 
 4) Interface must run off of power systems 5 volts
-* As shown in the schematic, the only  two circuits in the interface that need power are the op amp the three resistor circuit which are both supplied 5 V from the power system. 
+* As shown in the schematic, the only  two circuits in the interface that need power are the op amp the three resistor circuit which are both supplied 5 V from the power system. The op amp power consumption with a 5 volt power supply is about 50 mW. The current this correlates to with a 5 volt supply is about 8mA. Perfoming nodal analysis on the negative voltage to 0 V to 5 V converter comes out to about 1 mA. The other 2 circuits do not draw any power and therfore the max current consumption of the interface is about 9 mA.
 
 ## BOM
 
