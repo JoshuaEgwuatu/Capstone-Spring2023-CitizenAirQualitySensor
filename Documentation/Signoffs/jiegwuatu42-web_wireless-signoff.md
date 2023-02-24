@@ -83,3 +83,6 @@ Cherokee Data/Specifications:
 7. Admin, “SIM7600 4G GSM with Arduino | AT Commands, Call, SMS,” How To Electronics, Jan. 20, 2022. https://how2electronics.com/using-sim7600-4g-gsm-with-arduino-at-commands-call-sms/ (accessed Feb. 23, 2023)
 ‌
 8. “Maduino Zero 4G LTE(SIM7600X),” Makerfabs. https://www.makerfabs.com/maduino-zero-4g-lte-sim7600.html (accessed Feb. 23, 2023).
+
+9. “Cherokee Web Server | Home,” cherokee-project.com. https://cherokee-project.com/ (accessed Feb. 24, 2023).
+‌
