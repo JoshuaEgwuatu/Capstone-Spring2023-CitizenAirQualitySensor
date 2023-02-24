@@ -2,14 +2,14 @@
 ## FUNCTION OF THE SUBSYSTEM
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Sensor Subsystem will be designed to give various data to the Microcontroller Subsystem through the Interface Subsystem. As data acquisition starts, the output of each analog sensor goes through the Interface for voltage/current regulation to the microcontroller.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Within this Sensor Subsystem, the design team has decided to get multiple types of sensors for the modularity of the device. These types are digital, analog voltage, and analog current sensors. While the digital sensors send bits describing the measurement of a specific parameter, the analog sensors send their signals a bit differently. Analog sensors output analog signals which are different to measure from bits [11], therefore the Interface Subsystem will provide assistance in parameter conversion to the microcontroller.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Within this Sensor Subsystem, the design team has decided to get multiple types of sensors for the modularity of the device. These types are digital, analog voltage, and analog current sensors. While the digital sensors send bits describing the measurement of a specific parameter, the analog sensors send their signals a bit differently. Analog sensors output analog signals which are different to measure from bits, therefore the Interface Subsystem will provide assistance in parameter conversion to the microcontroller.
 
 ## CONSTRAINTS ON THE SUBSYSTEM
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Constraints on the subsystem are as follows:
 
 1. Each sensor selected shall be able to measure a specific pollutant. These pollutants include carbon dioxide, methane, nitrogen dioxide, ozone, particulate matter, and sulfur dioxide. These sensors should work independently from each other.
 
-2. Shall be modular. Specifically, the change of sensors should be seamless and handled by the board and software. The sensors will have multiple kinds of Input/Output (I/O) ports. For a sensor to be in the same group, it must share the same voltage supply, current consumption, communication technique through the interface, and output the signal at the range of 0 - 10 VDC or 4 - 20 mA [12].
+2. Shall be modular. Specifically, the change of sensors should be seamless and handled by the board and software. The sensors will have a variety of Input/Output (I/O) ports. For a sensor to be in the same group, it must share the same voltage supply, current consumption, communication technique through the interface, and output the signal at the range of 0 - 10 VDC for analog voltage or 4 - 20 mA for analog current [11].
 
 3. Each sensor must be able to communicate with the microcontroller using a communicative language. The sensors shall communicate through Serial Peripheral Interface (SPI), Universal Asynchronous Receiver-Transmitter (UART), or Inter-Integrated Circuit (I2C). The microcontroller for this design will also be able to communicate with those same data transfer techniques. 
 
@@ -17,7 +17,7 @@
 
 5. The input voltages from the Power Subsystem will provide either 3 or 5 +/- 0.1 V DC. Therefore, each sensor that will be used for the device shall have input voltages of either value. From looking at multiple gas sensors for this project, the maximum worst case for wattage in this subsystem is 375 mW. Maximum current consumption for each sensor is 75 mA.
 
-6. For every sensor that is plugged onto the Air Quality Device initially, there may be a start up time for initial calibration. According to a study in Tokyo, most portable gas sensors have a start-up time of 30s [13]. All sensors shall have a wait/warm-up time less than 2 hours before data acquisition.
+6. For every sensor that is plugged onto the Air Quality Device initially, there may be a start up time for initial calibration. According to a study in Tokyo, most portable gas sensors have a start-up time of 30s [12]. All sensors shall have a wait/warm-up time less than 2 hours before data acquisition.
 
 7. According to the ANSI/ASHRAE Standard 62.1-2016: Ventilation for Acceptable Indoor Air Quality [2], indoor CO2 concentrations no greater than 700 parts per million (ppm) above outdoor CO2 concentrations will satisfy a substantial majority (about 80%) of occupants. Sensors used for this device shall comply with their pollutant concentration with this standard for indoor/outdoor use.
 
@@ -40,17 +40,17 @@
 
 ## ANALYSIS OF THE SUBSYSTEM
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The team has chosen 3 sensors for testing that matches with the constraints list. We wanted each to be a different type of sensor output to test modularity and implement the necessary actions required within the software to model the functionality of both the Microcontroller, Interface, and Sensor Subsystems. All sensors chosen for experimentation are for detecting one of the 6 pollutants that the proposal has stated for data input. Note: All sensors that our team does not plan to order will have the quantity order number of 0 within the BOM.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The team has chosen 3 sensors for testing that matches with the constraints list. We wanted each to be a different type of sensor output to test modularity and implement the necessary actions required within the software to model the functionality of both the Microcontroller, Interface, and Sensor Subsystems. All sensors chosen for experimentation are for detecting one of the 6 pollutants that the proposal has stated for data input.
 
 ### OZONE SENSOR (ANALOG VOLTAGE)
 
 #### Analysis of the MIKROE-2767 [4]:
 
-●	The MIKROE-2767 Ozone (O3) Gas Sensor is a quarter-sized PCB mounted with a MQ131 detector that has high sensitivity depending on the potentiometer. This sensor is able to detect the pollutant anywhere from 10‐1000 Part-Per-Million (ppm). {1},{7}
+1.& 7.-The MIKROE-2767 Ozone (O3) Gas Sensor is a quarter-sized PCB mounted with a MQ131 detector that has high sensitivity depending on the potentiometer. This sensor is able to detect the pollutant anywhere from 10‐1000 Part-Per-Million (ppm).
 
-●	The MIKROE-2767 is able to communicate with the microcontroller using SPI and UART. Thus, the sensor will be able to send data for the user to store. {3}
+3.-The MIKROE-2767 is able to communicate with the microcontroller using SPI and UART. Thus, the sensor will be able to send data for the user to store.
 
-●	The MIKROE-2767 has an input voltage range of 3.3V - 5V therefore, this particular sensor can be powered by both voltage supply options. Based on the Schematic (Schematic Reference!), the current computation is in the range of 5 uA - 33 uA. {5}
+5.-The MIKROE-2767 has an input voltage range of 3.3V - 5V therefore, this particular sensor can be powered by both voltage supply options. Based on the Schematic (Schematic Reference!), the current computation is in the range of 5 uA - 33 uA.
 
 ●	The UART source code can be seen in the Buildables of the Subsystem section within the document. (See Figure 2.)
 
@@ -58,17 +58,17 @@
 
 #### Analysis of the ULPSM-IAQ 968-008 [6] with the A02P43B7001 [5]:
 
-●	The A02P43B7001 gas detector is able to detect Sulfur Dioxide (SO2) which is within the list of pollutants to be acquired. {1}
+1.-The A02P43B7001 gas detector is able to detect Sulfur Dioxide (SO2) which is within the list of pollutants to be acquired.
 
-●	The ULPSM-IAQ 968-008 below the detector contains a nice feature of having the ability to switch the gas detectors for other pollutants as well. This can allow the user to replace the SO2 sensor with another pollutant detector, or a different type of gas detector for more convenience and modularity. {2}
+2.-The ULPSM-IAQ 968-008 below the detector contains a nice feature of having the ability to switch the gas detectors for other pollutants as well. This can allow the user to replace the SO2 sensor with another pollutant detector, or a different type of gas detector for more convenience and modularity.
 
-●	The SO2 gas detector can also communicate with the microcontroller using UART for data transfer. {3}
+3.-The SO2 gas detector can also communicate with the microcontroller using UART for data transfer.
 
-●	The ULPSM-IAQ 968-008 will be under what the gas detector is mounted on. calls for a supply voltage of  around 3.3V. Therefore, this will consume even less power and can control current output for more accurate measurements within the parameters. The power consumption is on average 30 uW. Also, the corresponding current consumption is 10uA on average. {5}
+5.-The ULPSM-IAQ 968-008 will be connected using header pins under the A02P43B7001, which will communicate with the Microcontroller. The ULPSM-IAQ 968-008 calls for a supply voltage of around 3.3V. The power consumption is on average 30 uW. Also, the corresponding current consumption is 10uA on average.
 
-●	The A02P43B7001 will operate at the same voltage supply of 3.3V with an LED indicator telling the user that the sensor is operating in the ON position. During this time, the SO2 sensor has a max operating current of 1.17 mA and a max power consumption of 3.7 mW. {5}
+5.-The A02P43B7001 will operate at the same voltage supply of 3.3V with an LED indicator telling the user that the sensor is operating in the ON position. During this time, the SO2 sensor has a max operating current of 1.17 mA and a max power consumption of 3.7 mW.
 
-●	The analog current detector has a measurement range of 0 - 5 ppm. Having a wide range will give the user a range of accuracy and levels of precise calculations. {7}
+7.-The analog current detector has a measurement range of 0 - 5 ppm. Having a wide range will give the user a range of accuracy and levels of precise calculations. {7}
 
 ●	A method sample code for the SO2 detector to communicate with the Master device can be seen within the Buildables of the Subsystem section. (See Figure 3.)
 
@@ -76,65 +76,65 @@
 
 #### Analysis of the DGS-CO 968-034 [7]:
 
-●	The DGS-CO is a digital carbon monoxide detector that has a similar modular feature as the analog current gas sensor. This means we can switch detectors for experimentation on whether the components meet our specifications. {1},{2}
+1.& 2.-The DGS-CO is a digital carbon monoxide detector that has a similar modular feature as the analog current gas sensor. This means we can switch detectors for experimentation on whether the components meet our specifications.
 
-●	The connections are configured by the PCB to communicate using UART as well. {3}
+3.-The connections are configured by the PCB to communicate using UART as well.
 
-●	The supply voltage is available for a 3.3V supply with a power gumption range of 0.15 - 12 mW. The current consumption also has a range of 0.05 mA - 4 mA. Values for the power, voltage, and current requirements depend on the operating periodic functions of this device. {5}
+5.-The supply voltage is available for a 3.3V supply with a power gumption range of 0.15 - 12 mW. The current consumption also has a range of 0.05 mA - 4 mA. Values for the power, voltage, and current requirements depend on the operating periodic functions of this device.
 
-●	This Digital sensor has a range of 0 -1,000 ppm. {7}
+7.-This Digital sensor has a range of 0 -1,000 ppm.
 
 ### METHANE SENSOR (ANALOG VOLTAGE)
 
-#### Analysis of the MIKROE-1628 [14]:
+#### Analysis of the MIKROE-1628 [13]:
 
-● The MIKROE-1628 is able to detect methane within its location. {1}
+1.-The MIKROE-1628 is able to detect methane within its location.
 
-● It can be supplied with a max voltage of 5V, a max current consumption of 33 uA, outputting at a range of 0 - 5 V using SPI or UART. {2},{3},{5}
+2.& 3. 5.-It can be supplied with a max voltage of 5V, a max current consumption of 33 uA, outputting at a range of 0 - 5 V using SPI or UART.
 
-● After a warm up time of 1 hour, it can start sampling at a rate of 2Hz.{4},{6}
+4.& 6.-After a warm up time of 1 hour, it can start sampling at a rate of 2Hz.
 
-● Has a measurement rage of 200 - 10000 ppm. {7}
+7.-Has a measurement rage of 200 - 10000 ppm.
 
 ### NITROGEN DIOXIDE SENSOR (DIGITAL)
 
-#### Analysis of the SEN0377 [15]:
+#### Analysis of the SEN0377 [14]:
 
-● The SEN0377 can detect various type of gasses, but for this device it shall be used to detect NO2. {1}
+1.-The SEN0377 can detect various type of gasses, but for this device it shall be used to detect NO2.
 
-● This sensor has the modular compatibility to take either 3.3 or 5 V supply with a low current consumption of 11 mA. Thus having a lower power intake of .45 W. Digital output of 0 - 3 V. {2},{5}
+2.& 5.-This sensor has the modular compatibility to take either 3.3 or 5 V supply with a low current consumption of 11 mA. Thus having a lower power intake of .45 W. Digital output of 0 - 3 V.
 
-● The sensor shall communicate using I2C for the microcontroller. {3}
+3.-The sensor shall communicate using I2C for the microcontroller.
 
-● Start up time is less than 1 hour with a sample rate of 5 Hz. {4},{6}
+4.& 6.-Start up time is less than 1 hour with a sample rate of 5 Hz.
 
-● Measurement range of 0.05 - 10 ppm. {7}
+7.-Measurement range of 0.05 - 10 ppm.
 
 ### PARTICULATE MATTER SENSOR (DIGITAL)
 
-#### Analysis of the SPS30 [16]:
+#### Analysis of the SPS30 [15]:
 
-● This Particulate Matter (PM) Sensor can detect 4 different sizes of PM in its location. {1}
+1.-This Particulate Matter (PM) Sensor can detect 4 different sizes of PM in its location.
 
-● Supply voltage is 5V with max current intake of 75 mA. Outputs current of 0 - 16 mA. {2},{5}
+2.& 5.-Supply voltage is 5V with max current intake of 75 mA. Outputs current of 0 - 16 mA.
 
-● Uses both I2C and UART to communicate. {3}
+3.-Uses both I2C and UART to communicate.
 
-● Samples at a period of 1 second or 2 Hz. {4}
+4.-Samples at a period of 1 second or 2 Hz.
 
-● Start up time ranges from 8 - 30 seconds. {6}
+6.-Start up time ranges from 8 - 30 seconds.
 
-● Can calibrate up to ranges of 200 - 3000 ppm. {7}
+7.-Can calibrate up to ranges of 200 - 3000 ppm.
 
 ### GPS SENSOR (DIGITAL)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Another sensor to be applied in the project is used for GPS location. The RAK1910 [10] can do this task while also corresponding to the constraints provided.
 
-●	The RAK1910 can take 3.3V with low amperage consumption. The worst case being 22 mA. {5},{2}
+2.& 5.-The RAK1910 can take 3.3V with low amperage consumption. The worst case being 22 mA.
 
-●	The GPS sensor can communicate using UART or I2C, being compatible with the microcontroller in use. {3}
+3.-The GPS sensor can communicate using UART or I2C, being compatible with the microcontroller in use.
 
-●	30 second cold start-up time. {6}
+6.-30 second cold start-up time.
 
 ## BILL OF MATERIALS
 
@@ -148,6 +148,8 @@
 |Methane Click|MIKROE-1628|1|Multiple Function Sensor|$15.00|
 |Digital Sensor Module|SEN0377|1|Multiple Function Gas Sensor|$39.90|
 |Particulate Matter Sensor|SPS30|0|Particulate Matter Sensor for Air Quality Monitoring and Control|$50.50|
+
+Note: All sensors that our team does not plan to order will have the quantity order number of 0 within the BOM. Corresponding sensors that have the quantity number of 0 will be ordered at a later date separate from the initial build.
 
 ## REFERENCES
 
@@ -171,14 +173,12 @@
 
 10. RAK1910 WisBlock GNSS Location Module Datasheet https://docs.rakwireless.com/Product-Categories/WisBlock/RAK1910/Datasheet/#overview (Accessed on 2-17-23).
 
-11. RF Wireless World “Analog sensor vs Digital sensor | Difference between Analog sensor and Digital sensor” https://www.rfwireless-world.com/Terminology/Analog-sensor-vs-Digital-sensor.html (Accessed on 2-20-23).
+11. GasLab “Analog and Digital Gas Sensors: What’s the Difference?” https://gaslab.com/blogs/articles/what-s-difference-between-analog-digital-gas-sensors#:~:text=Analog%20gas%20sensors%20output%20one,or%200%2D3%20volts%20DC. (Accessed on 2-20-23).
 
-12. GasLab “Analog and Digital Gas Sensors: What’s the Difference?” https://gaslab.com/blogs/articles/what-s-difference-between-analog-digital-gas-sensors#:~:text=Analog%20gas%20sensors%20output%20one,or%200%2D3%20volts%20DC. (Accessed on 2-20-23).
+12. Stable Heating Technology for Catalytic Combustion Hydrogen Gas Sensor Using Quartz Resonators https://pdfs.semanticscholar.org/7a13/0c740245fd18929fdc9169a5f38154c9cf0e.pdf (Accessed on 2-23-23).
 
-13. Stable Heating Technology for Catalytic Combustion Hydrogen Gas Sensor Using Quartz Resonators https://pdfs.semanticscholar.org/7a13/0c740245fd18929fdc9169a5f38154c9cf0e.pdf (Accessed on 2-23-23).
+13. MIKROE-1628 Datasheet https://www.mouser.com/datasheet/2/272/methane-click-manual-v100-1483826.pdf (Accessed on 2-23-23).
 
-14. MIKROE-1628 Datasheet https://www.mouser.com/datasheet/2/272/methane-click-manual-v100-1483826.pdf (Accessed on 2-23-23).
+14. SEN0377 Datasheet https://www.mouser.com/pdfDocs/ProductOverview-DFRobot-SEN0377.pdf (Accessed on 2-23-23).
 
-15. SEN0377 Datasheet https://www.mouser.com/pdfDocs/ProductOverview-DFRobot-SEN0377.pdf (Accessed on 2-23-23).
-
-16. SPS30 Datasheet https://cdn.sparkfun.com/assets/4/e/e/f/8/Sensirion_PM_Sensors_Datasheet_SPS30.pdf (Accessed on 2-23-23).
+15. SPS30 Datasheet https://cdn.sparkfun.com/assets/4/e/e/f/8/Sensirion_PM_Sensors_Datasheet_SPS30.pdf (Accessed on 2-23-23).
