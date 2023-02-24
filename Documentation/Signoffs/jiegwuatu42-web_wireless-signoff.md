@@ -65,6 +65,7 @@ Cherokee Data/Specifications:
 | Designator | Manufacturer      | Manufactured Part # | Description                                                                                     | Quantity | Price Each |
 | ---------- | ----------------  | ------------------- | ----------------------------------------------------------------------------------------------- | -------- | ---------- |
 | S1         | Cherokee Project | Cherokee | Web Server | 1        | $0     |
+
 **All software packages are included in the web server.
 
 ## References
