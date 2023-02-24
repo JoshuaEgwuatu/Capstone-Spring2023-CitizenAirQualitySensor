@@ -1,7 +1,7 @@
 # Interface Signoff
 
 ## Subsystem Function
-The interface conditions a chosen set of analog voltage, analog current and digital signal output ranges coming from the sensor subsystem to be within the 0-5 volt range then outputs these conditioned signals to the microcontroller. 
+The interface conditions a chosen set of analog voltage and analog current output ranges coming from the sensor subsystem to be within the 0-5 volt range then outputs these conditioned signals to the microcontroller. Digital signals do not connect with the interface but instead go straight to the microcontroller.  
 
 ## Subsystem Constraints
 1) Must scale the following voltage ranges to 0 V to 5 V: 0 V to 3 V, 0 V to 10 V, -10 V to +10 V, and -5 V to +5 V   
@@ -10,13 +10,18 @@ The interface conditions a chosen set of analog voltage, analog current and digi
 
 ## System Schematic
 
-![interface mark 5 schematic](https://user-images.githubusercontent.com/118490274/221071898-a23fc4a9-c679-42f1-8a5d-3e42b1862897.PNG)
+![WORST CASE ANALYSIS FOR CIRCUIT 1](https://user-images.githubusercontent.com/118490274/221122223-c6ed2429-67f1-4fdd-9eaf-56006c308c21.PNG)
 
 ## Analysis
 
 1) Voltage Scaling
 * An input voltage range 0 V to 3 V is scaled to 0-5 V through the use of an non-inverting amplifier with a gain of 5/3. The gain formula for a non-inverting op amp is 1 + (R2/R1) and if R1 is set to 3.3k then R2 needs to be 2.2k to acquire a gain of 5/3. The input voltage range is ran through the op amp which multiplies the voltage by the gain. This scales up the original range to the desired range of 0 V to 5 V. 0 V x 5/3 = 0 V and 3 V x 5/3 = 5 V now making a 0 V to 3 V signal map into 0 V to 5 V.
 * Offset Voltage: Voff due to input offset is calculated with the equation (1+R2/R1) x input offset voltage. Voff due to input offset current is calculated by R2 x input offset current. According to the op07 datasheet, input offset voltage and input offset current are 75 uV max and 3.8 nA max. Substituting these values into the previous equations along with our resistor values of R1 = 3300 and R2 = 2200, we get a total offset voltage of .125 mV which is between our acceptable offset output range of 0 mV to 20 mV.
+* Component Variations for 0 V to 3 V to 0 V to 5 V Circuit: Each resistor tolerance and voltage tolerance for the op amp power supply is 5%. Taking this into account, a ltspice worse cast analysis simulation was performed for for the input voltages 0 V and 3 V respictevly. The arduino mega accepts -0.5 V to .3 X Vcc ( 1.5 V) and  as logic low and .3 x Vcc ( 3 V ) to Vcc + 0.5 ( 5.5 V) as logic high. As shown by the graphs, even with the variations of values due to tolerances input voltage 0 V maps to a logic 0 because the output of the circuit with tolerances considered ranges from 925 mV to 926 mV which is within the logic low range of -0.5 V to 1.5 V. Input voltage 3 V maps to a logic 1 because the output of the circuit with tolerances considered ranges from 3.8 V to 4.3 V which is within the logic high range of 3 V to 5.5 V. 
+
+![WORST CASE ANALYSIS FOR CIRCUIT 1](https://user-images.githubusercontent.com/118490274/221122771-ea940e4f-cec6-4fda-8705-ac0186986cd8.PNG)
+
+
 * A 0 V to 10 V range will be scaled down to 0 V to 5 V by way of voltage division. The formula for voltage division is Vout = ( R2 x Vin ) / ( R1 + R2 ). If we set both resistor values to 10k then vout will equal half of the input voltage. (10k x 0 V) / (10k + 10k) = 0 V and (10k x 10 V) / (10k + 10k) = 5 V. The 0-10 V range is now scaled down to a 0 V to 5 V range now measurable by the arduino. Using ohm's law, 10 V / (10k + 10k),  the current going through the voltage divider is .5 mA. Using the power formula, 10v x .5 mA, the power dissipated by each resistor is 5 mW. The chosen resistors are  ¼ W resistors so power dissipation and overheating will not become a problem. 
 * To accurately map our chosen negative voltage ranges, a set of equations and steps are used to pick the right resistor values for our three resistor voltage converter circuit. Step 1: Delta Vin = Sensor output range and Delta Vout =  A/D input range. Step 2: Ax = Delta Vin /  Delta Vout, Bx = Vbias / (Vout Vin/A ), and Cx = Ax * Bx / (Ax * Bx - Ax - Bx ). Step 2: RA and Vbias will be kept constant at 10k and 5 volts respectively. RA = (10K / Ax ) * Ax  = 10K. RB = (10k / Ax ) * Bx. RC = (10k / Ax ) * Cx. If input range is -10-10 V and these equations are followed, the values of resistor A,B and C would be 10k,5k, and 10k respectively to map the input range to 0 V to 5 V. If input range was -5 to +5 V, using these equations would give us RA = 10k, RB = 10k and RC would be disconnected to map -5 to +5 V to 0 V to 5 V. 
 
