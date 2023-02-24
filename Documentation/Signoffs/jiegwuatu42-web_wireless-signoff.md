@@ -14,15 +14,16 @@ The equation used: 10 Hz (worst case sampling rate) * 10 bits (analog to digital
 
 Chart Displaying Possibilities:
 
+|Required Space for Server (Megabytes per month)| | | | |
+|:----|:----|:----|:----|:----|
+| | |Data Size| | |
+|Sensors left in the field| |8 Bits|10 Bits|16 bits|
+|1 Month| |7.88E+01|9.86E+01|1.58E+02|
+|3 Months| |2.37E+02|2.96E+02|4.73E+02|
+|6 Months| |4.73E+02|5.91E+02|9.46E+02|
+|1 Year| |9.46E+02|1.18E+03|1.89E+03|
 
-| Required Space for Server (Megabytes per month) |  |        |         |        |
-| ----------------------------------------------- |  |        |         |        |
-|                                                 |  | Data Size |
-| Sensors left in the field                       |  | 8 Bits | 10 Bits | 16 bits |
-| 1 Month                                         |  | 7.88E+01 | 9.86E+01 | 1.58E+02 |
-| 3 Months                                        |  | 2.37E+02 | 2.96E+02 | 4.73E+02 |
-| 6 Months                                        |  | 4.73E+02 | 5.91E+02 | 9.46E+02 |
-| 1 Year                                          |  | 9.46E+02 | 1.18E+03 | 1.89E+03 |
+
 
 3. The data will be encrypted and decrypted using AES Symmetric Encryption. The encryption/decryption will happen at two different times:
 Microcontroller to Server
