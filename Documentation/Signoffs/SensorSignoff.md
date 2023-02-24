@@ -7,17 +7,17 @@
 ## CONSTRAINTS ON THE SUBSYSTEM
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Constraints on the subsystem are as follows:
 
-1. The sensors shall be able to measure carbon monoxide, lead monoxide, nitrogen oxide, ozone, particulate matter, and sulfur dioxide. These sensors should work independently from each other.
+1. Each sensor selected shall be able to measure a specific pollutant. These pollutants include carbon dioxide, methane, nitrogen dioxide, ozone, particulate matter, and sulfur dioxide. These sensors should work independently from each other.
 
 2. Shall be modular. Specifically, the change of sensors should be seamless and handled by the board and software. The sensors will have multiple kinds of Input/Output (I/O) ports. For a sensor to be in the same group, it must share the same voltage supply, current consumption, communication technique through the interface, and output the signal at the range of 0 - 10 VDC or 4 - 20 mA [12].
 
-3. Each sensor must be able to communicate with the microcontroller using a communicative language. The sensors shall communicate through Serial Peripheral Interface (SPI), Universal Asynchronous Receiver-Transmitter (UART), or Inter-Integrated Circuit (I2C). The microcontroller for this design will also be able to communicate with those same data transfer techniques.  
+3. Each sensor must be able to communicate with the microcontroller using a communicative language. The sensors shall communicate through Serial Peripheral Interface (SPI), Universal Asynchronous Receiver-Transmitter (UART), or Inter-Integrated Circuit (I2C). The microcontroller for this design will also be able to communicate with those same data transfer techniques. 
 
-4. For windy environments, the sampling rate should be at most 100Hz [3]. For indoor monitoring, ambient gas sensors will be sampled at the lowest rate of 2 Hz per second based on the diffusion of ambient air quality [1]. Thus, depending on the location/weather/wind/etc, the sensor should sample at specific ranges for indoor and outdoor measurements.
+4. For windy environments, the sampling rate should be at most 10 Hz [3]. For indoor monitoring, ambient gas sensors will be sampled at the lowest rate of 2 Hz per second based on the diffusion of ambient air quality [1]. Because of noise, resolution for each analog sensor must be at most 0.15 ppm or less. For digital sensors, a max resolution of 0.1 ppm or less shall be used for a 1 Hz sample rate [7].
 
-5. The input voltages from the Power Subsystem will provide either 3 or 5 V DC. Therefore, each sensor that will be used for the device shall have input voltages of either value. From looking at multiple gas sensors for this project, the maximum worst case for wattage in this subsystem is 375 mW. Maximum current consumption for sensors is 75 mA.
+5. The input voltages from the Power Subsystem will provide either 3 or 5 +/- 0.1 V DC. Therefore, each sensor that will be used for the device shall have input voltages of either value. From looking at multiple gas sensors for this project, the maximum worst case for wattage in this subsystem is 375 mW. Maximum current consumption for each sensor is 75 mA.
 
-6. For every sensor that is plugged onto the Air Quality Device initially, there may be a start up time for initial calibration. All sensors shall have a wait/warm-up time less than 2 hours before data acquisition.
+6. For every sensor that is plugged onto the Air Quality Device initially, there may be a start up time for initial calibration. According to a study in Tokyo, most portable gas sensors have a start-up time of 30s [13]. All sensors shall have a wait/warm-up time less than 2 hours before data acquisition.
 
 7. According to the ANSI/ASHRAE Standard 62.1-2016: Ventilation for Acceptable Indoor Air Quality [2], indoor CO2 concentrations no greater than 700 parts per million (ppm) above outdoor CO2 concentrations will satisfy a substantial majority (about 80%) of occupants. Sensors used for this device shall comply with their pollutant concentration with this standard for indoor/outdoor use.
 
@@ -27,7 +27,7 @@
 
 ## BUILDABLES OF THE SUBSYSTEM
 
-![CAPSTONE II Sensor Subsystem](https://user-images.githubusercontent.com/118767661/220430088-dc5df317-ef82-4628-a876-0c82efdccfef.png)
+![CAPSTONE II Sensor Subsystem](https://user-images.githubusercontent.com/118767661/221063057-85074e1f-1613-4238-9c89-70a61df53dee.png)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Figure 1. Sensor Subsystem through Interface Schematic
 
 ![Screenshot (229)](https://user-images.githubusercontent.com/118767661/220430812-1e9725cd-139a-45dc-94f5-ec22bebd58c4.png)
@@ -40,11 +40,11 @@
 
 ## ANALYSIS OF THE SUBSYSTEM
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The team has chosen 3 sensors for testing that matches with the constraints list. We wanted each to be a different type of sensor output to test modularity and implement the necessary actions required within the software to model the functionality of both the Microcontroller, Interface, and Sensor Subsystems. All sensors chosen for experimentation are for detecting one of the 6 pollutants that the proposal has stated for data input.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The team has chosen 3 sensors for testing that matches with the constraints list. We wanted each to be a different type of sensor output to test modularity and implement the necessary actions required within the software to model the functionality of both the Microcontroller, Interface, and Sensor Subsystems. All sensors chosen for experimentation are for detecting one of the 6 pollutants that the proposal has stated for data input. Note: All sensors that our team does not plan to order will have the quantity order number of 0 within the BOM.
 
-### ANALOG VOLTAGE SENSOR
+### OZONE SENSOR (ANALOG VOLTAGE)
 
-#### Analysis of the MIKROE-2767 [4]- (Analog Voltage):
+#### Analysis of the MIKROE-2767 [4]:
 
 ●	The MIKROE-2767 Ozone (O3) Gas Sensor is a quarter-sized PCB mounted with a MQ131 detector that has high sensitivity depending on the potentiometer. This sensor is able to detect the pollutant anywhere from 10‐1000 Part-Per-Million (ppm). {1},{7}
 
@@ -54,9 +54,9 @@
 
 ●	The UART source code can be seen in the Buildables of the Subsystem section within the document. (See Figure 2.)
 
-### ANALOG CURRENT SENSOR
+### SULFUR DIOXIDE SENSOR (ANALOG CURRENT)
 
-#### Analysis of the ULPSM-IAQ 968-008 [6] with the A02P43B7001 [5] - (Analog Current):
+#### Analysis of the ULPSM-IAQ 968-008 [6] with the A02P43B7001 [5]:
 
 ●	The A02P43B7001 gas detector is able to detect Sulfur Dioxide (SO2) which is within the list of pollutants to be acquired. {1}
 
@@ -72,9 +72,9 @@
 
 ●	A method sample code for the SO2 detector to communicate with the Master device can be seen within the Buildables of the Subsystem section. (See Figure 3.)
 
-### DIGITAL SENSOR
+### CARBON DIOXIDE SENSOR (DIGITAL)
 
-#### Analysis of the DGS-CO 968-034 [7] - (Digital):
+#### Analysis of the DGS-CO 968-034 [7]:
 
 ●	The DGS-CO is a digital carbon monoxide detector that has a similar modular feature as the analog current gas sensor. This means we can switch detectors for experimentation on whether the components meet our specifications. {1},{2}
 
@@ -84,7 +84,49 @@
 
 ●	This Digital sensor has a range of 0 -1,000 ppm. {7}
 
-### GPS SENSOR
+### METHANE SENSOR (ANALOG VOLTAGE)
+
+#### Analysis of the MIKROE-1628 [14]:
+
+● The MIKROE-1628 is able to detect methane within its location. {1}
+
+● It can be supplied with a max voltage of 5V, a max current consumption of 33 uA, outputting at a range of 0 - 5 V using SPI or UART. {2},{3},{5}
+
+● After a warm up time of 1 hour, it can start sampling at a rate of 2Hz.{4},{6}
+
+● Has a measurement rage of 200 - 10000 ppm. {7}
+
+### NITROGEN DIOXIDE SENSOR (DIGITAL)
+
+#### Analysis of the SEN0377 [15]:
+
+● The SEN0377 can detect various type of gasses, but for this device it shall be used to detect NO2. {1}
+
+● This sensor has the modular compatibility to take either 3.3 or 5 V supply with a low current consumption of 11 mA. Thus having a lower power intake of .45 W. Digital output of 0 - 3 V. {2},{5}
+
+● The sensor shall communicate using I2C for the microcontroller. {3}
+
+● Start up time is less than 1 hour with a sample rate of 5 Hz. {4},{6}
+
+● Measurement range of 0.05 - 10 ppm. {7}
+
+### PARTICULATE MATTER SENSOR (DIGITAL)
+
+#### Analysis of the SPS30 [16]:
+
+● This Particulate Matter (PM) Sensor can detect 4 different sizes of PM in its location. {1}
+
+● Supply voltage is 5V with max current intake of 75 mA. Outputs current of 0 - 16 mA. {2},{5}
+
+● Uses both I2C and UART to communicate. {3}
+
+● Samples at a period of 1 second or 2 Hz. {4}
+
+● Start up time ranges from 8 - 30 seconds. {6}
+
+● Can calibrate up to ranges of 200 - 3000 ppm. {7}
+
+### GPS SENSOR (DIGITAL)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Another sensor to be applied in the project is used for GPS location. The RAK1910 [10] can do this task while also corresponding to the constraints provided.
 
@@ -99,10 +141,13 @@
 |Item Name|Manufactured Part #|Quantity|Description|Price|
 |----------|-------------------|--------|-----------|-----|
 |OZONE 2 CLICK|MIKROE-2767|1|Analog Voltage O3 Gas Sensor|$45.00|
-|Analog Gas Sensor Module|ULPSM-IAQ 968-008|1|Analog Current Gas Sensor (Modular with Digital Sesnor)|$50.00|
-|Allsensing gas sensor module|A02P43B7001|1|SO2 GAS SENSOR|$163.62|
-|WisBlock GNSS Location Module|RAK1910|1|Tracks the GPS and the GLONASS signals|$17.00|
-|Digital Gas Sensor Module|DGS-CO 968-034|1|Digital Gas Sesnor (Modular with Analog Current Sensor) if out of stock, 968-001 is similar option.|$50.00|
+|Analog Gas Sensor Module|ULPSM-IAQ 968-008|0|Analog Current Gas Sensor (Modular with Digital Sesnor)|$50.00|
+|Allsensing gas sensor module|A02P43B7001|0|SO2 GAS SENSOR|$163.62|
+|WisBlock GNSS Location Module|RAK1910|0|Tracks the GPS and the GLONASS signals|$17.00|
+|Digital Gas Sensor Module|DGS-CO 968-034|0|Digital Gas Sesnor (Modular with Analog Current Sensor) if out of stock, 968-001 is similar option.|$50.00|
+|Methane Click|MIKROE-1628|1|Multiple Function Sensor|$15.00|
+|Digital Sensor Module|SEN0377|1|Multiple Function Gas Sensor|$39.90|
+|Particulate Matter Sensor|SPS30|0|Particulate Matter Sensor for Air Quality Monitoring and Control|$50.50|
 
 ## REFERENCES
 
@@ -110,7 +155,7 @@
 
 2. The National Institute for Occupational Safety and Health (NIOSH) “Indoor Environmental Quality” https://www.cdc.gov/niosh/topics/indoorenv/hvac.html (Accessed on 2-16-23).
 
-3. UC Irvine Machine Learning Repository “Gas sensor arrays in open sampling settings Data Set” http://archive.ics.uci.edu/ml/datasets/gas+sensor+arrays+in+open+sampling+settings (Accessed on 2-16-23).
+3. Lion Precision “Displacement Resolution Specifications and Its Effects on Performance” https://www.lionprecision.com/understanding-sensor-resolution-specifications-and-effects-on-performance/ (Accessed on 2-23-23).
 
 4. MIKROE-2767 Datasheet “Ozone 2 click” https://media.digikey.com/pdf/Data%20Sheets/MikroElektronika%20PDFs/MIKROE-2767_Web.pdf (Accessed on 2-13-23).
 
@@ -130,4 +175,10 @@
 
 12. GasLab “Analog and Digital Gas Sensors: What’s the Difference?” https://gaslab.com/blogs/articles/what-s-difference-between-analog-digital-gas-sensors#:~:text=Analog%20gas%20sensors%20output%20one,or%200%2D3%20volts%20DC. (Accessed on 2-20-23).
 
+13. Stable Heating Technology for Catalytic Combustion Hydrogen Gas Sensor Using Quartz Resonators https://pdfs.semanticscholar.org/7a13/0c740245fd18929fdc9169a5f38154c9cf0e.pdf (Accessed on 2-23-23).
 
+14. MIKROE-1628 Datasheet https://www.mouser.com/datasheet/2/272/methane-click-manual-v100-1483826.pdf (Accessed on 2-23-23).
+
+15. SEN0377 Datasheet https://www.mouser.com/pdfDocs/ProductOverview-DFRobot-SEN0377.pdf (Accessed on 2-23-23).
+
+16. SPS30 Datasheet https://cdn.sparkfun.com/assets/4/e/e/f/8/Sensirion_PM_Sensors_Datasheet_SPS30.pdf (Accessed on 2-23-23).
