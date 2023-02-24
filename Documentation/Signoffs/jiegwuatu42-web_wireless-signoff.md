@@ -28,7 +28,7 @@ Chart Displaying Possibilities:
 - Server to User
 4. The server must be able to read, decrypt, and format the data collected.
 5. The server must be accessible via the Internet.
-6. The data received must be displayed in a user friendly format. Graphical Interface suggested.
+6. The data received must be displayed in a user friendly format. User Interface will use Graphical Interface.
 
 
 
