@@ -28,9 +28,8 @@ Chart Displaying Possibilities:
    - The encryption/decryption will happen at two different times: [6]
      - Communication to Server
      - Server to User
-5. The server must be able to read, decrypt, and format the data collected.
-6. The server must be accessible via the Internet.
-7. The data received must be displayed in a user friendly format. User Interface will use Graphical Interface.
+4. The server must be accessible via the Internet.
+5. The data received must be displayed in a user friendly format. User Interface will use Graphical Interface.
 
 
 
