@@ -6,8 +6,9 @@ The Web & Wireless subsystem is responsible for receiving data from the Communic
 ## CONSTRAINTS ON THE SUBSYSTEM
 
 The subsystem constraints are placed to ensure that it can fulfill its job in a satisfactory manner. Constraints on the subsystem are as follows:
-1. The server must be able to communicate with the device (communication subsystem) via Internet:
-2. The server must have adequate storage for user data. This storage is based on the number of sensors used at once (3 max). [1] The current goal is to hold data collected for a month. At this time, 1 GB of ram is required. A chart will be provided to show if the user chooses to use a different option. 
+1. The server must be able to communicate with the measurement system (communication subsystem).
+2. The server must have adequate storage for user data. 
+    - This storage is based on the number of sensors used at once (3 max). [1] The current goal is to hold data collected for a month. At this time, 1 GB of ram is required. A chart will be provided to show if the user chooses to use a different option. 
 The equation used: 10 Hz (worst case sampling rate) * 2 bytes per 10 bit sample = 20 bytes per second. 20 bytes per second / 1.0486 * 10^6 (convert to megabytes) = 20 * 1.0486 * 10^-6 megabytes. 20 * 1.0486 * 10^-6 * 1 month = 32.8536 megabytes per month. 32.8536 megabytes per month * 3 (sensors in microcontroller at one time) = 50.16  megabytes per month.
 
 Chart Displaying Possibilities:
@@ -23,12 +24,13 @@ Chart Displaying Possibilities:
 
 
 
-3. The data will be encrypted and decrypted using TLS Encryption. The encryption/decryption will happen at two different times: [9]
-- Communication to Server
-- Server to User
-4. The server must be able to read, decrypt, and format the data collected.
-5. The server must be accessible via the Internet.
-6. The data received must be displayed in a user friendly format. User Interface will use Graphical Interface.
+3. The data will be encrypted and decrypted using TLS Encryption. 
+   - The encryption/decryption will happen at two different times: [6]
+     - Communication to Server
+     - Server to User
+5. The server must be able to read, decrypt, and format the data collected.
+6. The server must be accessible via the Internet.
+7. The data received must be displayed in a user friendly format. User Interface will use Graphical Interface.
 
 
 
