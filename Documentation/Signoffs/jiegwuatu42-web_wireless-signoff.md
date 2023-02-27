@@ -25,11 +25,17 @@ Chart Displaying Possibilities:
 
 
 3. The data will be encrypted and decrypted using TLS Encryption. 
-   - The encryption/decryption will happen at two different times: [6]
+   - The encryption/decryption will happen at two different times: [2] [5] [6]
      - Communication to Server
+       - Communication references devices used to connect microcontroller to internet:
+         - 4G LTE
+         - Wi-Fi  
      - Server to User
 4. The server must be accessible via the Internet.
-5. The data received must be displayed in a user friendly format. User Interface will use Graphical Interface.
+5. The data received must be displayed in a user friendly format. 
+    - User Interface will be a webpage.
+    - User Interface will use Graphical Interface.
+    - User Interface falls in line with W3C Standards. [7]
 
 
 
@@ -61,7 +67,7 @@ Cherokee Data/Specifications:
 
 | Designator | Manufacturer      | Manufactured Part # | Description                                                                                     | Quantity | Price Each |
 | ---------- | ----------------  | ------------------- | ----------------------------------------------------------------------------------------------- | -------- | ---------- |
-| S1         | Cherokee Project | Cherokee | Web Server https://cherokee-project.com/ | 1        | $0     |
+| S1         | Cherokee Project | Cherokee | Web Server. https://cherokee-project.com/ | 1        | $0     |
 
 **All software packages are included in the web server.
 
@@ -78,4 +84,7 @@ Cherokee Data/Specifications:
 5. “Maduino Zero 4G LTE(SIM7600X),” Makerfabs. https://www.makerfabs.com/maduino-zero-4g-lte-sim7600.html (accessed Feb. 23, 2023).
 
 6. “Cherokee Web Server | Home,” cherokee-project.com. https://cherokee-project.com/ (accessed Feb. 24, 2023).
+
+7. “About W3C Standards,” W3.org, 2010. https://www.w3.org/standards/about.html (accessed Feb. 24, 2023).
+‌
 ‌
