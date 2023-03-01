@@ -17,27 +17,27 @@
 
 3. Each sensor must be able to communicate with the microcontroller using a communicative language. The sensors shall communicate through Serial Peripheral Interface (SPI), Universal Asynchronous Receiver-Transmitter (UART), or Inter-Integrated Circuit (I2C). The microcontroller for this design will also be able to communicate with those same data transfer techniques. 
 
-4. For windy environments, the sampling rate should be at most 10 Hz [3]. For indoor monitoring, ambient gas sensors will be sampled at the lowest rate of 2 Hz per second based on the diffusion of ambient air quality [1].
+4. For windy environments, the sampling rate should be at most 10 Hz. This is because there are environmental factors that can cause a loss of accuracy in the data given higher wind speeds or non preferable weather conditions. After viewing this experiment of wind analysis in Thailand, it can be shown that using the Nyquist sampling theorem and varied wind speed, one can find the appropriate sampling rate at higher wind speed conditions without losing as much accuracy. They observed the wind speed data and used Fourier Transform to locate a cutoff frequency for the Nyquist sample rate. From their calculations, they have also concluded 10 Hz to be a suitable sample rate for higher wind conditions [1]. For indoor monitoring, ambient gas sensors will be sampled at the lowest rate of 2 Hz per second based on the diffusion of ambient air quality [3].
 
 5. Also because of noise, resolution for each analog sensor must be at most 0.15 ppm or less. For digital sensors, a max resolution of 0.1 ppm or less shall be used for a 1 Hz sample rate.
 
 6. The input voltages from the Power Subsystem will provide either 3 or 5 +/- 0.1 V DC. Therefore, each sensor that will be used for the device shall have input voltages of either value. From looking at multiple gas sensors for this project, the maximum worst case for wattage in this subsystem is 375 mW. Maximum current consumption for each sensor is 75 mA.
 
-7. For every sensor that is plugged onto the Air Quality Device initially, there may be a start up time for initial calibration. According to a study in Tokyo, most portable gas sensors have a start-up time of 30s [10]. All sensors shall have a wait/warm-up time less than 2 hours before data acquisition.
+7. For every sensor that is plugged onto the Air Quality Device initially, there may be a start up time for initial calibration. According to a study in Tokyo, most portable gas sensors have a start-up time of 30s [10]. After a survey observing the full start-up time range, the sensors selected within the analysis section have a max time of 1 hour. Therefore, all sensors shall have a wait/warm-up time less than 2 hours before data acquisition.
 
 8. According to the ANSI/ASHRAE Standard 62.1-2016: Ventilation for Acceptable Indoor Air Quality [2], indoor CO2 concentrations no greater than 700 parts per million (ppm) above outdoor CO2 concentrations will satisfy a substantial majority (about 80%) of occupants. Sensors used for this device shall comply with their pollutant concentration with this standard for indoor/outdoor use. The NAAQS has revised measurement standards for the main pollutants in America. The ranges are as follows [14]:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● PM 10 - 150 - 350 μg/m3 (micrograms per cubic meter of air) annually.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● PM 10 - 150 - 350 μg/m3 (micrograms per cubic meter of air.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● PM 2.5 - From 12 - 200 μg/m3 annually.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● PM 2.5 - From 12 - 200 μg/m3.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● NO2 - From 53 - 100 ppb (parts per billion) annually.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● NO2 - From 53 - 100 ppb (parts per billion).
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● O3 - At least 0.08 parts per million inside and 0.115 ppm outside [8].
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● O3 - From 0.07 - 0.115 ppm.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● SO2 - At least 0.02 ppm inside and 0.14 outside annually [9].
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● SO2 - From 0.5 - 2 ppm.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● CH4 (Methane) - From 2 - 90 ppm annually [15].
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● CH4 (Methane) - From 2 - 90 ppm [15].
 
 ## BUILDABLES OF THE SUBSYSTEM
 
@@ -167,7 +167,7 @@ Note: All sensors that our team does not plan to order will have the quantity or
 
 ## REFERENCES
 
-1. Pacific Marine Environmental Laboratory Gas Sensor Sampling Rate Standards “Sampling Rates” https://www.pmel.noaa.gov/ocs/sampling-rates (Accessed on 1-31-23).
+1. “Improving Accuracy of Wind Analysis with Multiple Sampling Rates of Wind Measurement” https://www.e3s-conferences.org/articles/e3sconf/pdf/2019/21/e3sconf_icpeme2018_02002.pdf (Accessed on 3-1-23).
 
 2. The National Institute for Occupational Safety and Health (NIOSH) “Indoor Environmental Quality” https://www.cdc.gov/niosh/topics/indoorenv/hvac.html (Accessed on 2-16-23).
 
