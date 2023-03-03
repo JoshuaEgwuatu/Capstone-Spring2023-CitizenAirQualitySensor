@@ -77,11 +77,19 @@ Cherokee Data/Specifications:
 | Designator | Manufacturer      | Manufactured Part # | Description                                                                                     | Quantity | Price Each |
 | ---------- | ----------------  | ------------------- | ----------------------------------------------------------------------------------------------- | -------- | ---------- |
 | S1 | Cherokee Project | Cherokee | Web Server | 1        | $0     |
-| S2 | Any | Computer/Laptop | Hardware to run/host server.  | 1 | $0 |
+| S2 | Any | Computer/Laptop | Hardware to run/host server. Almost all owned computers/laptops meet system requirements.  | 1 | $NA |
 
-Notes:
+Notes: 
+
 For more info on web server: https://cherokee-project.com/
-**All software packages are included in the web server.
+
+Hardware Specs for Computer/Laptop: (Most
+
+- CPU Speed: 133Mhz
+- RAM: 1 GB
+- System Programs: sh shell, make and an ANSI C compiler
+
+** All software packages are included in the web server.
 
 ## References
 
