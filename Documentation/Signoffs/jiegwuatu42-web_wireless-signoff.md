@@ -61,14 +61,26 @@ Cherokee Data/Specifications:
 - User Interface
   - Extremely friendly user interface (UI)
   - Uses graphical interface
+- License
+  - GNU General Public License v2.0 [8]
+    - Free Software
+        - Accessable Source Code
+        - Ability to share software
+        - Ability to alter software
+        - Software is free for all users
+    - This allows for modularity of software
+              
 
 
 ## BILL OF MATERIALS (BOM)
 
 | Designator | Manufacturer      | Manufactured Part # | Description                                                                                     | Quantity | Price Each |
 | ---------- | ----------------  | ------------------- | ----------------------------------------------------------------------------------------------- | -------- | ---------- |
-| S1         | Cherokee Project | Cherokee | Web Server. https://cherokee-project.com/ | 1        | $0     |
+| S1 | Cherokee Project | Cherokee | Web Server | 1        | $0     |
+| S2 | Any | Computer/Laptop | Hardware to run/host server.  | 1 | $0 |
 
+Notes:
+For more info on web server: https://cherokee-project.com/
 **All software packages are included in the web server.
 
 ## References
@@ -86,5 +98,8 @@ Cherokee Data/Specifications:
 6. “Cherokee Web Server | Home,” cherokee-project.com. https://cherokee-project.com/ (accessed Feb. 24, 2023).
 
 7. “About W3C Standards,” W3.org, 2010. https://www.w3.org/standards/about.html (accessed Feb. 24, 2023).
+
+8. “gnu.org,” www.gnu.org. https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html (accessed Mar. 03, 2023).
+‌
 ‌
 ‌
