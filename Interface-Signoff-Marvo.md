@@ -4,9 +4,9 @@
 The interface conditions a chosen set of analog voltage and analog current output ranges coming from the sensor subsystem to be within the 0 V to 5 V or 1 V to 5 V range then outputs these conditioned signals to the microcontroller. Digital signals do not connect with the interface but instead go straight to the microcontroller.  
 
 ## Subsystem Constraints
-1) Must scale the following voltage ranges to 0 V to 5 V: 0 V to 3 V,  0 V to 10 V,  -10 V to +10 V,  -5 V to +5 V     
-2) Must convert a current signal of 4 to 20 mA to a voltage signal of 1 to 5 V
-3) Components must be RoHS compliant
+1) Must scale the following sensor output voltage signal ranges to 0 V to 5 V: 0 V to 3 V,  0 V to 10 V,  -10 V to +10 V,  -5 V to +5 V.     
+2) Must convert a sensor output current signal of 4 to 20 mA to a voltage signal of 1 to 5 V.
+3) Components must be RoHS compliant to prevent health and environment risks due to electronic waste.
 4) Interface must not draw any more current than the power system can provide ( 3 A ) and operate off of 5±0.25 V from the power system.
 
 ## System Schematic
