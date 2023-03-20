@@ -19,13 +19,11 @@
 
 4. For windy environments, the sampling rate should be at most 10 Hz. This is because there are environmental factors that can cause a loss of accuracy in the data given higher wind speeds or non preferable weather conditions. After viewing this experiment of wind analysis in Thailand, it can be shown that using the Nyquist sampling theorem and varied wind speed, one can find the appropriate sampling rate at higher wind speed conditions without losing as much accuracy. They observed the wind speed data and used Fourier Transform to locate a cutoff frequency for the Nyquist sample rate. From their calculations, they have also concluded 10 Hz to be a suitable sample rate for higher wind conditions [1]. For indoor monitoring, ambient gas sensors will be sampled at the lowest rate of 2 Hz per second based on the diffusion of ambient air quality [3].
 
-5. Also because of noise, resolution for each analog sensor must be at most 0.15 ppm or less. For digital sensors, a max resolution of 0.1 ppm or less shall be used for a 1 Hz sample rate.
+5. The input voltages from the Power Subsystem will provide either 3 or 5 +/- 0.1 V DC. Therefore, each sensor that will be used for the device shall have input voltages of either value. From looking at multiple gas sensors for this project, the maximum worst case for wattage in this subsystem is 375 mW. Maximum current consumption for each sensor is 75 mA.
 
-6. The input voltages from the Power Subsystem will provide either 3 or 5 +/- 0.1 V DC. Therefore, each sensor that will be used for the device shall have input voltages of either value. From looking at multiple gas sensors for this project, the maximum worst case for wattage in this subsystem is 375 mW. Maximum current consumption for each sensor is 75 mA.
+6. For every sensor that is plugged onto the Air Quality Device initially, there may be a start up time for initial calibration. According to a study in Tokyo, most portable gas sensors have a start-up time of 30s [10]. After a survey observing the full start-up time range, the sensors selected within the analysis section have a max time of 1 hour. Therefore, all sensors shall have a wait/warm-up time less than 2 hours before data acquisition.
 
-7. For every sensor that is plugged onto the Air Quality Device initially, there may be a start up time for initial calibration. According to a study in Tokyo, most portable gas sensors have a start-up time of 30s [10]. After a survey observing the full start-up time range, the sensors selected within the analysis section have a max time of 1 hour. Therefore, all sensors shall have a wait/warm-up time less than 2 hours before data acquisition.
-
-8. According to the ANSI/ASHRAE Standard 62.1-2016: Ventilation for Acceptable Indoor Air Quality [2], indoor CO2 concentrations no greater than 700 parts per million (ppm) above outdoor CO2 concentrations will satisfy a substantial majority (about 80%) of occupants. Sensors used for this device shall comply with their pollutant concentration with this standard for indoor/outdoor use. The NAAQS has revised measurement standards for the main pollutants in America. The ranges are as follows [14]:
+7. According to the ANSI/ASHRAE Standard 62.1-2016: Ventilation for Acceptable Indoor Air Quality [2], indoor CO2 concentrations no greater than 700 parts per million (ppm) above outdoor CO2 concentrations will satisfy a substantial majority (about 80%) of occupants. Sensors used for this device shall comply with their pollutant concentration with this standard for indoor/outdoor use. The NAAQS has revised measurement standards for the main pollutants in America. Resolution for each analog sensor must be at most 0.15 ppm or less, and for digital sensors, a max resolution of 0.1 ppm or less shall be used. The ranges are as follows [14]:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● PM 10 - 150 - 350 μg/m3 (micrograms per cubic meter of air.
 
@@ -60,11 +58,11 @@
 
 #### Analysis of the MIKROE-2767 [4]:
 
-1.& 8.-The MIKROE-2767 Ozone (O3) Gas Sensor is a quarter-sized PCB mounted with a MQ131 detector that has high sensitivity depending on the potentiometer. This sensor is able to detect the pollutant anywhere from 10‐1000 Part-Per-Million (ppm).
+1.& 7.-The MIKROE-2767 Ozone (O3) Gas Sensor is a quarter-sized PCB mounted with a MQ131 detector that has high sensitivity depending on the potentiometer. This sensor is able to detect the pollutant anywhere from 10‐1000 Part-Per-Million (ppm).
 
 3.-The MIKROE-2767 is able to communicate with the microcontroller using SPI and UART. Thus, the sensor will be able to send data for the user to store.
 
-2.& 6.-The MIKROE-2767 has an input voltage range of 3.3V - 5V therefore, this particular sensor can be powered by both voltage supply options. Based on the Schematic (Schematic Reference!), the current computation is in the range of 5 uA - 33 uA.
+2.& 5.-The MIKROE-2767 has an input voltage range of 3.3V - 5V therefore, this particular sensor can be powered by both voltage supply options. Based on the Schematic (Schematic Reference!), the current computation is in the range of 5 uA - 33 uA.
 
 ●	The UART source code can be seen in the Buildables of the Subsystem section within the document. (See Figure 2.)
 
@@ -78,11 +76,11 @@
 
 3.-The SO2 gas detector can also communicate with the microcontroller using UART for data transfer.
 
-6.-The ULPSM-IAQ 968-008 will be connected using header pins under the A02P43B7001, which will communicate with the Microcontroller. The ULPSM-IAQ 968-008 calls for a supply voltage of around 3.3V. The power consumption is on average 30 uW. Also, the corresponding current consumption is 10uA on average.
+5.-The ULPSM-IAQ 968-008 will be connected using header pins under the A02P43B7001, which will communicate with the Microcontroller. The ULPSM-IAQ 968-008 calls for a supply voltage of around 3.3V. The power consumption is on average 30 uW. Also, the corresponding current consumption is 10uA on average.
 
-6.-The A02P43B7001 will operate at the same voltage supply of 3.3V with an LED indicator telling the user that the sensor is operating in the ON position. During this time, the SO2 sensor has a max operating current of 1.17 mA and a max power consumption of 3.7 mW.
+5.-The A02P43B7001 will operate at the same voltage supply of 3.3V with an LED indicator telling the user that the sensor is operating in the ON position. During this time, the SO2 sensor has a max operating current of 1.17 mA and a max power consumption of 3.7 mW.
 
-8.& 5.-The analog current detector has a measurement range of 0 - 5 ppm. Having a wide range will give the user a range of accuracy and levels of precise calculations.
+7.-The analog current detector has a measurement range of 0 - 5 ppm. Having a wide range will give the user a range of accuracy and levels of precise calculations.
 
 ●	A method sample code for the SO2 detector to communicate with the Master device can be seen within the Buildables of the Subsystem section. (See Figure 3.)
 
@@ -94,9 +92,9 @@
 
 3.-The connections are configured by the PCB to communicate using UART as well.
 
-6.-The supply voltage is available for a 3.3V supply with a power gumption range of 0.15 - 12 mW. The current consumption also has a range of 0.05 mA - 4 mA. Values for the power, voltage, and current requirements depend on the operating periodic functions of this device.
+5.-The supply voltage is available for a 3.3V supply with a power gumption range of 0.15 - 12 mW. The current consumption also has a range of 0.05 mA - 4 mA. Values for the power, voltage, and current requirements depend on the operating periodic functions of this device.
 
-8.-This Digital sensor has a range of 0 -1,000 ppm.
+7.-This Digital sensor has a range of 0 -1,000 ppm.
 
 ### METHANE SENSOR (ANALOG VOLTAGE)
 
@@ -104,11 +102,11 @@
 
 1.-The MIKROE-1628 is able to detect methane within its location.
 
-2.& 3. 6.-It can be supplied with a max voltage of 5V, a max current consumption of 33 uA, outputting at a range of 0 - 5 V using SPI or UART.
+2.& 3. 5.-It can be supplied with a max voltage of 5V, a max current consumption of 33 uA, outputting at a range of 0 - 5 V using SPI or UART.
 
-4.& 5. 7.-After a warm up time of 1 hour, it can start sampling at a rate of 2Hz.
+4.& 6.-After a warm up time of 1 hour, it can start sampling at a rate of 2Hz.
 
-8.-Has a measurement rage of 200 - 10000 ppm.
+7.-Has a measurement rage of 200 - 10000 ppm.
 
 ### NITROGEN DIOXIDE SENSOR (DIGITAL)
 
@@ -116,13 +114,13 @@
 
 1.-The SEN0377 can detect various type of gasses, but for this device it shall be used to detect NO2.
 
-2.& 6.-This sensor has the modular compatibility to take either 3.3 or 5 V supply with a low current consumption of 11 mA. Thus having a lower power intake of .45 W. Digital output of 0 - 3 V.
+2.& 5.-This sensor has the modular compatibility to take either 3.3 or 5 V supply with a low current consumption of 11 mA. Thus having a lower power intake of .45 W. Digital output of 0 - 3 V.
 
 3.-The sensor shall communicate using I2C for the microcontroller.
 
-4.& 7.-Start up time is less than 1 hour with a sample rate of 5 Hz.
+4.& 6.-Start up time is less than 1 hour with a sample rate of 5 Hz.
 
-8.-Measurement range of 0.05 - 10 ppm.
+7.-Measurement range of 0.05 - 10 ppm.
 
 ### PARTICULATE MATTER SENSOR (DIGITAL)
 
@@ -130,25 +128,25 @@
 
 1.-This Particulate Matter (PM) Sensor can detect 4 different sizes of PM in its location.
 
-2.& 6.-Supply voltage is 5V with max current intake of 75 mA. Outputs current of 0 - 16 mA.
+2.& 5.-Supply voltage is 5V with max current intake of 75 mA. Outputs current of 0 - 16 mA.
 
 3.-Uses both I2C and UART to communicate.
 
 4.-Samples at a period of 1 second or 2 Hz.
 
-7.-Start up time ranges from 8 - 30 seconds.
+6.-Start up time ranges from 8 - 30 seconds.
 
-8.-Can calibrate up to ranges of 200 - 3000 ppm.
+7.-Can calibrate up to ranges of 200 - 3000 ppm.
 
 ### GPS SENSOR (DIGITAL)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Another sensor to be applied in the project is used for GPS location. The RAK1910 [8] can do this task while also corresponding to the constraints provided.
 
-2.& 6.-The RAK1910 can take 3.3V with low amperage consumption. The worst case being 22 mA.
+2.& 5.-The RAK1910 can take 3.3V with low amperage consumption. The worst case being 22 mA.
 
 3.-The GPS sensor can communicate using UART or I2C, being compatible with the microcontroller in use.
 
-7.-30 second cold start-up time.
+6.-30 second cold start-up time.
 
 ## BILL OF MATERIALS
 
