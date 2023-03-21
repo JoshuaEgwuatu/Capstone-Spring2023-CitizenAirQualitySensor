@@ -9,11 +9,13 @@
 
 1. The pollutants of the Air Quality Device shall be able to detect carbon dioxide, methane, nitrogen dioxide, ozone, particulate matter, and sulfur dioxide. These sensors should work independently from each other.
 
+Each sensor shall meet the requirmentds of either Constraint 2 or 3.
+
 2. Shall be modular. Specifically, the change of sensors should be seamless and handled by the board and software. The sensors will have a variety of Input/Output (I/O) ports. For a sensor to be in the same group, it must share the same voltage supply, current consumption, and communication technique through the interface. The sensor shall meet either of the following output ranges [9]:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● Output the signal at the range of 0 - 10 VDC for analog voltage.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● Output 4 - 20 mA for analog current/digital.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● Output 4 - 20 mA for analog current.
 
 3. Each sensor must be able to communicate with the microcontroller using a communicative language. The sensors shall communicate through Serial Peripheral Interface (SPI), Universal Asynchronous Receiver-Transmitter (UART), or Inter-Integrated Circuit (I2C). The microcontroller for this design will also be able to communicate with those same data transfer techniques. 
 
