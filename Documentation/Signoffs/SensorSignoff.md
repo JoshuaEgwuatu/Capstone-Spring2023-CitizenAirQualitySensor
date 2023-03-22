@@ -9,7 +9,7 @@
 
 1. The pollutants of the Air Quality Device shall be able to detect carbon dioxide, methane, nitrogen dioxide, ozone, particulate matter, and sulfur dioxide. These sensors should work independently from each other.
 
-Each sensor shall meet the requirmentds of either Constraint 2 or 3.
+Each sensor shall meet the requirements of either Constraint 2 or 3.
 
 2. Shall be modular. Specifically, the change of sensors should be seamless and handled by the board and software. The sensors will have a variety of Input/Output (I/O) ports. For a sensor to be in the same group, it must share the same voltage supply, current consumption, and communication technique through the interface. The sensor shall meet either of the following output ranges [9]:
 
@@ -25,19 +25,19 @@ Each sensor shall meet the requirmentds of either Constraint 2 or 3.
 
 6. For every sensor that is plugged onto the Air Quality Device initially, there may be a start up time for initial calibration. According to a study in Tokyo, most portable gas sensors have a start-up time of 30s [10]. After a survey observing the full start-up time range, the sensors selected within the analysis section have a max time of 1 hour. Therefore, all sensors shall have a wait/warm-up time less than 2 hours before data acquisition.
 
-7. According to the ANSI/ASHRAE Standard 62.1-2016: Ventilation for Acceptable Indoor Air Quality [2], indoor CO2 concentrations no greater than 700 parts per million (ppm) above outdoor CO2 concentrations will satisfy a substantial majority (about 80%) of occupants. Sensors used for this device shall comply with their pollutant concentration with this standard for indoor/outdoor use. The NAAQS has revised measurement standards for the main pollutants in America. Resolution for each analog sensor must be at most 0.15 ppm or less, and for digital sensors, a max resolution of 0.1 ppm or less shall be used. The ranges are as follows [14]:
+7. According to the ANSI/ASHRAE Standard 62.1-2016: Ventilation for Acceptable Indoor Air Quality [2], indoor CO2 concentrations no greater than 700 parts per million (ppm) above outdoor CO2 concentrations will satisfy a substantial majority (about 80%) of occupants. Sensors used for this device shall comply with their pollutant concentration with this standard for indoor/outdoor use. The NAAQS has revised measurement standards for the main pollutants in America.  Resolution for each sensor must be at most a max resolution of 0.2 ppm or less shall be used. The ranges are as follows [14]:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● PM 10 - 150 - 350 μg/m3 (micrograms per cubic meter of air.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● PM 10 - 150 - 350 μg/m3 (micrograms per cubic meter of air. Resolution not found
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● PM 2.5 - From 12 - 200 μg/m3.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● PM 2.5 - From 12 - 200 μg/m3. Resolution not found
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● NO2 - From 53 - 100 ppb (parts per billion).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● NO2 - From 53 - 100 ppb (parts per billion). Resolution not found
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● O3 - From 0.07 - 0.115 ppm.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● O3 - From 0.07 - 0.115 ppm. Resolution not found
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● SO2 - From 0.5 - 2 ppm.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● SO2 - From 0.5 - 2 ppm. 0.001 ppm - 0.15 ppm resolution
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● CH4 (Methane) - From 2 - 90 ppm [15].
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● CH4 (Methane) - From 2 - 90 ppm [15]. Resolution not found
 
 ## BUILDABLES OF THE SUBSYSTEM
 
@@ -60,9 +60,7 @@ Each sensor shall meet the requirmentds of either Constraint 2 or 3.
 
 #### Analysis of the MIKROE-2767 [4]:
 
-1.& 7.-The MIKROE-2767 Ozone (O3) Gas Sensor is a quarter-sized PCB mounted with a MQ131 detector that has high sensitivity depending on the potentiometer. This sensor is able to detect the pollutant anywhere from 10‐1000 Part-Per-Million (ppm).
-
-3.-The MIKROE-2767 is able to communicate with the microcontroller using SPI and UART. Thus, the sensor will be able to send data for the user to store.
+1.& 7.-The MIKROE-2767 Ozone (O3) Gas Sensor is a quarter-sized PCB mounted with a MQ131 detector that has high sensitivity depending on the potentiometer. This sensor is able to detect the pollutant anywhere from 10‐1000 Part-Per-Million (ppm). Resolution not stated within the data sheet.
 
 2.& 5.-The MIKROE-2767 has an input voltage range of 3.3V - 5V therefore, this particular sensor can be powered by both voltage supply options. Based on the Schematic (Schematic Reference!), the current computation is in the range of 5 uA - 33 uA.
 
@@ -76,13 +74,11 @@ Each sensor shall meet the requirmentds of either Constraint 2 or 3.
 
 2.-The ULPSM-IAQ 968-008 below the detector contains a nice feature of having the ability to switch the gas detectors for other pollutants as well. This can allow the user to replace the SO2 sensor with another pollutant detector, or a different type of gas detector for more convenience and modularity.
 
-3.-The SO2 gas detector can also communicate with the microcontroller using UART for data transfer.
-
 5.-The ULPSM-IAQ 968-008 will be connected using header pins under the A02P43B7001, which will communicate with the Microcontroller. The ULPSM-IAQ 968-008 calls for a supply voltage of around 3.3V. The power consumption is on average 30 uW. Also, the corresponding current consumption is 10uA on average.
 
 5.-The A02P43B7001 will operate at the same voltage supply of 3.3V with an LED indicator telling the user that the sensor is operating in the ON position. During this time, the SO2 sensor has a max operating current of 1.17 mA and a max power consumption of 3.7 mW.
 
-7.-The analog current detector has a measurement range of 0 - 5 ppm. Having a wide range will give the user a range of accuracy and levels of precise calculations.
+7.-The analog current detector has a measurement range of 0 - 5 ppm. Having a wide range will give the user a range of accuracy and levels of precise calculations.  Resolution found to be 0.15 ppm for the ULPSM-IAQ 968-008. The A02P43B7001 states in the datasheet a resolution of 1 ppb.
 
 ●	A method sample code for the SO2 detector to communicate with the Master device can be seen within the Buildables of the Subsystem section. (See Figure 3.)
 
@@ -90,13 +86,13 @@ Each sensor shall meet the requirmentds of either Constraint 2 or 3.
 
 #### Analysis of the DGS-CO 968-034 [7]:
 
-1.& 2.-The DGS-CO is a digital carbon monoxide detector that has a similar modular feature as the analog current gas sensor. This means we can switch detectors for experimentation on whether the components meet our specifications.
+1.-The DGS-CO is a digital carbon monoxide detector that has a similar modular feature as the analog current gas sensor. This means we can switch detectors for experimentation on whether the components meet our specifications.
 
 3.-The connections are configured by the PCB to communicate using UART as well.
 
 5.-The supply voltage is available for a 3.3V supply with a power gumption range of 0.15 - 12 mW. The current consumption also has a range of 0.05 mA - 4 mA. Values for the power, voltage, and current requirements depend on the operating periodic functions of this device.
 
-7.-This Digital sensor has a range of 0 -1,000 ppm.
+7.-This Digital sensor has a range of 0 -1,000 ppm. The DGS-CO has a resolution of 0.1 ppm.
 
 ### METHANE SENSOR (ANALOG VOLTAGE)
 
@@ -104,11 +100,11 @@ Each sensor shall meet the requirmentds of either Constraint 2 or 3.
 
 1.-The MIKROE-1628 is able to detect methane within its location.
 
-2.& 3. 5.-It can be supplied with a max voltage of 5V, a max current consumption of 33 uA, outputting at a range of 0 - 5 V using SPI or UART.
+2.& 5.-It can be supplied with a max voltage of 5V, a max current consumption of 33 uA, outputting at a range of 0 - 5 V.
 
 4.& 6.-After a warm up time of 1 hour, it can start sampling at a rate of 2Hz.
 
-7.-Has a measurement rage of 200 - 10000 ppm.
+7.-Has a measurement rage of 200 - 10000 ppm. Resolution was not found within the datasheet.
 
 ### NITROGEN DIOXIDE SENSOR (DIGITAL)
 
@@ -116,13 +112,13 @@ Each sensor shall meet the requirmentds of either Constraint 2 or 3.
 
 1.-The SEN0377 can detect various type of gasses, but for this device it shall be used to detect NO2.
 
-2.& 5.-This sensor has the modular compatibility to take either 3.3 or 5 V supply with a low current consumption of 11 mA. Thus having a lower power intake of .45 W. Digital output of 0 - 3 V.
-
 3.-The sensor shall communicate using I2C for the microcontroller.
 
 4.& 6.-Start up time is less than 1 hour with a sample rate of 5 Hz.
 
-7.-Measurement range of 0.05 - 10 ppm.
+5.-This sensor has the modular compatibility to take either 3.3 or 5 V supply with a low current consumption of 11 mA. Thus having a lower power intake of .45 W. Digital output of 0 - 3 V.
+
+7.-Measurement range of 0.05 - 10 ppm. Resolution was not found within the datasheet.
 
 ### PARTICULATE MATTER SENSOR (DIGITAL)
 
@@ -130,15 +126,15 @@ Each sensor shall meet the requirmentds of either Constraint 2 or 3.
 
 1.-This Particulate Matter (PM) Sensor can detect 4 different sizes of PM in its location.
 
-2.& 5.-Supply voltage is 5V with max current intake of 75 mA. Outputs current of 0 - 16 mA.
-
 3.-Uses both I2C and UART to communicate.
 
 4.-Samples at a period of 1 second or 2 Hz.
 
+5.-Supply voltage is 5V with max current intake of 75 mA. Outputs current of 0 - 16 mA.
+
 6.-Start up time ranges from 8 - 30 seconds.
 
-7.-Can calibrate up to ranges of 200 - 3000 ppm.
+7.-Can calibrate up to ranges of 200 - 3000 ppm. Resolution not found within the datasheet.
 
 ### GPS SENSOR (DIGITAL)
 
