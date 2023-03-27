@@ -25,7 +25,7 @@ Each sensor shall meet the requirements of either Constraint 2 or 3.
 
 6. For every sensor that is plugged onto the Air Quality Device initially, there may be a start up time for initial calibration. According to a study in Tokyo, most portable gas sensors have a start-up time of 30s [10]. After a survey observing the full start-up time range, the sensors selected within the analysis section have a max time of 1 hour. Therefore, all sensors shall have a wait/warm-up time less than 2 hours before data acquisition.
 
-7. According to the ANSI/ASHRAE Standard 62.1-2016: Ventilation for Acceptable Indoor Air Quality [2], indoor CO2 concentrations no greater than 700 parts per million (ppm) above outdoor CO2 concentrations will satisfy a substantial majority (about 80%) of occupants. Sensors used for this device shall comply with their pollutant concentration with this standard for indoor/outdoor use. The NAAQS has revised measurement standards for the main pollutants in America.  Resolution for each sensor must be at most a max resolution of 0.2 ppm or less shall be used. The ranges are as follows [14]:
+7. According to the ANSI/ASHRAE Standard 62.1-2016: Ventilation for Acceptable Indoor Air Quality [2], indoor CO2 concentrations no greater than 700 parts per million (ppm) above outdoor CO2 concentrations will satisfy a substantial majority (about 80%) of occupants. Sensors used for this device shall comply with their pollutant concentration with this standard for indoor/outdoor use. The NAAQS has revised measurement standards for the main pollutants in America. The ranges are as follows [14]:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● PM 10 - 150 - 350 μg/m3 (micrograms per cubic meter of air. Resolution not found
 
@@ -64,7 +64,7 @@ Each sensor shall meet the requirements of either Constraint 2 or 3.
 
 2.& 5.-The MIKROE-2767 has an input voltage range of 3.3V - 5V therefore, this particular sensor can be powered by both voltage supply options. Based on the Schematic (Schematic Reference!), the current computation is in the range of 5 uA - 33 uA.
 
-●	The UART source code can be seen in the Buildables of the Subsystem section within the document. (See Figure 2.)
+Not Applicable - The UART source code can be seen in the Buildables of the Subsystem section within the document. (See Figure 2.)
 
 ### SULFUR DIOXIDE SENSOR (ANALOG CURRENT)
 
@@ -80,7 +80,7 @@ Each sensor shall meet the requirements of either Constraint 2 or 3.
 
 7.-The analog current detector has a measurement range of 0 - 5 ppm. Having a wide range will give the user a range of accuracy and levels of precise calculations.  Resolution found to be 0.15 ppm for the ULPSM-IAQ 968-008. The A02P43B7001 states in the datasheet a resolution of 1 ppb.
 
-●	A method sample code for the SO2 detector to communicate with the Master device can be seen within the Buildables of the Subsystem section. (See Figure 3.)
+Not Applicable - A method sample code for the SO2 detector to communicate with the Master device can be seen within the Buildables of the Subsystem section. (See Figure 3.)
 
 ### CARBON DIOXIDE SENSOR (DIGITAL)
 
