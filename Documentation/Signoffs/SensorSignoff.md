@@ -35,7 +35,7 @@ Each sensor shall meet the requirements of either Constraint 2 or 3.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● O3 - From 0.07 - 0.115 ppm. Resolution not found
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● SO2 - From 0.5 - 2 ppm. 0.001 ppm - 0.15 ppm resolution
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● SO2 - From 0.5 - 2 ppm. 1 ppb Resolution.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● CH4 (Methane) - From 2 - 90 ppm [15]. Resolution not found
 
@@ -64,7 +64,11 @@ Each sensor shall meet the requirements of either Constraint 2 or 3.
 
 2.& 5.-The MIKROE-2767 has an input voltage range of 3.3V - 5V therefore, this particular sensor can be powered by both voltage supply options. Based on the Schematic (Schematic Reference!), the current computation is in the range of 5 uA - 33 uA.
 
-Not Applicable - The UART source code can be seen in the Buildables of the Subsystem section within the document. (See Figure 2.)
+4.-Not Applicable.
+
+6.-Not Applicable.
+
+Other - The UART source code can be seen in the Buildables of the Subsystem section within the document. (See Figure 2.)
 
 ### SULFUR DIOXIDE SENSOR (ANALOG CURRENT)
 
@@ -74,13 +78,17 @@ Not Applicable - The UART source code can be seen in the Buildables of the Subsy
 
 2.-The ULPSM-IAQ 968-008 below the detector contains a nice feature of having the ability to switch the gas detectors for other pollutants as well. This can allow the user to replace the SO2 sensor with another pollutant detector, or a different type of gas detector for more convenience and modularity.
 
+4.-Not Applicable.
+
 5.-The ULPSM-IAQ 968-008 will be connected using header pins under the A02P43B7001, which will communicate with the Microcontroller. The ULPSM-IAQ 968-008 calls for a supply voltage of around 3.3V. The power consumption is on average 30 uW. Also, the corresponding current consumption is 10uA on average.
 
 5.-The A02P43B7001 will operate at the same voltage supply of 3.3V with an LED indicator telling the user that the sensor is operating in the ON position. During this time, the SO2 sensor has a max operating current of 1.17 mA and a max power consumption of 3.7 mW.
 
+6.-Not Applicable.
+
 7.-The analog current detector has a measurement range of 0 - 5 ppm. Having a wide range will give the user a range of accuracy and levels of precise calculations.  Resolution found to be 0.15 ppm for the ULPSM-IAQ 968-008. The A02P43B7001 states in the datasheet a resolution of 1 ppb.
 
-Not Applicable - A method sample code for the SO2 detector to communicate with the Master device can be seen within the Buildables of the Subsystem section. (See Figure 3.)
+Other - A method sample code for the SO2 detector to communicate with the Master device can be seen within the Buildables of the Subsystem section. (See Figure 3.)
 
 ### CARBON DIOXIDE SENSOR (DIGITAL)
 
@@ -90,7 +98,11 @@ Not Applicable - A method sample code for the SO2 detector to communicate with t
 
 3.-The connections are configured by the PCB to communicate using UART as well.
 
+4.-Not Applicable.
+
 5.-The supply voltage is available for a 3.3V supply with a power gumption range of 0.15 - 12 mW. The current consumption also has a range of 0.05 mA - 4 mA. Values for the power, voltage, and current requirements depend on the operating periodic functions of this device.
+
+6.-Not Applicable.
 
 7.-This Digital sensor has a range of 0 -1,000 ppm. The DGS-CO has a resolution of 0.1 ppm.
 
@@ -145,6 +157,8 @@ Not Applicable - A method sample code for the SO2 detector to communicate with t
 3.-The GPS sensor can communicate using UART or I2C, being compatible with the microcontroller in use.
 
 6.-30 second cold start-up time.
+
+7.-Not Applicable.
 
 ## BILL OF MATERIALS
 
