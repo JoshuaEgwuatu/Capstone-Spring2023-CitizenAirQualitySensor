@@ -152,9 +152,13 @@ Other - A method sample code for the SO2 detector to communicate with the Master
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Another sensor to be applied in the project is used for GPS location. The RAK1910 [8] can do this task while also corresponding to the constraints provided.
 
-2.& 5.-The RAK1910 can take 3.3V with low amperage consumption. The worst case being 22 mA.
+1.-Not Applicable.
 
 3.-The GPS sensor can communicate using UART or I2C, being compatible with the microcontroller in use.
+
+4.-Not Applicable.
+
+5.-The RAK1910 can take 3.3V with low amperage consumption. The worst case being 22 mA.
 
 6.-30 second cold start-up time.
 
