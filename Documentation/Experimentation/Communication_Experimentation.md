@@ -1,10 +1,13 @@
 # Communication Subsystem Experimentation
 
 ### What Is Being Tested
-1. Ability to connect to Wi-Fi for sending data to a server on the Internet
+1. Wi-Fi Connection Distance Test
 2. Throughput for our code
 
 ### What Is Not Being Tested
+* Ability to connect Wi-Fi
+  * It should be a given that a device that claims to connect to Wi-Fi does indeed connect to the Wi-Fi.  This ability was proven during the prototype demonstration.
+  * Given that the ESP8266 is the Wi-Fi component, we may assume that its hardware is functioning as intended.
 * 3G/4G/LTE abilities
   * 3G services are no longer supported in the U.S.A.  
   * 4G/LTE options are not being implementing in this iteration
@@ -14,8 +17,15 @@
   * It is expected that UART will be operable from purchase
 
 ### Wi-Fi Capabilities
-* Test 1 text
-* Test 1 table
+* For this test, we are actually going to be measuring the range of the ESP8266 to connect to the Wi-Fi.  This is to help see how far a user can place the device from a router and still work.  For this test, a simple code has been created that just marks the time it starts to connect to the Wi-Fi and marks the time that it fully connects.  This is just to see how long of a delay may be needed before sampling from the senosrs.  This is under normal conditions with few obstacles or inclement weather.  Distance is gradually increased after each success until a failure occurs. 
+
+| Distance (ft) | Connection Time | Success or Failure |
+| ------------- | --------------- | ------------------ |
+|               |                 |                    |
+|               |                 |                    |
+|               |                 |                    |
+|               |                 |                    |
+|               |                 |                    |
 * Test 1 Discussion
 
 ### Throughput Test
