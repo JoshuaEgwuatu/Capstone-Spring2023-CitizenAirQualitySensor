@@ -3,9 +3,8 @@
 ### What Is Being Tested
 1. Writing Speed To USB
 2. USB Access Time
-3. Excess Memory Available For Future Features
-4. Sampling Speeds
-5. Multiple Sensor Simultaneous Sampling (Analog and Digital)
+3. Sampling Speeds
+4. Multiple Sensor Simultaneous Sampling (Analog and Digital)
 
 ### What Is Not Being Tested
 * Pin count
@@ -24,17 +23,12 @@
 * Test 2 table
 * Test 2 Discussion
 
-### Excess Memory Available For Future Features
+### Sampling Speeds
 * Test 3 text
 * Test 3 table
 * Test 3 Discussion
 
-### Sampling Speeds
+### Multiple Sensor Simultaneous Sampling (Analog and Digital)
 * Test 4 text
 * Test 4 table
 * Test 4 Discussion
-
-### Multiple Sensor Simultaneous Sampling (Analog and Digital)
-* Test 5 text
-* Test 5 table
-* Test 5 Discussion
