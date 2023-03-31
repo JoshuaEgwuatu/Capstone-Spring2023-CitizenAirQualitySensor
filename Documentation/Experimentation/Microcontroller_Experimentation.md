@@ -9,9 +9,9 @@
 
 ### What Is Not Being Tested
 * Pin count
- * It is not necessary to test the pin count as it is evident that enough pins are available.
+  * It is not necessary to test the pin count as it is evident that enough pins are available.
 * UART
- * It is expected for the UART to be operable
+  * It is expected for the UART to be operable
 * Signal connections from other subsystems are expected to work
 
 ### USB Writing Speed
