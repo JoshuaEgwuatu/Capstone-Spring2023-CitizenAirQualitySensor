@@ -17,19 +17,24 @@
 ### USB Writing Speed
 * Test 1 text
 * Test 1 table
+* Test 1 Discussion
 
 ### USB Access Time
 * Test 2 text
 * Test 2 table
+* Test 2 Discussion
 
 ### Excess Memory Available For Future Features
 * Test 3 text
 * Test 3 table
+* Test 3 Discussion
 
 ### Sampling Speeds
 * Test 4 text
 * Test 4 table
+* Test 4 Discussion
 
 ### Multiple Sensor Simultaneous Sampling (Analog and Digital)
 * Test 5 text
 * Test 5 table
+* Test 5 Discussion
