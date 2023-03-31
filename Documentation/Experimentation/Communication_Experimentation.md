@@ -16,7 +16,29 @@
 ### Wi-Fi Capabilities
 * Test 1 text
 * Test 1 table
+* Test 1 Discussion
 
 ### Throughput Test
-* Test 2 text
-* Test 2 table
+* Although not explicitly stated anywhere in the rest of the documentation, it would be nice to know how much throughput we can get to with how our code is setup.  For this test, I will need a simple client that will constantly send some data.  Then, I wil need a server that will just receive the data.  The data to be sent will need to be consistant, so I chose the letters of the alphabet, coming out to 26 bytes per transmission.  To start the test, I just set the server to wait and start the client to send as fast as it can transmit to the server for 1 second.
+
+| Number of Alphabets | Bytes Sent | Number of transmission |
+| ------------------- | ---------- | ---------------------- |
+| 1                   | 6110       | 235                    |
+| 2                   | 12220      | 235                    |
+| 3                   | 18330      | 235                    |
+| 20                  | 122200     | 235                    |
+| 60                  | 132600     | 85                     |
+| 40                  | 132080     | 127                    |
+| 50                  | 132600     | 102                    |
+| 30                  | 131,820    | 169                    |
+| 45                  | 132600     | 113                    |
+
+The number of alphabets literally mean that I am sending that many sets of the standard english alphabet A-Z.  Bytes sent is calculated by number of transmission times byte size of the alphabet (26) times the number of alphabets.  I started off small with just a few sets to send and kept hitting roughly the same number of transmissions per second.  I decided to try and bump it up to 20 to see if that would change.  It didn't, so I decided to bump it up some more and it drastically lowered the number of transmissions.  This showed that the ESP8266 was struggling greatly to send the larger set of data at the same speeds.  In bumbing it to 60 sets, I was able to reach speeds of 1.326 kB per second and could not get passed this.  I decided to just fill in some of the numbers between and see where roughly where the cap on speed is for the bytes sent.  I found it to be around 45 sets of the alphabet.  Going passed this yielded the same speed.  It should be noted that this is a test of upload speed which is typically much slower than download speed.
+* Code for this Client test can be found in the Software section.  Pictures of the physical test setup are not provided for this test as it seems unnecessary as the device is just connected to a laptop.  The test is entirely software based and cannot be seen.
+* Shown is what the output from the client looked like.  Basically, what transmission count it stopped sending at.
+
+![ESPThroughputTestOutputClientSide](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/ESPThroughputTestOutputClientSide.JPG)
+
+* Shown is what the output from the server looked like.  Basically, the alphabet a lot.
+
+![ESPThroughputTestOutputServerSide](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/ESPThroughputTestOutputServerSide.JPG)
