@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>
 
-const char *ssid = "Verizon-SM-S901U-3BF7";      // wifi router name
-const char *pass = "mydw318(";    // wifi router password
+const char *ssid = "Network Name";      // wifi router name
+const char *pass = "Network Password";    // wifi router password
 const char *host = "192.168.225.17"; // server IP Address
 const int port = 54000;            // server port
 int flag = 1;      // flag to check for connection existance
