@@ -12,8 +12,8 @@
 #define SERVER_IP "192.168.225.17"
 
 #ifndef STASSID
-#define STASSID "Verizon-SM-S901U-3BF7"
-#define STAPSK "mydw318("
+#define STASSID "Network ID"
+#define STAPSK "Network Password"
 #endif
 
 void setup() 
