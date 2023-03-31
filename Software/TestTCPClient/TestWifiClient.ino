@@ -2,7 +2,7 @@
 
 const char *ssid = "Network Name";      // wifi router name
 const char *pass = "Network Password";    // wifi router password
-const char *host = "192.168.225.17"; // server IP Address
+const char *host = "Server IP"; // server IP Address
 const int port = 54000;            // server port
 int flag = 1;      // flag to check for connection existance
 bool read = 0;
