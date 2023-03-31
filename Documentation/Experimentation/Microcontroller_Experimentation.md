@@ -17,18 +17,22 @@
 * Test 1 text
 * Test 1 table
 * Test 1 Discussion
+* Test Picture
 
 ### USB Access Time
 * Test 2 text
 * Test 2 table
 * Test 2 Discussion
+* Test Picture
 
 ### Sampling Speeds
 * Test 3 text
 * Test 3 table
 * Test 3 Discussion
+* Test Picture
 
 ### Multiple Sensor Simultaneous Sampling (Analog and Digital)
 * Test 4 text
 * Test 4 table
 * Test 4 Discussion
+* Test Picture
