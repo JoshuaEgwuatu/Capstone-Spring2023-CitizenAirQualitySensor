@@ -4,7 +4,7 @@
 1. Wi-Fi Connection Distance Test
 2. Throughput for our code
 
-### What Is Not Being Tested
+### What Is Not Being Tested And Why
 * Ability to connect Wi-Fi
   * It should be a given that a device that claims to connect to Wi-Fi does indeed connect to the Wi-Fi.  This ability was proven during the prototype demonstration.
   * Given that the ESP8266 is the Wi-Fi component, we may assume that its hardware is functioning as intended.
@@ -19,14 +19,25 @@
 ### Wi-Fi Capabilities
 * For this test, we are actually going to be measuring the range of the ESP8266 to connect to the Wi-Fi.  This is to help see how far a user can place the device from a router and still work.  For this test, a simple code has been created that just marks the time it starts to connect to the Wi-Fi and marks the time that it fully connects.  This is just to see how long of a delay may be needed before sampling from the senosrs.  This is under normal conditions with few obstacles or inclement weather.  Distance is gradually increased after each success until a failure occurs. 
 
-| Distance (ft) | Connection Time | Success or Failure |
-| ------------- | --------------- | ------------------ |
-|               |                 |                    |
-|               |                 |                    |
-|               |                 |                    |
-|               |                 |                    |
-|               |                 |                    |
-* Test 1 Discussion
+| Distance (ft) | Connect Time (ms) | Success or Failure |
+| ------------- | ----------------- | ------------------ |
+| 10            | 5580              | S                  |
+| 20            | 5530              | S                  |
+| 30            | 5130              | S                  |
+| 40            | 5930              | S                  |
+| 50            | 6431              | S                  |
+| 60            | 5880              | S                  |
+| 70            | 5631              | S                  |
+| 80            | 21688             | S                  |
+| 90            | 20199             | S                  |
+| 100           | N/A               | F                  |
+| 100+          | N/A               | F                  |
+
+* As distance increases, I expected for the time to be linearly increasing, but that was not the case.  For the first few tries, it remained pretty consistently around 5-6 seconds.  It was only after 50 ft. that it took over 6 seconds.  What was weird was that it then dipped back under 6 seconds until 80 when it took an serious jump in time to nearly 22 seconds.  It still connected even at 90 ft. in 20 seconds, but the connection after 100 ft. was taking so long, that I stopped the tests after 100+ ft.  I did take step a few feet forward on the last test from 110 ft. and saw that the time read 44 seconds.
+* For our purposes, the device can be reliably used within 70 ft. of the Wi-Fi source.  The device can still be used within 90 ft. of the Wi-Fi source, but the connection is very slow.  The code would need to be adjusted accordingly.  Going passed 90 ft. is when the reliability is almost non-existent and cannot be recommended for use.  The 4G alternative is, at the time of writing this, unavailable but would fill the role when a known Wi-Fi source is not close enough.
+* Shown is the output from some of the tests.  Real IP and SSID are blocked for security.
+
+![ESPDistanceTestOutput](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/ESPDistanceTestOutput.jpg)
 
 ### Throughput Test
 * Although not explicitly stated anywhere in the rest of the documentation, it would be nice to know how much throughput we can get to with how our code is setup.  For this test, I will need a simple client that will constantly send some data.  Then, I wil need a server that will just receive the data.  The data to be sent will need to be consistant, so I chose the letters of the alphabet, coming out to 26 bytes per transmission.  To start the test, I just set the server to wait and start the client to send as fast as it can transmit to the server for 1 second.
