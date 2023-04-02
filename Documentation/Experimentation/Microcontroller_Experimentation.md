@@ -5,7 +5,6 @@
 1. USB Read/Write Speed
 2. USB Access Time
 3. Sampling Speeds
-4. Multiple Sensor Simultaneous Sampling (Analog and Digital)
 
 ### What Is Not Being Tested
 * Pin count
@@ -67,13 +66,23 @@
 ![USBAccessTimeTest](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/USBAccessTimeTest.JPG)
 
 ### Sampling Speeds
-* Test 3 text
-* Test 3 table
-* Test 3 Discussion
-* Test Picture
+* This test is designed to see how quickly the microcontroller can sample from the sensors.  In this test, a sensor of some kind (analog or digital is indifferent) is placed as an input to the microcontroller.  Over the course of 1 second, the test is to see how many times the data from the sensor can be collected and placed into a variable for storage.  This method is showing the bare minimum for collecting the sensor's data.  Although, general use of this device will not require a very high smaple rate, some applications, such as high-wind environment testing, will require higher sample rates.  Due to this, it is prudent that the max speed of the device's sampling speed be tested.
 
-### Multiple Sensor Simultaneous Sampling (Analog and Digital)
-* Test 4 text
-* Test 4 table
-* Test 4 Discussion
-* Test Picture
+| Trial # | Sample Rate (Hz) |
+| ------- | ---------------- |
+| 1       | 8                |
+| 2       | 8                |
+| 3       | 8                |
+| 4       | 8                |
+| 5       | 8                |
+| 6       | 8                |
+| 7       | 8                |
+| 8       | 8                |
+| 9       | 8                |
+| 10      | 8                |
+
+* That is about as conclusive of a test as can be gotten.  The test was even adjusted to perform even less work between samples, but it is quite clear that the highest sample rate that can be achieved is 8 Hz.  This is unfortunate, as some of the chosen sensors can potentially ask for upwards of 10 Hz in the aforementioned high-wind environmental conditions.  These results does show that data gathered during these scenarios requiring higher sample rates will yield less than concrete results.  Perhaps different sensors can be chosen to allow for these scenarios to become achievable or the full 10 Hz sampling is not necessary for the users applications.  This is just taking the extremes into consideration after all, but it must be done nevertheless.  On the brighter side, most applications and general use is able to be fully realized with a sample rate of 8 Hz.
+
+* Shown is a sample output from many of the trials.  The number shown is representing the sample rate in Hertz (Hz).
+
+![SampleSpeedTestOutput.JPG](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/SampleSpeedTestOutput.JPG)
