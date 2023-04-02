@@ -70,18 +70,18 @@
 
 | Trial # | Sample Rate (Hz) |
 | ------- | ---------------- |
-| 1       | 8                |
-| 2       | 8                |
-| 3       | 8                |
-| 4       | 8                |
-| 5       | 8                |
-| 6       | 8                |
-| 7       | 8                |
-| 8       | 8                |
-| 9       | 8                |
-| 10      | 8                |
+| 1       | 8924             |
+| 2       | 8924             |
+| 3       | 8924             |
+| 4       | 8924             |
+| 5       | 8924             |
+| 6       | 8924             |
+| 7       | 8924             |
+| 8       | 8924             |
+| 9       | 8924             |
+| 10      | 8924             |
 
-* That is about as conclusive of a test as can be gotten.  The test was even adjusted to perform even less work between samples, but it is quite clear that the highest sample rate that can be achieved is 8 Hz.  This is unfortunate, as some of the chosen sensors can potentially ask for upwards of 10 Hz in the aforementioned high-wind environmental conditions.  These results does show that data gathered during these scenarios requiring higher sample rates will yield less than concrete results.  Perhaps different sensors can be chosen to allow for these scenarios to become achievable or the full 10 Hz sampling is not necessary for the users applications.  This is just taking the extremes into consideration after all, but it must be done nevertheless.  On the brighter side, most applications and general use is able to be fully realized with a sample rate of 8 Hz.
+* That is about as conclusive of a test as can be gotten.  The test was even adjusted to perform even less work between samples, but it is quite clear that the highest sample rate that can be achieved is 8924 Hz.  This is fortunate, as some of the chosen sensors can potentially ask for upwards of 10 Hz in the aforementioned high-wind environmental conditions.  These results does show that data gathered during these scenarios requiring higher sample rates will yield less than concrete results.  Perhaps different sensors can be chosen to allow for these scenarios to become achievable or the full 10 Hz sampling is not necessary for the users applications.  This is just taking the extremes into consideration after all, but it must be done nevertheless.  On the brighter side, most applications and general use is able to be fully realized with a sample rate of 8 Hz.
 
 * Shown is a sample output from many of the trials.  The number shown is representing the sample rate in Hertz (Hz).
 
