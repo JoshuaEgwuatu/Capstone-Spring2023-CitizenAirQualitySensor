@@ -10,7 +10,7 @@ It was recreated using a timer interrupt to call for the sampling of the sensors
 1. Arduino's SPI
 2. Arduino's Wire
 3. Public USB Host Shield V2 library (additional custom version from u/greiman on GitHub)
-4. UsbFat by u/greiman
+4. UsbFat by u/greiman (William Greiman developed the USBFat library that is now publicly available)
 
 ### Installation
 1. Download and install latest version of the Arduino IDE
