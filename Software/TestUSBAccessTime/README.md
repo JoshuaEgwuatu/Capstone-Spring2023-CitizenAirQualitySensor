@@ -9,7 +9,7 @@ This code was for testing the time it takes to access the USB Fat32 flash drive 
 6. Close the file and display the access time in milliseconds.
 
 ### Dependent Libraries
-1. 
+1. Arduino IDE
 2. Public USB Host Shield V2 library (additional custom version from u/greiman on GitHub)
 3. UsbFat by u/greiman (Major thanks to William Greiman for his public library on Fat32 usage)
 
