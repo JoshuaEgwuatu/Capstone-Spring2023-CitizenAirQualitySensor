@@ -41,10 +41,30 @@
 ![USBWriteReadSpeedTestOutput](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/USBWriteReadSpeedTestOutput.JPG)
 
 ### USB Access Time
-* Test 2 text
-* Test 2 table
-* Test 2 Discussion
-* Test Picture
+* This test is to see how long it takes to open a file on the USB Fat32 flash drive.  It is expected for the device to have to do this a lot and given that the USB is very probably the slowest component, knowing just how slow is critical.  To test this, a simple code has been created that will initially creating a blank file that is can be opened and written to as normal.  The time start time is marked and then the file will be opened and accessed.  The end time is marked when the file has been fully opened and is able to be read from.  The file is then closed and the test is over.  
+
+| Trial # | Time (ms) |
+| ------- | --------- |
+| 1       | 2         |
+| 2       | 4         |
+| 3       | 4         |
+| 4       | 4         |
+| 5       | 4         |
+| 6       | 3         |
+| 7       | 4         |
+| 8       | 2         |
+| 9       | 4         |
+| 10      | 4         |
+| 11      | 4         |
+| 12      | 2         |
+| 13      | 4         |
+| 14      | 3         |
+| 15      | 3         |
+
+* What we are wanting to take away from this test is, when we are going to try to access the flash drive as a means for storage, how long can we expect it to take to get to the file.  Here, we will take the highest amount of time as our worst-case scenario and see that the longest time to access the flash drive was 4 milliseconds.  This means that we can safely adjust our time prediction to account slightly above 4 milliseconds (say 5 or 6).
+* This knowledge, combined with write/read speeds will allow us to make accurate predicitons and improve the performance of the device.  Knowing the timing of what is our slowest action (disregarding wireless) is pivotal.  It is doubly important when an interrupt driven system is being implemented.  Preventing the interrupts from overlapping with accruate predictions will allowf or more smoothly flowing performance.
+* Shown is a sample output from one of the trials.  Timing reference is ommitted but is known to be in milliseconds.
+![USBAccessTimeTest](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/USBAccessTimeTest.JPG)
 
 ### Sampling Speeds
 * Test 3 text
