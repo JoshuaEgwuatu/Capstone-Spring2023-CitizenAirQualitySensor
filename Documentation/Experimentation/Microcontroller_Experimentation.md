@@ -10,28 +10,28 @@
 * Pin count
   * It is not necessary to test the pin count as it is evident that enough pins are available.
 * UART
-  * It is expected for the UART to be operable
+  * UART is inherently required to be able to flash the Arduino Mega.  It either works or doesn't work.  Here, the board was able to flash and therefore works.
 * Signal connections from other subsystems are expected to work
 
 ### USB Read/Write Speed
-* For this test, we are going to look at reading and writing speeds to a standard USB Fat32 flash drive.  During the test, it is assumed that the flash drive has adequete size to store the data to be written.  To conduct the write test, we simply open a file on the flash drive and write a predetermined set of data as fast as possible while keeping track of how long it took.  We can perform the read test by reading from the data that was just written as fast as possible while also keeping track of time.
+* For this test, we are going to look at reading and writing speeds to a standard USB Fat32 flash drive.  During the test, it is assumed that the flash drive has adequete size to store the data to be written.  To conduct the write test, we simply open a file on the flash drive and write a predetermined set of data (5 megabytes in size) as fast as possible while keeping track of how long it took.  We can perform the read test by reading from the data that was just written as fast as possible while also keeping track of time.
 
-| Write Speed (KB/s) | Max (us) | Min (us) | Average (us) |
-| ------------------ | -------- | -------- | ------------ |
-| 64                 | 538592   | 76       | 1552         |
-| 62                 | 543760   | 76       | 1605         |
-| 64                 | 543608   | 76       | 1546         |
-| 62                 | 567616   | 76       | 1606         |
-| 64                 | 547084   | 76       | 1555         |
+| Write Speed (KB/s) | Max Time To Write (us) | Min Time To Write (us) | Average (us) |
+| ------------------ | ---------------------- | ---------------------- | ------------ |
+| 64                 | 538592                 | 76                     | 1552         |
+| 62                 | 543760                 | 76                     | 1605         |
+| 64                 | 543608                 | 76                     | 1546         |
+| 62                 | 567616                 | 76                     | 1606         |
+| 64                 | 547084                 | 76                     | 1555         |
 
 
-| Read Speed (KB/s) | Max (us) | Min (us) | Average (us) |
-| ----------------- | -------- | -------- | ------------ |
-| 168               | 5124     | 84       | 586          |
-| 168               | 5120     | 84       | 586          |
-| 168               | 5120     | 84       | 586          |
-| 169               | 5124     | 84       | 586          |
-| 169               | 5344     | 84       | 586          |
+| Read Speed (KB/s) | Max Time To Read (us) | Min Time To Read(us) | Average (us) |
+| ----------------- | --------------------- | -------------------- | ------------ |
+| 168               | 5124                  | 84                   | 586          |
+| 168               | 5120                  | 84                   | 586          |
+| 168               | 5120                  | 84                   | 586          |
+| 169               | 5124                  | 84                   | 586          |
+| 169               | 5344                  | 84                   | 586          |
 
 
 * The results are very conclusive.  With all the tests pooled together, it is easy to see a very high precision cluster in the data.  The only variables to really change with any significance are the Max time values.  Most likely, this is where the first write or read takes significantly longer as the file needs to be accessed before anything can be done.  Once the first write or read has been made, the rest become significanly faster.  Knowing this, we could actually say that discarding the Max value as a major outlier is understandable for an average.  With this change, the Min and Average values then become the same at 76 microseconds for writing and 84 microseconds for reading.  This cannot be used for the case of actual write/read speeds however, as in the real application, we will encounter such massive delays as the Max values.  This will lower the speed and is why the write speed can only be as fast as 64 KB/s and read speed as fast as 169 KB/s.  This combined with USB access time will prove valuable in getting efficient timing which is naturally going to give the microcontroller extra time to perform other tasks.
@@ -83,6 +83,6 @@
 
 * That is about as conclusive of a test as can be gotten.  The test was even adjusted to perform even less work between samples, but it is quite clear that the highest sample rate that can be achieved is 8924 Hz.  Naturally, this will allow for many of the general applications to be easily achievable, but additionally allow for sampling in high-wind environments.  Certain sensors may also ask for higher sample rates to acquire accurate data.  These higher speeds are only 10 Hz however and are very possible with this device.  
 
-* Shown is a sample output from many of the trials.  The number shown is representing the sample rate in milli-Hertz (mHz).
+* Shown is a sample output from many of the trials.  The number shown is representing the sample rate in kilo-Hertz (kHz).
 
 ![SampleSpeedTestOutput.JPG](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/SampleSpeedTestOutput.JPG)
