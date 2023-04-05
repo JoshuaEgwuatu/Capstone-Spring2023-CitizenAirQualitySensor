@@ -14,7 +14,7 @@
 * TCP Client
   * HTTP has been chosen for accessing the server instead, so it is sufficient to know that the ESP8266 can do TCP to then achieve a HTTP Client
 * UART receiving data and instructions
-  * It is expected that UART will be operable from purchase
+  * UART is required to work to even flash the ESP8266, so it is simple it works or doesn't.  We were able to flash it, so the UART works.
 
 ### Wi-Fi Capabilities
 * For this test, we are actually going to be measuring the range of the ESP8266 to connect to the Wi-Fi.  This is to help see how far a user can place the device from a router and still work.  For this test, a simple code has been created that just marks the time it starts to connect to the Wi-Fi and marks the time that it fully connects.  This is just to see how long of a delay may be needed before sampling from the senosrs.  This is under normal conditions with few obstacles or inclement weather.  Distance is gradually increased after each success until a failure occurs. 
@@ -40,21 +40,22 @@
 ![ESPDistanceTestOutput](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/Images/ESPDistanceTestOutput.jpg)
 
 ### Throughput Test
-* Although not explicitly stated anywhere in the rest of the documentation, it would be nice to know how much throughput we can get to with how our code is setup.  For this test, I will need a simple client that will constantly send some data.  Then, I wil need a server that will just receive the data.  The data to be sent will need to be consistant, so I chose the letters of the alphabet, coming out to 26 bytes per transmission.  To start the test, I just set the server to wait and start the client to send as fast as it can transmit to the server for 1 second.
+* Although not explicitly stated anywhere in the rest of the documentation, it would be nice to know how much throughput we can get to with how our code is setup.  For this test, I will need a simple client that will constantly send some data.  Then, I wil need a server that will just receive the data.  The data to be sent will need to be consistant, so I chose the letters of the alphabet, coming out to 26 byte payloads.  Adding more sets of the alphabet added 26 more bytes to the payload for each set.  To start the test, I just set the server to wait and start the client to send as fast as it can transmit to the server for 1 second.
 
-| Number of Alphabets | Bytes Sent | Number of transmission |
-| ------------------- | ---------- | ---------------------- |
-| 1                   | 6110       | 235                    |
-| 2                   | 12220      | 235                    |
-| 3                   | 18330      | 235                    |
-| 20                  | 122200     | 235                    |
-| 60                  | 132600     | 85                     |
-| 40                  | 132080     | 127                    |
-| 50                  | 132600     | 102                    |
-| 30                  | 131,820    | 169                    |
-| 45                  | 132600     | 113                    |
+| Payload Size (Bytes) | Number of Payload Transmissions | Bytes Sent Over 1 Second |
+| -------------------- | ------------------------------- | ------------------------ |
+| 26                   | 235                             | 6110                     |
+| 52                   | 235                             | 12220                    |
+| 78                   | 235                             | 18330                    |
+| 520                  | 235                             | 122200                   |
+| 780                  | 169                             | 131820                   |
+| 1040                 | 127                             | 132080                   |
+| 1170                 | 113                             | 132600                   |
+| 1300                 | 102                             | 132600                   |
+| 1560                 | 85                              | 132600                   |
 
-The number of alphabets literally mean that I am sending that many sets of the standard english alphabet A-Z.  Bytes sent is calculated by number of transmission times byte size of the alphabet (26) times the number of alphabets.  I started off small with just a few sets to send and kept hitting roughly the same number of transmissions per second.  I decided to try and bump it up to 20 to see if that would change.  It didn't, so I decided to bump it up some more and it drastically lowered the number of transmissions.  This showed that the ESP8266 was struggling greatly to send the larger set of data at the same speeds.  In bumbing it to 60 sets, I was able to reach speeds of 1.326 kB per second and could not get passed this.  I decided to just fill in some of the numbers between and see where roughly where the cap on speed is for the bytes sent.  I found it to be around 45 sets of the alphabet.  Going passed this yielded the same speed.  It should be noted that this is a test of upload speed which is typically much slower than download speed.
+* Bytes sent is calculated by number of transmission times byte size of the alphabet (26) times the number of alphabets.  I started off small with just a few sets to send and kept hitting roughly the same number of transmissions per second.  I decided to try and bump it up to 20 to see if that would change.  It didn't, so I decided to bump it up some more and it drastically lowered the number of transmissions.  This showed that the ESP8266 was struggling greatly to send the larger set of data at the same speeds.  In bumping it to 60 sets, I was able to reach speeds of 1.326 kB per second and could not get passed this.  I decided to just fill in some of the numbers between and see where roughly where the cap on speed is for the bytes sent.  I found it to be around 45 sets of the alphabet.  Going passed this yielded the same speed.  It should be noted that this is a test of upload speed which is typically much slower than download speed.
+* Knowing the throughput of the device will help in understanding how much time can be spent to send collected data.  Depending on the time, the code will need to be adjusted accordingly.  Luckily, with a 1.326 kB/s throughput, we will be able to speedily transmit the collected data and return to other tasks with little worry.  This is thanks to the data collected from the sensors being significantly smaller than that of the payload sizes used during testing.
 * Code for this Client test can be found in the Software section.  Pictures of the physical test setup are not provided for this test as it seems unnecessary as the device is just connected to a laptop.  The test is entirely software based and cannot be seen.
 * Shown is what the output from the client looked like.  Basically, what transmission count it stopped sending at.
 
