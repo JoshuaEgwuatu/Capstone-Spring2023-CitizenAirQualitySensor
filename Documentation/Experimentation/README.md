@@ -7,7 +7,7 @@ Experimental Format:
 2. The test results in the form of a table or graph
 3. Analysis of the results and consideration of their limitations on the design
 
-## Goals and Fulfillments
+## Project Goals and Fulfillments
 The design has undergone considerable changes throughout its development.  There were many ambitious features that were hoped to be implemented in this iteration.  One of the biggest problems we faced was ordering parts which is naturally essential for experimentation.  In the Project Proposal, there was a list of shall statements that describe the idealized final product.  At the time of writing, here are the current beliefs about the shall statements of the project:
 * Shall have a selection of tested and approved air quality sensors.
   * Due to problems with ordering, air quality sensors were never obtained.  These have had to be supplemented with other kinds of sensors.  Interfacing with an air quality sensor would not be a general issue, so the substitution is simply a change in what is being measured.
@@ -30,3 +30,53 @@ The design has undergone considerable changes throughout its development.  There
 * Shall have an independent power source.
   * Development has reached the point of having several options of power sources/supplies.  Options are battery, mains, solar, battery and solar, or battery and mains.
 
+## Subsystem Goals and Fulfillments
+
+### Communication
+The Communication subsystem has seen much success in fulfilling its constraints. Experimentation really targets the limitations on the device's ability to communicate as many of the constraints listed in the signoff are binary answers.
+
+What has been done:
+* The device is able to connect to local Wi-Fi and access the Internet.
+* The ESP8266 for Wi-Fi is within budget at $7.99.
+* The ESP8266 is able to receive instructions from the Microntroller through the UART.
+* ESP8266 is an extremely popular product and is still in production.
+
+What has not been done:
+* All 4G contraints have not been met.  This is done intentionally as it was expected to exceed our workload with the time we were given to develop.  The 4G capabilites are possible with the specified components but are not implemented.
+* Error handling has not been implemented.  The idea was for the software to have a way to attempt to fix itself or run diagnostic tests on a network connection to determine what to do.  The code is running on interrupt driven programming, but the additional routines have not been developed.
+
+### Interface
+The Interace subsystem is able to fulfill each of its constraints.  The only issue arising from Interface is its current reliance on being solderless.  This has obvious downsides of bad connections being an issue.  The experiments target the values present in the circuit given various inputs.  The goal being to insure the scaling of the input to a desired output for safe usage for the Microcontroller.
+
+What has been done:
+* The circuit is able to scale the following sensor output voltage signal ranges to 0 V to 5 V: 0 V to 3 V, 0 V to 10 V, -10 V to +10 V, -5 V to +5 V.
+* The circuit is able to convert a sensor output current signal of 4 to 20 mA to a voltage signal of 1 to 5 V.
+* Comprised components are non-toxic and abide by RoHS.
+* The circuit does not draw more current than the Power system can provide.
+
+What has not been done:
+* Relocating the circuit to a soldered board.  
+
+### Power
+Currently testing.
+
+### Microcontroller
+The Arduino Mega 2560 has proven to be an apt choice for the project.  Many of the constraints have been fulfilled and are ready.  There is still much room for improvement and quality of life fixes.  Many of the constraints are binary, therefore, experimentation targets some of the limitations of the Mega regarding the current software design.  The goal being to find limiting factors and refactor the software with the results in mind.  The idea being that knowing how far the Mega can be pushed will help to understand what can be done in given amount of time.
+
+What has been done:
+* The Arduino Mega 2560 is within budget at $48.40.
+* The Mega is able to instruct the USB Host Shield and ESP8266.  Although we intended for both to be done using UART, we ended up using some SPI for the connections made to the USB Host Shield.
+* The Mega and USB Host Shield are able to log all collected data in a USB FAT32 flash drive.  There is actually a couple experiments targeting the limitations of the USB Host Shield.
+* The Mega has an apparent abundance of pins available for use.
+* We had projections for the code to take up quite a bit of room in memory.  The current version of the code only uses around 13% of the Mega's memory, so there is plenty to spare as expected.  Larger and more in-depth libraries are still able to be included for future improvements.
+* The Mega is widely popular and readily available in the open-market.
+* The entirety of the code is written using C++.
+
+What has not been done:
+* The code is interrupt driven, however, it does not have all the features that were hoped for.  There is no error handling.  There is not a feature for measuring the battery capacity.  The idea was to check the battery capacity every so often to guage whether or not the Arduino should enter a sleep mode to protect its data.  Although the sleep mode is being developed, it is not ready for publishing.
+
+### Sensor
+Currently testing.
+
+### Web & Wireless
+Currently developing.
