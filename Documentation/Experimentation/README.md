@@ -46,7 +46,7 @@ What has not been done:
 * Error handling has not been implemented.  The idea was for the software to have a way to attempt to fix itself or run diagnostic tests on a network connection to determine what to do.  The code is running on interrupt driven programming, but the additional routines have not been developed.
 
 ### Interface
-The Interace subsystem is able to fulfill each of its constraints.  The only issue arising from Interface is its current reliance on being solderless.  This has obvious downsides of bad connections being an issue.  The experiments target the values present in the circuit given various inputs.  The goal being to insure the scaling of the input to a desired output for safe usage for the Microcontroller.
+The Interace subsystem is able to fulfill each of its constraints. The experiments target the values present in the circuit given various inputs.  The goal being to insure the scaling of the input to a desired output for safe usage for the Microcontroller.
 
 What has been done:
 * The circuit is able to scale the following sensor output voltage signal ranges to 0 V to 5 V: 0 V to 3 V, 0 V to 10 V, -10 V to +10 V, -5 V to +5 V.
@@ -54,8 +54,7 @@ What has been done:
 * Comprised components are non-toxic and abide by RoHS.
 * The circuit does not draw more current than the Power system can provide.
 
-What has not been done:
-* Relocating the circuit to a soldered board.  
+
 
 ### Power
 Currently testing.
