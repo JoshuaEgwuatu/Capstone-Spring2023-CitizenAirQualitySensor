@@ -10,11 +10,11 @@
 #include "HTTPSRedirect.h"
 
 // Enter network credentials:
-const char* ssid     = ""; //network ID
-const char* password = ""; //Password 
+const char* ssid     = "NETWORK-NAME-HERE"; //network ID
+const char* password = "NETWORK-PASSWORD-HERE"; //Password 
 
 // Enter Google Script Deployment ID:
-const char *GScriptId = "";
+const char *GScriptId = "GOOGLE-SCRIPT-ID-HERE";
 
 // Enter command (insert_row or append_row) and your Google Sheets sheet name (default is Sheet1):
 String payload_base =  "{\"command\": \"insert_row\", \"sheet_name\": \"Sheet1\", \"values\": ";
