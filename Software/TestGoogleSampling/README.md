@@ -14,7 +14,7 @@ This code was for testing the device's ability to connect to Google Sheets for l
 2. Arduino's Wire
 3. Public USB Host Shield V2 library (additional custom version from u/greiman on GitHub)
 4. UsbFat by u/greiman (William Greiman developed the USBFat library that is now publicly available.  Our gratitude is great.)
-5. HTTPSRedirect by u/StorageB107 and u/electronicsGuy
+5. HTTPSRedirect by u/StorageB107 and u/electronicsguy
 6. Arduino Community ESP8266 library
 
 ### Installation
@@ -23,4 +23,13 @@ This code was for testing the device's ability to connect to Google Sheets for l
 3. git clone the target file
 4. Launch Arduino and open the target file
 5. Set the port to target the Arduino Mega
-6. Compile and Upload
+6. Compile and Upload Arduino code
+7. Set port target to ESP8266
+8. Compile and Upload ESP code
+9. Create Google Sheet
+10. Attach Google Script to Google Sheets via the Extensions tab
+11. Edit Google Script with desired changes
+12. Save and deploy script to be public
+13. Save and Run script
+
+More detailed instructions for Google Sheets can be found in the HTTPSRedirect library.
