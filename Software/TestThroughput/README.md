@@ -15,5 +15,5 @@ This code was for testing the throughput of the ESP8266 using our device.  This 
 2. git clone the required libraries
 3. git clone the target file
 4. Launch Arduino and open the target file
-5. Set the port to target the Arduino Mega
+5. Set the port to target the ESP8266-Node-Module12E
 6. Compile and Upload
