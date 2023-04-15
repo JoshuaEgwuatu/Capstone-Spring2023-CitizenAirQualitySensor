@@ -15,5 +15,5 @@ This code is for testing the functionality of a TCP Client service for the ESP82
 2. git clone the required libraries
 3. git clone the target file
 4. Launch Arduino and open the target file
-5. Set the port to target the Arduino Mega
+5. Set the port to target the ESP8266-Node-Module12E
 6. Compile and Upload
