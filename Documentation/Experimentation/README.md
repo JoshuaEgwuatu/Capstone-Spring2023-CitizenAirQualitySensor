@@ -78,4 +78,23 @@ What has not been done:
 Currently testing.
 
 ### Web & Wireless
-Currently developing.
+Due to time constraints and unforeseen problems with the Web & Wireless subsystem, only certain features are available.  These features either work or don't work so is suffices just to see if the feature works as intended.  The point of the Web & Wireless subsystem was to allow for remote access to the data via a website hosted by a deployable server.  This option has not been entirely abandoned but altered.  Now, the server aspect has been changed to be utilize public Google Services running a Google Script.  The data is stored onto a Google spreadsheet.  This can be accessed by anyone with the link and permission to the Google Sheets.  The website has been turned into a Google Site that contains the Google Sheets inside it.  This allows anyone with the link to view the data as a regular website.  
+This has actually turned into a pleasant replacement for the original plans, but it still lacks some things.
+
+What has been done:
+* A website
+  * Anyone with a Google account is able to create a super simple Google Site and link it to the Google Sheets for website access.  Otherwise, the Google Sheets can be accessed directly.  The Google Site shows a screenshot of the data received from the data.
+* Graphical displays
+  * Google Sheets inherently has built-in graphical options such as charts, graphs, plots, or diagrams.  
+* Data display
+  * The data is displayed in a spreadsheet and can be very easily read.  It is static on the website but dynamic on the Google Sheet.
+
+What has not been done:
+* Central server
+  * There is not a central or default server that is accessible from anyone attempting to use the project for research.  Since there is not default server, there is also not a layer of security for the non-existant accounts or data.
+* Deployable server
+  * Although anyone can make a Google account, it still relies entirely on Google.  Independence is gone.
+* Dynamic data display
+  * Data displayed on the website is a static screenshot of whatever the data was in that moment.  It will not change.  The data displayed on the Google Sheets is dynamic however.  As a side note, Google Sheets has the benefit of easy chart and graphical creation.
+* Fast sampling fix
+  * Google has a limit on how many POST requests are allowed in a set timeframe.  This means that if the data is to be accessed remotely, the device must limit itself to a sample rate of once every five seconds.  The device needs to delay itself in order to not flood Google with POST requests that will inevitably get rejected.  A potential fix could be to increase the sample rate to the desired 2 Hz and store the data in a buffer.  Once five seconds has passed, the entire buffer could be sent to try to simulate 2 Hz sampling.  The device would then reset the buffer and begin filling it back up.  Sending a bigger POST request instead of the many small ones.
