@@ -75,7 +75,22 @@ What has not been done:
 * The code is interrupt driven, however, it does not have all the features that were hoped for.  There is no error handling.  There is not a feature for measuring the battery capacity.  The idea was to check the battery capacity every so often to guage whether or not the Arduino should enter a sleep mode to protect its data.  Although the sleep mode is being developed, it is not ready for publishing.
 
 ### Sensor
-Currently testing.
+Due to time constraints and unforeseen problems with the Sensor subsystem, only certain features are available.  The nature of this system was made with air quality sensors in mind of which we possess none.  Thusfar, we have been using various other types of sensors to test the device.  The sensors either worked or didn't.  If they didn't work, it was usually a coding issue.  The original idea was for the code to have a configuration file that would be set by the user to tell the device which sensors are being used.  The code would then know what settings to have and begin sampling for those sensors from a sensor group described in previous documentation.  This is no longer the case.  As the sensors never came, we are resorted to configuring the code to work with what sensors we did have.
+As of now, the device can easily handle new analog sensors with a few minor tweaks to the adc registers and multiply the read values by a scale.  Digital is a different case as the information sent by digital sensors is packeted.  This means that device would need to know beforehand what the packet contains and where to read data properly.  Right now, only one packet is being read that contains temperature, gyroscopic, and acceleration data.  The format for this packet will not be the same for all others.  
+
+What has been done:
+* Multiple sensors simultaneously
+  * The device is able to handle the required three sensors simultaneoulsy.  
+* High sampling rate achieved
+  * During microcontroller experimentation, it was found that the Arduino Mega can sample sensors at a rate of 8924 Hz.  This well exceeds the needs for most suggested sensors.  It should be noted that this number is only available when not using Wireless data storage.  See Web & Wireless below for more information.
+* Hot swapping analog
+  * Analog sensors can actually be unplugged and plugged in during operation.  They will work mostly as intended.  The data may be skewed due to scaling, but the data can be rescaled just the same.
+
+What has not been done:
+* Any kind of air quality sensing whatsoever.
+  * It is quite difficult to sample air quality with sensors without the sensors.
+* How swapping digital
+  * The device must be told beforehand what kind of digital sensor is being used.  It must also have its code changed to conform to that new sensor.  It is not smart enough to determine this on its own.
 
 ### Web & Wireless
 Due to time constraints and unforeseen problems with the Web & Wireless subsystem, only certain features are available.  These features either work or don't work so is suffices just to see if the feature works as intended.  The point of the Web & Wireless subsystem was to allow for remote access to the data via a website hosted by a deployable server.  This option has not been entirely abandoned but altered.  Now, the server aspect has been changed to be utilize public Google Services running a Google Script.  The data is stored onto a Google spreadsheet.  This can be accessed by anyone with the link and permission to the Google Sheets.  The website has been turned into a Google Site that contains the Google Sheets inside it.  This allows anyone with the link to view the data as a regular website.  
