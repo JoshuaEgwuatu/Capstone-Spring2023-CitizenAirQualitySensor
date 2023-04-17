@@ -13,7 +13,8 @@ current will be placed in series at the positive input. A sample will be taken e
 and logged. The test will be run again with the sensors disconnected in order to establish the current 
 draw independent of the sensors.
 ### Graphs
-
+![Current Consumption With Sensors -2](https://user-images.githubusercontent.com/118766525/232384061-53cbb2c1-c43c-4e8f-9801-1c4e4ef69af3.png)
+![Current Consumption without Sensors-2](https://user-images.githubusercontent.com/118766525/232383700-8ebcc5ed-2d50-4066-8cf5-7959633268e7.png)
 ### Explanation
 The above tests show the current draw over around 5 minutes of the system. The results show that using 
 the sensors causes the current to fluctuate regularly around 237 mA. The slight negative slope can be 
@@ -36,9 +37,7 @@ and lead to improved operational time.
 ## DC-DC Convertor 
 For this test, the input will be supplied with 5 V from the bench supply in the capstone lab. A DMM will be connected 
 across the output leads of the converter and the voltage will be measured. This will be taken 5 times and then the 
-convertor will be calibrated and the data will be taken again. An oscilloscope will also be connected across the output 
-to observe ripple voltage at 50 mA output as this is the lower threshold where the convertor should be used. Ripple voltage 
-at 120 mA will also be observed as this would provide enough current to power 5 of the worst case power draw sensors.
+convertor will be calibrated and the data will be taken again. 
 ### Results 
 #### Uncalibrated Results 
 |                 | Trial 1 | Trial 2 | Trial 3  | Trial 4 | Trial 5 |
@@ -57,28 +56,20 @@ The output out of the box seems to overshoot the output by about 0.15V. Once the
 and adjusting the potentiometer on the device a stable output near the desired voltage was easily achieved. The output voltage 
 shown by the seven segment displays was still showing an output voltage of about 0.15V less than the actual output and should be 
 used cautiously and we recommend calibrating the device especially if exact voltages or tight tolerances are required by the sensors
-being powered. The screenshots of the oscilloscope show the output voltage when supplying 41 and 119 mA at the output. Virtually 
-no ripple is seen and what variance is shown can be attributed to noise given the scale used.
+being powered. 
 ### Further Improvements/Experimentation 
-We would have liked to observe the ripple voltage under a varrying load instead of the static resitors used but did not have sensors 
-that warrented the use of the buck converter.
+We would have liked to observe the ripple voltage under a sufficant and varrying load but, we did not have the sensors we planned on ordering. Implementing these sensors and observing the ripple volatge using the same method presented above and a scope probe across the output should be done in future experiments.
 
 ## Solar cell
-For this test, the battery will be discharged to just under half capacity using the LEDs that show charge level 
-and visual inspection. The solar cell will then be left overnight so that it is in the sun from sunrise to sunset.  
-On the date of April 4th, 2023, the weather conditions are expected to be mostly cloudy until the afternoon where 
-it will be partly cloudy. At the end of the day the battery charge level will be inspected.
+For this test, the battery will be discharged until the indicator LEDs show it is around half charged.
+The solar cell will then be left on a car dashboard overnight so that it is in the sun from sunrise to sunset.
+At the end of the day the battery charge level will be inspected using the indicator LEDs once again. 
+This process will be repeated until it is fully charged
+### Results
+The solar cell was discharged and left until the night of April 5th. On the night of April 4th the battery was inspected and the indicator LEDs showed the battery at near 3/4 capacity. At the end of the second day when I checked it again the battery was fully charged. April 4th was mostly cloudy for a majority of the peak solar hours and became partly cloudy towards the  end of the day and April 5th was sunny during the peak solar hours and overcast for the end of the day.
 
 ### Explanation 
-The solar cell was discharged and left until the night of April 5th. The added length of the test was due to the battery being charged by 
-at least 25% the first day. By the end of the second day when I checked it again the battery was fully charged. April 4th was mostly cloudy 
-for most of the peak solar hours and became partly cloudy towards the  end of the day and April 5th was sunny during the peak solar hours and 
-overcast for the end of the day. This test showed a mix of weather conditions and showed that even on a cloudy day we can expect to regain a 
-quarter of the capacity or more. Given the imprecise nature of testing the capacity with its four indicator LEDs, we may or may not be able 
-to guarantee that the chosen solar cell completely replenishes the power used through an entire day based on weather conditions. It will 
-definitely prolong the use of the system. Assuming the capacity gained from the mostly cloudy day was just 25%, the solar cell collected 
-23.125 Wh throughout the day. Using the capacity of the battery and the hourly gain in energy from the solar cell and the worst case power 
-draw, it can be shown that the system will operate for slightly more than 418 hours. If this is not long enough for the user, they may implement 
-the solution presented in the detailed design of plugging an additional usb-c solar cell into the power input of the battery to further prolong 
-operation.
-### Further Improvements/Experimentation 
+ This test showed a mix of weather conditions and showed that even on a cloudy day we can expect to regain a 
+quarter of the capacity or more. Given the imprecise nature of testing the capacity with its four indicator LEDs, we are not able to guarantee 
+that the chosen solar cell completely replenishes the power used through an entire day based on weather conditions. Assuming the capacity gained 
+from the mostly cloudy day was just 25%, which would be the worst case given another LED lit up, the solar cell collected 23.125 Wh throughout the day. Using the capacity of the battery and the hourly gain in energy from the solar cell and the worst case power draw, it can be shown that the system will operate for slightly more than 418 hours. If this is not long enough for the user, they may implement the solution presented in the detailed design of plugging an additional usb-c solar cell into the power input of the battery to further prolong operation.
