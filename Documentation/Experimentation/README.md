@@ -42,8 +42,10 @@ What has been done:
 * ESP8266 is an extremely popular product and is still in production.
 
 What has not been done:
-* All 4G contraints have not been met.  This is done intentionally as it was expected to exceed our workload with the time we were given to develop.  The 4G capabilites are possible with the specified components but are not implemented.
-* Error handling has not been implemented.  The idea was for the software to have a way to attempt to fix itself or run diagnostic tests on a network connection to determine what to do.  The code is running on interrupt driven programming, but the additional routines have not been developed.
+* All 4G contraints have not been met.  
+  * This is done intentionally as it was expected to exceed our workload with the time we were given to develop.  The 4G capabilites are possible with the specified components but are not implemented.
+* Error handling has not been implemented.  
+  * The idea was for the software to have a way to attempt to fix itself or run diagnostic tests on a network connection to determine what to do.  The code is running on interrupt driven programming, but the additional routines have not been developed.
 
 ### Interface
 The Interace subsystem is able to fulfill each of its constraints. The experiments target the values present in the circuit given various inputs.  The goal being to insure the scaling of the input to a desired output for safe usage for the Microcontroller.
@@ -54,25 +56,37 @@ What has been done:
 * Comprised components are non-toxic and abide by RoHS.
 * The circuit does not draw more current than the Power system can provide.
 
-
-
 ### Power
-Currently testing.
+At the moment, the Power subsystem is far enough along that there are options available for preference or particular situation.  This subsystem's constraints revolved around current and voltage values to provide to the rest of the device and have these values available from different methods.  Overall, this has been achieved and tested.
+
+What has been done:
+* Suitable power is able to be provided from mains, battery, battery and solar, and mains and battery.
+* DC-DC converters have been tested and proven mostly functional.
+  * Here, "mostly" refers to the DC-DC converters rounding issue in displayed voltage.
+* Solar has been tested to provide adequate power to the device.
+
+What has not been done:
+* Extensive testing of the solar cell pack during a variety of weather conditions.  
+  * The test was conducted during a typical partly cloudy day.  It is safe to assume that the solar cell would naturally due even better during sunny days, however, testing was not done for days featuring less light.  
 
 ### Microcontroller
 The Arduino Mega 2560 has proven to be an apt choice for the project.  Many of the constraints have been fulfilled and are ready.  There is still much room for improvement and quality of life fixes.  Many of the constraints are binary, therefore, experimentation targets some of the limitations of the Mega regarding the current software design.  The goal being to find limiting factors and refactor the software with the results in mind.  The idea being that knowing how far the Mega can be pushed will help to understand what can be done in given amount of time.
 
 What has been done:
 * The Arduino Mega 2560 is within budget at $48.40.
-* The Mega is able to instruct the USB Host Shield and ESP8266.  Although we intended for both to be done using UART, we ended up using some SPI for the connections made to the USB Host Shield.
-* The Mega and USB Host Shield are able to log all collected data in a USB FAT32 flash drive.  There is actually a couple experiments targeting the limitations of the USB Host Shield.
+* The Mega is able to instruct the USB Host Shield and ESP8266.
+  * Although we intended for both to be done using UART, we ended up using some SPI for the connections made to the USB Host Shield.
+* The Mega and USB Host Shield are able to log all collected data in a USB FAT32 flash drive.  
+  * There are actually a couple experiments targeting the limitations of the USB Host Shield.
 * The Mega has an apparent abundance of pins available for use.
-* We had projections for the code to take up quite a bit of room in memory.  The current version of the code only uses around 13% of the Mega's memory, so there is plenty to spare as expected.  Larger and more in-depth libraries are still able to be included for future improvements.
+* We had projections for the code to take up quite a bit of room in memory.  
+  * The current version of the code only uses around 13% of the Mega's memory, so there is plenty to spare as expected.  Larger and more in-depth libraries are still able to be included for future improvements.
 * The Mega is widely popular and readily available in the open-market.
 * The entirety of the code is written using C++.
 
 What has not been done:
-* The code is interrupt driven, however, it does not have all the features that were hoped for.  There is no error handling.  There is not a feature for measuring the battery capacity.  The idea was to check the battery capacity every so often to guage whether or not the Arduino should enter a sleep mode to protect its data.  Although the sleep mode is being developed, it is not ready for publishing.
+* The code is interrupt driven, however, it does not have all the features that were hoped for.  
+  * There is no error handling.  There is not a feature for measuring the battery capacity.  The idea was to check the battery capacity every so often to guage whether or not the Arduino should enter a sleep mode to protect its data.  Although the sleep mode is being developed, it is not ready for publishing.
 
 ### Sensor
 Due to time constraints and unforeseen problems with the Sensor subsystem, only certain features are available.  The nature of this system was made with air quality sensors in mind of which we possess none.  Thusfar, we have been using various other types of sensors to test the device.  The sensors either worked or didn't.  If they didn't work, it was usually a coding issue.  The original idea was for the code to have a configuration file that would be set by the user to tell the device which sensors are being used.  The code would then know what settings to have and begin sampling for those sensors from a sensor group described in previous documentation.  This is no longer the case.  As the sensors never came, we are resorted to configuring the code to work with what sensors we did have.
@@ -89,7 +103,7 @@ What has been done:
 What has not been done:
 * Any kind of air quality sensing whatsoever.
   * It is quite difficult to sample air quality with sensors without the sensors.
-* How swapping digital
+* Hot swapping digital
   * The device must be told beforehand what kind of digital sensor is being used.  It must also have its code changed to conform to that new sensor.  It is not smart enough to determine this on its own.
 
 ### Web & Wireless
