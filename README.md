@@ -38,7 +38,7 @@ Cameron Smith is a computer engineer who is heading the communication subsystem
 Kaleb Irwin is an electrical engineer who is designing the power subystem
 Alejandro Moore is an electrical engineer in charge of the sensor subystem
 Marvo Odds is an electrical engineer managing interfacing between components and sensors
-Joshua Egwuata is an electrical engineer leading the web subsystem.  
+Joshua Egwuatu is an electrical engineer leading the web subsystem.  
 
 ### Faculty Supervisor
 The supervisor and customer for this project is Dr. Jeffrey Austin.  He is overseeing the design process made by the team and also providing the end-goal desires of the device.
