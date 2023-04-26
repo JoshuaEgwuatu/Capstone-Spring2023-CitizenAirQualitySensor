@@ -30,6 +30,10 @@ The design has undergone considerable changes throughout its development.  There
 * Shall have an independent power source.
   * Development has reached the point of having several options of power sources/supplies.  Options are battery, mains, solar, battery and solar, or battery and mains.
 
+## Measures of Success
+Our Measures of Success were mostly based around the completion of our Shall Statements.  Some statements were of higher importance than others.  The other major measure was if the work could be continued from a stable point.  The biggest goal of this project was for "any Joe Schmoe" to be able to pick up the project for his/her own research/needs.  
+With these in mind, it can be concluded that this project can be considered an overall failure.  The biggest contributor to this conclusion is the device's lack of completing some key Shall Statements.  The device cannot measure any of the air qualities listed.  The device has no security in place.  Sensors are not entirely interchangeable.  There are just too many things missing to really say the project has been completed in the allotted time.  There is future work to be done from a fairly decent starting point, but the foundations are there.
+
 ## Subsystem Goals and Fulfillments
 
 ### Communication
