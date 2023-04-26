@@ -7,27 +7,36 @@
 ## What isn't being tested?
 1. Ability to operate on battery and AC mains input
     *  Was shown during minimum functionality prototype 
-## System Current Draw
+## Test 1 
+### System Current Draw
 For this test, the power input of the microcontroller will be supplied with 5 V and a DMM set to measure
-current will be placed in series at the positive input. A sample will be taken every second for 5 minutes 
-and logged. The test will be run again with the sensors disconnected in order to establish the current 
-draw independent of the sensors.
+current will be placed in series at the positive input. 1200 samples over 10 miniutes will be taken and logged. This will be reapeated four times. The test will be run again with the sensors disconnected in order to establish the current draw independent of the sensors.
 ### Graphs
-![Current Consumption With Sensors -2](https://user-images.githubusercontent.com/118766525/232384061-53cbb2c1-c43c-4e8f-9801-1c4e4ef69af3.png)
+<img width="621" alt="FourTests" src="https://user-images.githubusercontent.com/118766525/234675372-2ebf06ea-dc24-44cc-aab3-2711e73b6039.png">
+<img width="613" alt="AverageCurrent" src="https://user-images.githubusercontent.com/118766525/234675435-c6472a89-ea61-4c32-925f-dcd7d64baca9.png">
+
+
 ![Current Consumption without Sensors-2](https://user-images.githubusercontent.com/118766525/232383700-8ebcc5ed-2d50-4066-8cf5-7959633268e7.png)
 ### Explanation
-The above tests show the current draw over around 5 minutes of the system. The results show that using 
-the sensors causes the current to fluctuate regularly around 237 mA. The slight negative slope can be 
+The above tests show the current draw over ten minutes while the system is operational. The results show that using 
+the sensors causes the current to fluctuate regularly around 228 mA. 
+
+The slight negative slope can be 
 attributed to the high initial current consumption shown in the test running just the microcontroller. 
+
 Also observed was how consistent the Arduinos’ power draw is with minimal variance about the average 
-current of 199 mA. The maximum current draw observed during operation with the sensors was 245.56 mA 
-while the minimum value was 228.98. If you use the worst case current draw alongside the 5 V input, 
-you get a power draw of 1.2278 W. Our selected battery has a capacity of 92.5 Wh. Using this and the 
-worst case power draw shows that our device should run for 75.34 hours with no further charging from 
-the solar cell. Using the average current draw of 237 mA gives a power draw of 1.185 W. This gives a use 
-time of 78.05 hours. Both of these values are well above the minimum operation time of 48 hours; however, 
+current of 199 mA.
+
+The maximum current draw observed during operation with the sensors was 234.43 mA while the minimum value was 222.18 mA. 
+
+Using the largest currernt draw observerd and the 5 V input, we get a power requirement of 1.17215 W. Using this worst case power requirements and the capacity of our battery (92.5 Wh), we can show that our device will run for 78.91 hours with no further charging from 
+the solar cell. 
+Using the average current draw of 228 mA gives a power draw of 1.14 W. This gives a use 
+time of 81.14 hours.
+
+Both of these values are well above the minimum operation time of 48 hours; however, 
 they also fall below the expected operation time outlined in the power subsystem detail design. This is due 
-to the sensors chosen using more current than initially accounted  for as well as the estimations for current 
+to the sensors chosen using more current than initially accounted for as well as the estimations for current 
 use from the arduino being taken utilizing low power features from a library that was not implemented.
 ### Further Improvements/Experimentation 
 Implementing and testing the low power library as well as the use of the deep sleep mode for ATMega2560 
@@ -52,7 +61,7 @@ convertor will be calibrated and the data will be taken again.
 | Output Voltage  | 2.94648 | 2.94681 | 2.94656 | 2.94630 | 2.94629 |
 | Shown Output    | 2.8     | 2.8     | 2.8     | 2.8     | 2.8     |
 ### Explanation
-The output out of the box seems to overshoot the output by about 0.15V. Once the converter was calibrated using a voltmeter 
+The output out of the box seems to overshoot the indicated output by about 0.15V. Once the converter was calibrated using a voltmeter 
 and adjusting the potentiometer on the device a stable output near the desired voltage was easily achieved. The output voltage 
 shown by the seven segment displays was still showing an output voltage of about 0.15V less than the actual output and should be 
 used cautiously and we recommend calibrating the device especially if exact voltages or tight tolerances are required by the sensors
@@ -62,14 +71,14 @@ We would have liked to observe the ripple voltage under a sufficant and varrying
 
 ## Solar cell
 For this test, the battery will be discharged until the indicator LEDs show it is around half charged.
-The solar cell will then be left on a car dashboard overnight so that it is in the sun from sunrise to sunset.
+The solar cell will then be left in the sun from sunrise to sunset.
 At the end of the day the battery charge level will be inspected using the indicator LEDs once again. 
-This process will be repeated until it is fully charged
+This process will be repeated until it is fully charged.
 ### Results
-The solar cell was discharged and left until the night of April 5th. On the night of April 4th the battery was inspected and the indicator LEDs showed the battery at near 3/4 capacity. At the end of the second day when I checked it again the battery was fully charged. April 4th was mostly cloudy for a majority of the peak solar hours and became partly cloudy towards the  end of the day and April 5th was sunny during the peak solar hours and overcast for the end of the day.
+The solar cell was discharged and left outsdide on the night of April 3rd until the night of April 5th. On the night of April 4th the battery was inspected and the indicator LEDs showed the battery at near 3/4 capacity. At the end of the second day when I checked it again the battery was fully charged. April 4th was mostly cloudy for a majority of the peak solar hours and became partly cloudy towards the  end of the day and April 5th was sunny during the peak solar hours and overcast for the end of the day.
 
 ### Explanation 
  This test showed a mix of weather conditions and showed that even on a cloudy day we can expect to regain a 
 quarter of the capacity or more. Given the imprecise nature of testing the capacity with its four indicator LEDs, we are not able to guarantee 
 that the chosen solar cell completely replenishes the power used through an entire day based on weather conditions. Assuming the capacity gained 
-from the mostly cloudy day was just 25%, which would be the worst case given another LED lit up, the solar cell collected 23.125 Wh throughout the day. Using the capacity of the battery and the hourly gain in energy from the solar cell and the worst case power draw, it can be shown that the system will operate for slightly more than 418 hours. If this is not long enough for the user, they may implement the solution presented in the detailed design of plugging an additional usb-c solar cell into the power input of the battery to further prolong operation.
+from the mostly cloudy day was just 25%, which would be the worst case given another LED lit up, the solar cell collected 23.125 Wh throughout the day. Using the capacity of the battery and the hourly gain in energy from the solar cell and the worst case power draw, it can be shown that the system will operate for slightly more than 524 hours. If this is not long enough for the user, they may implement the solution presented in the detailed design of plugging an additional usb-c solar cell into the power input of the battery to further prolong operation.
