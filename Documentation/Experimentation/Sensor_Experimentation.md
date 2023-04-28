@@ -18,5 +18,8 @@
 3. Microcontroller communication protocol
    - This was taken out of consideration due to it being tested in the microcontroller/communication subsystem
 
-### Test Setup
+### Performance of Sensors
   - For this test, we will measure the performance of the gyroscope and distance sensors. This will act as a simulation for the sensors we couldn’t acquire.
+
+### Modularity of Sensors
+
