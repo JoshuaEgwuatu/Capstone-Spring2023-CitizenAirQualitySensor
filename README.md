@@ -62,7 +62,7 @@ The customer for this product is also the same person, Dr. Jeffrey Austin. Anoth
 ## Repo Organization
 
 ### Reports
-The reports will conist of a Project Proposal, Conceptual Design, Minimal Functionality, Project Poster, and Presentations.
+The reports will consist of a Project Proposal, Conceptual Design, Minimal Functionality, Project Poster, and Presentations. Proposal and Design cover analysis and contraints of the system.
 
 ### Documentation
 Signoffs, Schematics, 3D Models, Images/Photos, and Final Bill of Materials.  Signoffs cover analysis and contraints of individual subsystems.
