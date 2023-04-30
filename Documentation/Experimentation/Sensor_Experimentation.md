@@ -83,7 +83,7 @@ Picture of Trial 2 Setup
 #### Introduction
 - Six different trials were done to test the accuracy of the HW-123 sensor. This sensor has the capability of getting very accurate information about the sensor's orientation. This can be done through the combination of accelerometer and gyroscope data. Both the acceleration speed and gyroscope data show how the sensor is orientated on the X, Y, and Z-Axis. 
 #### Test Setup
-- The way this sensor was tested was by changing the orientation 6 different times to show that the sensor is analyzing its position correctly. Each column shows where the sensor is located on the X, Y, and Z-Axis. The accelerometer will show g (gravitational constant) in the X, Y, and Z-Axis. 
+- The way this sensor was tested was by changing the orientation 6 different times to show that the sensor is analyzing its position correctly. The sensor was rotated 90 degrees in each direction to show a multitode of orientations. Each column shows where the sensor is located on the X, Y, and Z-Axis. The accelerometer will show g (gravitational constant) in the X, Y, and Z-Axis. 
 
 
 ### Trial 1
