@@ -3,9 +3,9 @@
 * Conversion of the following voltage ranges to 0-5 V: 0-3 V, 0-10 V, -10 V to +10 V, -5 V to +5 V and read the output voltages from the ADC.
 ## Excluded Test Specifications
 * Components must be RoHS compliant
-* Components chosen have gone through thorough testing for hazardous components to be listed as RoHS compliant and therefore I will not be testing this myself.
+  * Components chosen have gone through thorough testing for hazardous components to be listed as RoHS compliant and therefore I will not be testing this myself.
 * Interface must run off of 5 V
-* 5 volts will be provided from the power subsystem to components requiring voltage which does not warrant testing.
+  * 5 volts will be provided from the power subsystem to components requiring voltage which does not warrant testing.
 * Interface analog current sensors with the Arduino ADC
   * We do not have access to any current sensors or any substitutes. 
 
