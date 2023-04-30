@@ -1,1 +1,0 @@
-Images of all major PCB designs.   Given that many components may comprise multiple PCBs, individual PCBs may be generalized as they are intended for cooperation with each other.  Major subystems using PCB will have their own files included.  Images will be in PCB and JPEG format.
