@@ -1,1 +1,1 @@
-This folder will also contain general images used throughout various documentation of the project. The images folder acts as a hoard of all the images. This includes the project poster and photos of the device under construction and completion.
+This folder will also contain general images used throughout various documentation of the project. The images folder acts as a hoard of all the image sources save photos of the device.
