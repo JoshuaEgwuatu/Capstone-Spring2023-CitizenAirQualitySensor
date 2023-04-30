@@ -30,6 +30,17 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Dr. Austen has presented an admirable goal and intriguing future for this project.  His vision has a future where this proposed device is improved by numerous teams and utilized in small communities to spread awareness of air quality concerns and the health risks that can arise from poor conditions.  People and companies use this design as foundation for their own projects.  This team is happy to pursue this vision and see it fulfilled.
 
+## Project Photos and Video
+
+### Original Box Exterior
+![Box1Exterior2.jpg](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/ProjectPhotos/JPGVersions/Box1Exterior2.jpg)
+
+### New Box Exterior
+![Box2Exterior.jpg](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/blob/main/Documentation/ProjectPhotos/JPGVersions/Box2Exterior.jpg)
+
+### Device In Operation Video
+[Click Here To Go To YouTube Demonstration]()
+
 ## About Us
 
 ### Team
@@ -51,10 +62,10 @@ The customer for this product is also the same person, Dr. Jeffrey Austin. Anoth
 ## Repo Organization
 
 ### Reports
-The reports will conist of a Bill of Materials (BOM), Schematic, and List of Contraints and Speficiations.
+The reports will conist of a Project Proposal, Conceptual Design, Minimal Functionality, Project Poster, and Presentations.
 
 ### Documentation
-Signoffs and Design Documents will be placed in the Documentation Folder.
+Signoffs, Schematics, 3D Models, Images/Photos, and Final Bill of Materials.  Signoffs cover analysis and contraints of individual subsystems.
 
 ### Software
-The Pseudo Code and other Software components for the project will be placed in Software. 
+The Pseudo Code and other Software components for the project will be placed in Software. Each code directory contains a README that details a description, functions of the code, dependences, and how to install.
