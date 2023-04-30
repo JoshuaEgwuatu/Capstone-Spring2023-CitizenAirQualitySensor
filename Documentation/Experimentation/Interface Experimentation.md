@@ -325,6 +325,9 @@ the ADC was then read for each input voltage.
   * Circuit works as expected without any data or resolution loss and is therefore successful. 
 ## Arduino,Interface and Code Experimentation Setup Picture
 
+![image_67176961](https://user-images.githubusercontent.com/118490274/235331509-2ddb3a30-143c-4214-bbfd-8b77544dcee1.JPG)
+
+
 ## Arduino Source Code for Voltage Reading from the ADC
 
 ![VoltageReadingCode](https://user-images.githubusercontent.com/118490274/234534465-175248e1-ae34-4035-8f14-6658210ad771.JPG)
