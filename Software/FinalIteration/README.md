@@ -1,4 +1,4 @@
-This code was for testing the device's ability to connect to Google Sheets for logging data.  The data was then sent to a Google Site containing the speadsheet for display.
+This code is the final interation and should be used for sampling, logging, and sending data. The data is sent to a Google Sheet for display. If a user doesn't wish to use a Google Sheet and only use the USB, use [InterruptTest](https://github.com/JoshuaEgwuatu/Capstone-Spring2023-CitizenAirQualitySensor/tree/main/Software/InterruptTest)
 
 ### Functions
 1. To initialize USB flash drive for storage.
