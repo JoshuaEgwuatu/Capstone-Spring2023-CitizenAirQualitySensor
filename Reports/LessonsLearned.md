@@ -32,3 +32,19 @@ I found it best practice to pester for lack of a better word. Going to our super
 Words of wisdom I would pass on would be to make sure your group is working consistently and on time. Don’t be afraid to talk to the professor for help in any regard; whether it’s a technical question or about team dynamics. Don’t sit idle in this class, if you finish a section before it is due go ahead and start on the next part you never know if unexpected issues arise and take a week of effort to resolve.
 ### What new knowledge or skills did you acquire throughout capstone?
 I acquired a lot of knowledge and skills around working on a project in a team environment. I saw both facets of teamwork from the extremely bad parts of group work where you feel like you are the only one doing work to the good parts where you're sitting next to your teammate figuring out complex topics and getting them to work. The biggest lesson learned from this was that no matter the group dynamic, or the effort they put in, the work is a reflection on you and you should put forth the effort that makes the work a good reflection on you. If this means doing the work of others, then do it and let the person in charge know that they aren't completing their work. In terms of knowledge gained, I learned a lot about expectations and processes in engineering design and what I need to show during it.
+
+## Marvo Odds
+
+### Reflect on the project, both technical and organizational. What went well? What didn’t go well? 
+Communication and teamwork went poorly throughout the semester. 
+### What unanticipated problems occurred? 
+Lack of parts ordered impacted experimentation and gaps in communication between team members and supervisors. 
+### What would you do differently if you were to do it over again? 
+I would start the entire process of getting signed off during capstone 1 and heavily encourage my team members to do this as well. This process is the first major hurdle of capstone 2, but everything after this grade would be a smoother process. 
+### What “best practices” have you identified? 
+Scheduled meeting times outside of the weekly supervisor meetings is a must for success. Another best practice would be consistent daily group communication to ensure everyone knows deadlines and what they need to be doing. Checking on each group member and ensuring no one is struggling and needs.
+### What words of wisdom would you pass on to future students?
+Start everything whether it's a sign off, purchasing, experimentation, or prototyping as soon as possible instead of waiting because you don't have 100 % certainty that you will be signed off quickly or all your parts will come in on time. Account for scenarios and possibilities outside of your control. 
+### What new knowledge or skills did you acquire throughout capstone?
+At a basic level I learned the fundamental engineering process of taking an idea, making it real, and meticulously documenting every step and detail along the way. In doing this I learned better approaches for working in teams, technical writing, and how to research and parse useful information.
+
