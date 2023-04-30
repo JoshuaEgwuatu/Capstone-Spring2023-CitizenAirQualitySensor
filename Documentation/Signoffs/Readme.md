@@ -1,1 +1,1 @@
-This folder will contain copies of the final versions of the signoffs. These signoffs represent the approved designs and purchases made for the overall design.
+This folder contains copies of the final versions of the signoffs. These signoffs represent the approved designs and purchases made for the overall design.  They also include small electrical diagrams representative of that subsystem.
