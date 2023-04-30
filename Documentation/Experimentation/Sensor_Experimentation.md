@@ -27,7 +27,7 @@
 Two Trials were done to test the accuracy of the distance sensor. The first trial used a box as the object. The second trial used a computer mouse as the object. A tape measure was set at 5 cm from the sensor. The object was placed at the opposite end of the tape measure. Every 5 cm, the object was moved. The experiment was stopped once 80 cm was reached.
 
 ![IMG_3338](https://user-images.githubusercontent.com/110966922/235371363-7579b483-feda-4db6-a57d-4db74489859f.jpg)
-
+Picture of Trial 1 Setup
 ### Trial 1
 | Measured (cm) | Recorded (cm) |
 | ------------- | ------------- |
@@ -49,6 +49,7 @@ Two Trials were done to test the accuracy of the distance sensor. The first tria
 | 80            | 50            |
 
 ![IMG_3342](https://user-images.githubusercontent.com/110966922/235371347-77daf7c2-6d4c-4b95-b047-a3c58fe7bd43.jpg)
+Picture of Trial 2 Setup
 
 ### Trial 2
 | Measured (cm) | Recorded (cm) |
