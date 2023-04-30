@@ -1,5 +1,7 @@
 This software directory will contain all the code and software utilized.
 
+FinalIteration represents the final version of the code that was able to be tested and prove completely functional.
+
 Each folder will contain the following:
 
 1. What the software does
