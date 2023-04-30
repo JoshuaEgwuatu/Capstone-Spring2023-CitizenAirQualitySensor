@@ -4,8 +4,8 @@ This folder will also contain general images used throughout various documentati
 
 Any wiring and electrical schematics will be available in the electrical folder in this directory.  Here, there will be PCB and Schematic sections for each component and subsystem.
 
-A final version of the Bill of Materials will be included when applicable.
+A final version of the Bill of Materials is included.  This file details all components purchased for constructing the final product.
 
-Any potential 3D models or simulations will also be included in this directory under 3D models and simulations.
+3D Models contains the most up-to-date version of the enclosure in an STL file.
 
-All datasheets for this device and its subsystem will also be available inside this documentationo folder.
+All signoffs detailing the contraints and analysis for this device's subsystems are available inside this documentation folder.  These signoffs also include small electrical diagrams for constructing the subsystem.
