@@ -87,6 +87,7 @@ Picture of Trial 2 Setup
 
 ### Trial 1
 - Orientation 1 (Upright)
+
 | Acceleration X Axis (g) | Accerlaration Y Axis (g) | Accerlaration Z Axis (g) | Gyro X | Gyro Y | Gyro Z |
 | ----------------------- | ------------------------ | ------------------------ | ------ | ------ | ------ |
 | \-764                   | 15788                    | \-1960                   | 541    | \-133  | \-342  |
@@ -102,6 +103,7 @@ Picture of Trial 2 Setup
 
 ### Trial 2
 - Orientation 2 (90 degrees rotated to the right)
+
 | Acceleration X Axis (g) | Accerlaration Y Axis (g) | Accerlaration Z Axis (g) | Gyro X | Gyro Y | Gyro Z |
 | ----------------------- | ------------------------ | ------------------------ | ------ | ------ | ------ |
 | \-15344                 | \-484                    | \-4784                   | 283    | \-667  | \-36   |
@@ -117,6 +119,7 @@ Picture of Trial 2 Setup
 
 ### Trial 3
 - Orientation 3 (180 degrees rotated to the right)
+
 | Acceleration X Axis (g) | Accerlaration Y Axis (g) | Accerlaration Z Axis (g) | Gyro X | Gyro Y | Gyro Z |
 | ----------------------- | ------------------------ | ------------------------ | ------ | ------ | ------ |
 | 692                     | \-16360                  | \-2128                   | 347    | \-106  | 35     |
@@ -133,6 +136,7 @@ Picture of Trial 2 Setup
 
 ### Trial 4
 - Orientation 4 (270 degrees rotated to the right)
+
 | Acceleration X Axis (g) | Accerlaration Y Axis (g) | Accerlaration Z Axis (g) | Gyro X | Gyro Y | Gyro Z |
 | ----------------------- | ------------------------ | ------------------------ | ------ | ------ | ------ |
 | 17168                   | \-80                     | \-1764                   | 362    | 212    | \-37   |
@@ -148,6 +152,7 @@ Picture of Trial 2 Setup
 
 ### Trial 5
 - Orientation 5 (90 degrees rotated downward)
+
 | Acceleration X Axis (g) | Accerlaration Y Axis (g) | Accerlaration Z Axis (g) | Gyro X | Gyro Y | Gyro Z |
 | ----------------------- | ------------------------ | ------------------------ | ------ | ------ | ------ |
 | 1496                    | \-640                    | \-18976                  | 293    | 56     | 641    |
@@ -163,6 +168,7 @@ Picture of Trial 2 Setup
 
 ### Trial 6
 - Orientation 6 (90 degrees rotated upward)
+
 | Acceleration X Axis (g) | Accerlaration Y Axis (g) | Accerlaration Z Axis (g) | Gyro X | Gyro Y | Gyro Z |
 | ----------------------- | ------------------------ | ------------------------ | ------ | ------ | ------ |
 | \-1408                  | \-944                    | 15012                    | 87     | 11     | \-53   |
