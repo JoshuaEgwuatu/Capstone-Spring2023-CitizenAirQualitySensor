@@ -24,6 +24,7 @@
 
 ## Performance of Sensors
 ### Sharp 2Y0A21 (Distance Sensor)  
+#### Test Setup
 Two Trials were done to test the accuracy of the distance sensor. The first trial used a box as the object. The second trial used a computer mouse as the object. A tape measure was set at 5 cm from the sensor. The object was placed at the opposite end of the tape measure. Every 5 cm, the object was moved. The experiment was stopped once 80 cm was reached.
 
 ![IMG_3338](https://user-images.githubusercontent.com/110966922/235371363-7579b483-feda-4db6-a57d-4db74489859f.jpg)
@@ -79,9 +80,9 @@ Picture of Trial 2 Setup
 
 
 ### HW-123 MPU-6050 Detection Sensor
-
+#### Introduction
 - Six different trials were done to test the accuracy of the HW-123 sensor. This sensor has the capability of getting very accurate information about the sensor's orientation. This can be done through the combination of accelerometer and gyroscope data. Both the acceleration speed and gyroscope data show how the sensor is orientated on the X, Y, and Z-Axis. 
-
+####T est Setup
 - The way this sensor was tested was by changing the orientation 6 different times to show that the sensor is analyzing its position correctly. Each column shows where the sensor is located on the X, Y, and Z-Axis. The accelerometer will show g (gravitational constant) in the X, Y, and Z-Axis. 
 
 
