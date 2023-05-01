@@ -89,19 +89,19 @@ General coding practice and coding knowledge regarding the topics covered in the
 ## Joshua Egwuatu
 
 ### Reflect on the project, both technical and organizational. What went well? What didn’t go well? 
-
+Overall, this project was a great learning experience. We were able to produce a semi-working project. With all issues we ran into, the outcome is something I think we can be proud of. The planning stage for the project went relatively well, but the execution during the second half took a nose dive. Communication may have been the biggest factor in the group's lack of success. I think all group members have learned this.
 
 ### What unanticipated problems occurred? 
-
+Deadlines! As a team, we had a rough time meeting deadlines on time. We should’ve put more emphasis on working through signoffs during the first semester/winter break. This started to lead to delays in all other aspects of the project. We also ran into major ordering delays, some of this was due to subsystems not being completed on time. At other times, parts didn’t work when ordered initially. 
 
 ### What would you do differently if you were to do it over again? 
-
+Set meeting times throughout the week to work on Capstone as a group. Even though some of the work can be done on your own, this is the best way to make sure everyone is equally contributing to the group. Something I’d do personally differently is ask for help. My understanding of my subsystem went over my head, asking for help doesn’t need to be looked at as weak or unintelligent. Capstone is supposed to be difficult!
 
 ### What “best practices” have you identified?
-
+Keep each other accountable! Accountability is key to success in a project. Time management is essential. Plan your time appropriately. Communicate with your supervisor and communicate with your team members. Always make sure everyone is on the exact same page.
 
 ### What words of wisdom would you pass on to future students?
+It’s never too early to get something done. Waiting till the last minute is something we college students tend to do a lot. Treat capstone like a job, you need to put in a certain amount of hours every week in order to succeed. It is okay to ask for help! If you don’t understand something, it is okay to lean on your team members. Even though capstone tests your skills on what you’ve done in your college career, it doesn’t mean everything you do has to be a solo job. When issues arise, make sure to take care of these issues as a team!
 
-
-### What new knowledge or skills did you acquire throughout capstone?
-
+### What new knowledge or skills did you acquire throughout the capstone?
+I learned that without a proper structure for team members to adhere to for a project, your project may fail. Teamwork is an integral part of succeeding in the workforce, and there are no exceptions. Knowledge of creating schematics and 3D Models has been improved. 
